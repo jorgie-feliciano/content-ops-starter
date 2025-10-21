@@ -39,7 +39,6 @@ sections:
     items:
       - type: FeaturedItem
         title: Sistemas de Sonido y Equipos de PA
-        tagline: ''
         subtitle: ''
         text: >
           Sistemas de PA profesionales para eventos y locales. **Marcas premium:
@@ -53,15 +52,14 @@ sections:
           • Subwoofers activos y pasivos
 
           • Procesadores de sistema
-        actions: []
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
             borderRadius: x-large
             flexDirection: col
     actions:
@@ -102,7 +100,6 @@ sections:
     items:
       - type: FeaturedItem
         title: Consolas de Mezcla Digitales
-        tagline: ''
         subtitle: ''
         text: >
           Consolas digitales de última generación con capacidades completas de
@@ -117,15 +114,14 @@ sections:
           • Procesamiento de efectos integrado
 
           • Apps móviles disponibles
-        actions: []
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-light-fg-dark
         styles:
           self:
             padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
             borderRadius: x-large
             flexDirection: col
     actions:
@@ -166,7 +162,6 @@ sections:
     items:
       - type: FeaturedItem
         title: Micrófonos y Sistemas Inalámbricos
-        tagline: ''
         subtitle: ''
         text: >
           Micrófonos profesionales para eventos. **Marcas premium: Sennheiser,
@@ -180,15 +175,14 @@ sections:
           • Sistemas de monitoreo in-ear
 
           • Micrófonos especializados para instrumentos
-        actions: []
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
             borderRadius: x-large
             flexDirection: col
     actions:
