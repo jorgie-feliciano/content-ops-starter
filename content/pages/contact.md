@@ -20,10 +20,10 @@ sections:
     styles:
       self:
         padding:
-          - pt-16
-          - pl-16
-          - pb-8
-          - pr-16
+          - pt-12
+          - pl-12
+          - pb-6
+          - pr-12
         alignItems: center
         justifyContent: center
   - type: GenericSection
@@ -112,10 +112,10 @@ sections:
       styles:
         self:
           padding:
-            - pt-8
-            - pb-8
-            - pl-8
-            - pr-8
+            - pt-6
+            - pb-6
+            - pl-6
+            - pr-6
           borderColor: border-dark
           borderStyle: solid
           borderWidth: 1
@@ -133,19 +133,19 @@ sections:
     styles:
       self:
         padding:
-          - pt-8
-          - pl-16
-          - pb-16
-          - pr-16
+          - pt-6
+          - pl-12
+          - pb-12
+          - pr-12
   - title: Divider
     colors: bg-neutral-fg-dark
     styles:
       self:
         padding:
-          - pt-7
-          - pl-7
-          - pb-7
-          - pr-7
+          - pt-5
+          - pl-5
+          - pb-5
+          - pr-5
     type: DividerSection
   - type: FeaturedItemsSection
     title:
@@ -161,22 +161,18 @@ sections:
         title: Phone
         subtitle: Call us directly
         text: >-
-          Contact us by phone to discuss your audio needs.
+          Contact by phone to discuss audio needs.
           
           
-          **Contact for details**
-        image:
-          url: /images/icon1.svg
-          altText: Phone contact
-          type: ImageBlock
+          **321 300 5425**
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
             borderRadius: x-large
             flexDirection: col
             textAlign: center
@@ -184,22 +180,18 @@ sections:
         title: Email
         subtitle: Send us a message
         text: >-
-          Send us an email with your event details.
+          Send an email with event details.
           
           
-          **Contact for details**
-        image:
-          url: /images/icon2.svg
-          altText: Email contact
-          type: ImageBlock
+          **contacto@sonidovivo.org**
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
             borderRadius: x-large
             flexDirection: col
             textAlign: center
@@ -207,25 +199,21 @@ sections:
         title: Location
         subtitle: Puerto Rico
         text: >-
-          Sonido Vivo serves events and venues across Puerto Rico.
+          Sonido Vivo serves events and venues across Puerto Rico including San Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo, Toa Baja, Trujillo Alto, and surrounding areas.
           
           
           **Puerto Rico**
           
           
-          Contact us for service area details
-        image:
-          url: /images/icon3.svg
-          altText: Visit us
-          type: ImageBlock
+          Island-wide service available
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
             borderRadius: x-large
             flexDirection: col
             textAlign: center
@@ -234,10 +222,10 @@ sections:
     styles:
       self:
         padding:
-          - pt-16
-          - pl-16
-          - pb-16
-          - pr-16
+          - pt-12
+          - pl-12
+          - pb-12
+          - pr-12
         justifyContent: center
       subtitle:
         textAlign: center
@@ -246,44 +234,117 @@ sections:
     styles:
       self:
         padding:
-          - pt-7
-          - pl-7
-          - pb-7
-          - pr-7
+          - pt-5
+          - pl-5
+          - pb-5
+          - pr-5
     type: DividerSection
   - type: GenericSection
     title:
-      text: About Our Services
+      text: Service Areas
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: All of Puerto Rico
+    text: >
+      We proudly serve events and venues throughout Puerto Rico. From San Juan to Ponce, Mayagüez to Fajardo-- Wherever your event is, we're there.
+
+
+      **Island-Wide Coverage**
+
+      • Metro San Juan area
+
+      • North, South, East & West regions
+
+      • Mountain towns (Utuado, Jayuya, etc.)
+
+      • For Coastal Venues and Beach/Remote locations (fees may apply)
+    badge:
+      label: Island-Wide Service
+      color: text-primary
+      styles:
+        self:
+          textAlign: center
+      type: Badge
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        alignItems: center
+        padding:
+          - pt-12
+          - pl-12
+          - pb-12
+          - pr-12
+  - title: Divider
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-5
+          - pl-5
+          - pb-5
+          - pr-5
+    type: DividerSection
+  - type: GenericSection
+    title:
+      text: Frequently Asked Questions
       color: text-dark
       type: TitleBlock
-    subtitle: Professional audio equipment rentals
+    subtitle: Everything you need to know about our audio services
     text: |
-      **How do I request equipment?**
+      **How do I request equipment for my event?**
       
-      Use the contact form above or reach out directly to discuss your event needs.
+      Use the contact form above to provide details about your event, or reach out directly via phone (321 300 5425) or email (contacto@sonidovivo.org). We'll discuss your specific audio needs and provide a customized quote based on your event requirements.
       
       
-      **What areas do you serve?**
+      **What areas of Puerto Rico do you serve?**
       
-      We serve events and venues across Puerto Rico.
+      We serve events and venues across Puerto Rico including San Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo, Toa Baja, Trujillo Alto, and surrounding municipalities throughout the island. No matter where your event is located, we can deliver professional audio solutions to your venue.
       
       
       **What services do you offer?**
       
-      We provide equipment rentals, sound engineering services, delivery and setup, and technical support.
+      We provide comprehensive audio solutions including professional equipment rentals, sound engineering services, delivery and setup, technical support during events, and system optimization. Audio is our primary service, with video solutions available as an optional extension for select projects.
       
       
-      **What equipment is available?**
+      **What equipment brands do you carry?**
       
-      We offer PA systems, mixing consoles, microphones, wireless systems, and related audio equipment.
+      We offer premium brands including QSC, Midas, Sennheiser, Shure, sE Electronics, and Beyerdynamic for clients seeking top-tier audio quality. We also provide budget-friendly options from Mackie and Behringer, ensuring quality sound solutions for events of all budget levels.
+      
+      
+      **What types of equipment are available?**
+      
+      Our inventory includes PA systems, line array speakers, powered and passive speakers, mixing consoles (digital and analog), microphones (dynamic, condenser, wireless), wireless systems, cables, and all necessary audio accessories.
+      
+      
+      **Do you provide sound engineers for events?**
+      
+      Yes, we offer professional sound engineering services. Our experienced technicians can handle audio setup, live mixing, system optimization, and troubleshooting to ensure optimal sound quality throughout your event.
+      
+      
+      **How far in advance should I book equipment?**
+      
+      We recommend booking as early as possible, especially for weekend events and peak seasons. Contact us with your event date, and we'll confirm availability and reserve the equipment you need.
+      
+      
+      **Do you offer delivery, setup, and pickup services?**
+      
+      Yes, we provide complete logistics support including equipment delivery to your venue, professional setup and testing, and post-event pickup. Our team ensures everything is properly installed and functioning before your event begins.
+      
+      
+      **What types of events do you serve?**
+      
+      We serve all types of events including concerts, weddings, corporate events, conferences, festivals, church services, school events, private parties, and venue installations throughout Puerto Rico.
     colors: bg-light-fg-dark
     styles:
       self:
         padding:
-          - pt-16
-          - pl-16
-          - pb-16
-          - pr-16
+          - pt-12
+          - pl-12
+          - pb-12
+          - pr-12
 seo:
   metaTitle: Contact Us - Sonido Vivo Professional Audio Rentals
   metaDescription: Contact Sonido Vivo for professional audio equipment rentals in Puerto Rico. Equipment, sound engineering, and technical support services.

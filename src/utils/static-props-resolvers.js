@@ -13,6 +13,19 @@ export function resolveStaticProps(urlPath, data) {
     // get root path of paged path: /blog/page/2 => /blog
     const rootUrlPath = getRootPagePath(urlPath);
     const { __metadata, ...rest } = data.pages.find((page) => page.__metadata.urlPath === rootUrlPath);
+    
+    // Determine if this is a Spanish page
+    const isSpanishPage = urlPath.startsWith('/es') || urlPath === '/es';
+    
+    // Clone the site config and update header/footer for Spanish pages
+    const site = { ...data.props.site };
+    if (isSpanishPage) {
+        const headerEs = data.objects.find(obj => obj.__metadata.id === 'content/data/header-es.json');
+        const footerEs = data.objects.find(obj => obj.__metadata.id === 'content/data/footer-es.json');
+        if (headerEs) site.header = headerEs;
+        if (footerEs) site.footer = footerEs;
+    }
+    
     const props = {
         page: {
             __metadata: {
@@ -22,7 +35,7 @@ export function resolveStaticProps(urlPath, data) {
             },
             ...rest
         },
-        ...data.props
+        site
     };
     return mapDeepAsync(
         props,

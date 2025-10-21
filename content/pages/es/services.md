@@ -1,18 +1,18 @@
 ---
-title: Services
-slug: services
+title: Servicios
+slug: es/services
 sections:
   - type: GenericSection
     title:
-      text: Professional Audio Services
+      text: Servicios Profesionales de Audio
       color: text-dark
       type: TitleBlock
-    subtitle: Audio Equipment Rentals in Puerto Rico
+    subtitle: Alquiler de Equipos de Sonido en Puerto Rico
     text: >
-      Sonido Vivo provides professional audio equipment rentals and services 
-      for events and venues in Puerto Rico.
+      Sonido Vivo provee alquiler de equipos de audio profesional y servicios 
+      para eventos y locales en Puerto Rico.
     badge:
-      label: Professional Services
+      label: Servicios Profesionales
       color: text-primary
       type: Badge
     elementId: ''
@@ -28,26 +28,26 @@ sections:
         justifyContent: center
   - type: FeaturedItemsSection
     title:
-      text: Our Services
+      text: Nuestros Servicios
       color: text-dark
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: What we offer
+    subtitle: Lo que ofrecemos
     items:
       - type: FeaturedItem
-        title: Equipment Rentals
-        tagline: Professional Sound Systems
+        title: Alquiler de Equipos
+        tagline: Sistemas de Sonido Profesional
         text: |
-          Professional sound equipment available for rent.
+          Equipos de audio profesional disponibles para alquiler.
           
-          **Available Equipment:**
-          • PA systems (Premium: QSC, sE Electronics | Budget-friendly: Mackie, Behringer)
-          • Mixing consoles (Premium: Midas | Budget-friendly: Behringer)
-          • Microphones (Premium: Sennheiser, Shure, Beyerdynamic)
-          • Wireless systems
-          • Cables and accessories
+          **Equipos Disponibles:**
+          • Sistemas de PA (Premium: QSC, sE Electronics | Económico: Mackie, Behringer)
+          • Consolas de mezcla (Premium: Midas | Económico: Behringer)
+          • Micrófonos (Premium: Sennheiser, Shure, Beyerdynamic)
+          • Sistemas inalámbricos
+          • Cables y accesorios
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
@@ -59,16 +59,16 @@ sections:
             borderRadius: x-large
             flexDirection: col
       - type: FeaturedItem
-        title: Sound Engineering Services
-        tagline: Technical Expertise
+        title: Servicios de Ingeniería de Sonido
+        tagline: Experiencia Técnica
         text: |
-          Professional sound engineering for events.
+          Ingeniería de sonido profesional para eventos.
           
-          **Services Include:**
-          • Audio setup
-          • Sound mixing
-          • System optimization
-          • Technical consultation
+          **Los Servicios Incluyen:**
+          • Configuración de audio
+          • Mezcla de sonido
+          • Optimización de sistemas
+          • Consultoría técnica
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
@@ -80,16 +80,16 @@ sections:
             borderRadius: x-large
             flexDirection: col
       - type: FeaturedItem
-        title: Delivery & Setup
-        tagline: Logistics Support
+        title: Entrega e Instalación
+        tagline: Soporte Logístico
         text: |
-          Equipment delivery and setup services.
+          Servicios de entrega e instalación de equipos.
           
-          **We Handle:**
-          • Equipment delivery
-          • System setup
-          • Technical testing
-          • Post-event pickup
+          **Manejamos:**
+          • Entrega de equipos
+          • Instalación de sistemas
+          • Pruebas técnicas
+          • Recogida después del evento
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
@@ -101,16 +101,16 @@ sections:
             borderRadius: x-large
             flexDirection: col
       - type: FeaturedItem
-        title: Technical Support
-        tagline: Expert Assistance
+        title: Soporte Técnico
+        tagline: Asistencia Especializada
         text: |
-          Technical support for your events.
+          Soporte técnico para sus eventos.
           
-          **Support Services:**
-          • On-site assistance
-          • Troubleshooting
-          • Equipment operation guidance
-          • Emergency support
+          **Servicios de Soporte:**
+          • Asistencia en sitio
+          • Solución de problemas
+          • Orientación sobre operación de equipos
+          • Soporte de emergencia
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
@@ -145,22 +145,22 @@ sections:
     type: DividerSection
   - type: GenericSection
     title:
-      text: Serving Events and Venues
+      text: Sirviendo Eventos y Locales
       color: text-dark
       type: TitleBlock
-    subtitle: Professional audio for Puerto Rico
+    subtitle: Audio profesional para Puerto Rico
     text: >
-      Professional audio equipment and services for events and venues throughout Puerto Rico. We serve San Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo, and surrounding areas. Audio is our primary service, with video solutions available as an optional extension for select projects. 
-      Contact us to discuss specific needs.
+      Proveemos equipos y servicios de audio profesional para eventos y locales en todo Puerto Rico. Servimos San Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo y áreas circundantes. El audio es nuestro servicio principal, con soluciones de video disponibles como extensión opcional para proyectos selectos. 
+      Contáctenos para discutir sus necesidades específicas.
     actions:
-      - label: Contact Us
-        url: /contact
+      - label: Contáctanos
+        url: /es/contact
         icon: arrowRight
         iconPosition: right
         style: primary
         type: Button
-      - label: View Equipment
-        url: /equipment-rentals
+      - label: Ver Equipos
+        url: /es/equipment-rentals
         showIcon: true
         icon: arrowRight
         iconPosition: right
@@ -191,28 +191,28 @@ sections:
     type: DividerSection
   - type: GenericSection
     title:
-      text: Service Areas
+      text: Áreas de Servicio
       color: text-dark
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: All of Puerto Rico
+    subtitle: Todo Puerto Rico
     text: >
-      We proudly serve events and venues throughout Puerto Rico. From San Juan to Ponce, Mayagüez to Fajardo-- Wherever your event is, we're there.
+      Servimos con orgullo eventos y locaciones en todo Puerto Rico. Desde San Juan hasta Ponce, Mayagüez hasta Fajardo—donde sea que esté tu evento, ahí estaremos.
 
 
-      **Island-Wide Coverage**
+      **Cobertura en Toda la Isla**
 
-      • Metro San Juan area
+      • Área metro de San Juan
 
-      • North, South, East & West regions
+      • Regiones norte, sur, este y oeste
 
-      • Mountain towns (Utuado, Jayuya, etc.)
+      • Municipios montaña (Utuado, Jayuya, etc.)
 
-      • For Coastal Venues and Beach/Remote locations (fees may apply)
+      • Para locaciones costeras, playas y remotas (pueden aplicar cargos)
     badge:
-      label: Island-Wide Service
+      label: Servicio en Toda la Isla
       color: text-primary
       styles:
         self:
@@ -228,8 +228,8 @@ sections:
           - pb-12
           - pr-12
 seo:
-  metaTitle: Services - Sonido Vivo Professional Audio Rentals
-  metaDescription: Professional audio services in Puerto Rico - equipment rentals, sound engineering, delivery, setup, and technical support for events and venues.
+  metaTitle: Servicios - Sonido Vivo Alquiler de Audio Profesional
+  metaDescription: Servicios de audio profesional en Puerto Rico - alquiler de equipos, ingeniería de sonido, entrega, instalación y soporte técnico para eventos y locales.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout

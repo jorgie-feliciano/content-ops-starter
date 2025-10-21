@@ -1,28 +1,28 @@
 ---
-title: Home
-slug: /
+title: Inicio
+slug: /es
 sections:
   - type: GenericSection
     title:
-      text: Professional Audio Equipment Rentals
+      text: Alquiler Profesional de Equipos de Audio
       color: text-dark
       type: TitleBlock
-    subtitle: Elevate Your Event with Crystal Clear Sound
+    subtitle: Eleve Su Evento con Sonido Cristalino
     text: >
-      Transform your events with professional audio excellence. From intimate gatherings to large-scale productions, Sonido Vivo delivers premium sound systems, expert engineering, and comprehensive technical support throughout Puerto Rico. Experience the difference that professional audio makes.
+      Transforme sus eventos con excelencia en audio profesional. Desde reuniones íntimas hasta producciones de gran escala, Sonido Vivo ofrece sistemas de sonido premium, ingeniería experta y soporte técnico integral en todo Puerto Rico. Experimente la diferencia que hace el audio profesional.
     actions:
-      - label: View Equipment
-        altText: Browse our equipment catalog
-        url: /equipment-rentals
+      - label: Ver Equipos
+        altText: Ver catálogo de equipos
+        url: /es/equipment-rentals
         showIcon: false
         icon: arrowRight
         iconPosition: right
         style: secondary
         elementId: ''
         type: Button
-      - label: Contact Us
-        altText: Get in touch
-        url: /contact
+      - label: Contáctanos
+        altText: Comunícate con nosotros
+        url: /es/contact
         showIcon: true
         icon: arrowRight
         iconPosition: right
@@ -30,7 +30,7 @@ sections:
         elementId: ''
         type: Link
     badge:
-      label: Professional Service
+      label: Servicio Profesional
       color: text-primary
       type: Badge
     elementId: ''
@@ -46,21 +46,21 @@ sections:
           - pr-12
   - type: FeaturedItemsSection
     title:
-      text: Complete Audio Solutions for Every Event
+      text: Soluciones Completas de Audio para Cada Evento
       color: text-dark
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Professional Equipment and Services
+    subtitle: Equipos y Servicios Profesionales
     items:
       - type: FeaturedItem
-        title: Equipment Rentals
-        subtitle: Professional Sound Systems
+        title: Alquiler de Equipos
+        subtitle: Sistemas de Sonido Profesional
         text: >-
-          Professional audio equipment available for rent. PA systems, 
-          microphones, and audio gear for events and venues. Premium brands include QSC, Midas, 
-          Sennheiser, Shure, sE Electronics, and Beyerdynamic. Budget-friendly options available with Mackie and Behringer.
+          Equipos de audio profesional disponibles para alquiler. Sistemas de PA, 
+          micrófonos y equipos de calidad para eventos y locales en Puerto Rico. 
+          Marcas premium incluyendo QSC, Midas, Sennheiser, Shure, sE Electronics y Beyerdynamic. Opciones económicas disponibles con Mackie y Behringer.
         actions: []
         elementId: null
         colors: bg-neutralAlt-fg-dark
@@ -75,11 +75,11 @@ sections:
             flexDirection: row
             justifyContent: center
             textAlign: left
-      - title: Sound Engineering
-        subtitle: Technical Expertise
+      - title: Ingeniería de Sonido
+        subtitle: Experiencia Técnica
         text: >-
-          Professional sound engineering services for events. 
-          Experienced technicians ensure optimal audio quality.
+          Servicios profesionales de ingeniería de sonido para sus eventos. 
+          Técnicos especializados garantizan calidad de audio óptima.
         actions: []
         colors: bg-neutralAlt-fg-dark
         styles:
@@ -94,11 +94,11 @@ sections:
             textAlign: left
             justifyContent: center
         type: FeaturedItem
-      - title: Delivery & Setup
-        subtitle: Complete Support
+      - title: Entrega e Instalación
+        subtitle: Soporte Completo
         text: >-
-          Equipment delivery, setup, and technical support services. 
-          Logistics handled so you can focus on your event.
+          Servicios de entrega, instalación y soporte técnico de equipos. 
+          Manejamos la logística para que usted se enfoque en su evento.
         actions: []
         colors: bg-neutralAlt-fg-dark
         styles:
@@ -112,9 +112,9 @@ sections:
             flexDirection: row
         type: FeaturedItem
     actions:
-      - label: View Equipment
-        altText: Browse equipment catalog
-        url: /equipment-rentals
+      - label: Ver Equipos
+        altText: Explorar catálogo de equipos
+        url: /es/equipment-rentals
         showIcon: false
         icon: arrowRight
         iconPosition: right
@@ -122,7 +122,7 @@ sections:
         elementId: ''
         type: Button
     badge:
-      label: Serving Puerto Rico
+      label: Sirviendo a Puerto Rico
       color: text-primary
       styles:
         self:
@@ -153,28 +153,28 @@ sections:
     type: DividerSection
   - type: GenericSection
     title:
-      text: Service Areas
+      text: Áreas de Servicio
       color: text-dark
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: All of Puerto Rico
+    subtitle: Todo Puerto Rico
     text: >
-      We proudly serve events and venues throughout Puerto Rico. From San Juan to Ponce, Mayagüez to Fajardo-- Wherever your event is, we're there.
+      Servimos con orgullo eventos y locaciones en todo Puerto Rico. Desde San Juan hasta Ponce, Mayagüez hasta Fajardo—donde sea que esté tu evento, ahí estaremos.
 
 
-      **Island-Wide Coverage**
+      **Cobertura en Toda la Isla**
 
-      • Metro San Juan area
+      • Área metro de San Juan
 
-      • North, South, East & West regions
+      • Regiones norte, sur, este y oeste
 
-      • Mountain towns (Utuado, Jayuya, etc.)
+      • Municipios montaña (Utuado, Jayuya, etc.)
 
-      • For Coastal Venues and Beach/Remote locations (fees may apply)
+      • Para locaciones costeras, playas y remotas (pueden aplicar cargos)
     badge:
-      label: Island-Wide Service
+      label: Servicio en Toda la Isla
       color: text-primary
       styles:
         self:
@@ -201,28 +201,28 @@ sections:
     type: DividerSection
   - type: GenericSection
     title:
-      text: Ready to Elevate Your Event?
+      text: ¿Listo para Elevar Su Evento?
       color: text-dark
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Get Professional Audio Solutions Today
+    subtitle: Obtenga Soluciones de Audio Profesional Hoy
     text: >
-      Whether you're planning an intimate gathering or a large-scale production, Sonido Vivo provides the professional audio equipment and technical expertise to make your event exceptional. Contact us today to discuss your audio needs and discover how our premium sound systems and experienced team can transform your event.
+      Ya sea que esté planificando una reunión íntima o una producción de gran escala, Sonido Vivo provee los equipos de audio profesional y la experiencia técnica para hacer su evento excepcional. Contáctenos hoy para discutir sus necesidades de audio y descubra cómo nuestros sistemas de sonido premium y equipo experimentado pueden transformar su evento.
     actions:
-      - label: Get a Quote
-        altText: Request a quote for your event
-        url: /contact
+      - label: Solicitar Cotización
+        altText: Solicitar cotización para su evento
+        url: /es/contact
         showIcon: true
         icon: arrowRight
         iconPosition: right
         style: primary
         elementId: ''
         type: Button
-      - label: View Equipment
-        altText: Browse our equipment catalog
-        url: /equipment-rentals
+      - label: Ver Equipos
+        altText: Ver catálogo de equipos
+        url: /es/equipment-rentals
         showIcon: false
         icon: arrowRight
         iconPosition: right
@@ -230,7 +230,7 @@ sections:
         elementId: ''
         type: Link
     badge:
-      label: Professional Audio Excellence
+      label: Excelencia en Audio Profesional
       color: text-primary
       styles:
         self:
@@ -256,8 +256,8 @@ sections:
           - pr-5
     type: DividerSection
 seo:
-  metaTitle: Sonido Vivo - Professional Audio Equipment Rentals
-  metaDescription: Professional audio equipment rentals serving Puerto Rico. Sound systems, engineering services, delivery and technical support for events and venues.
+  metaTitle: Sonido Vivo - Alquiler Profesional de Equipos de Audio
+  metaDescription: Alquiler de equipos de audio profesional en Puerto Rico. Sistemas de sonido, servicios de ingeniería, entrega y soporte técnico para eventos y locales.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
