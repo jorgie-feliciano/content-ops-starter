@@ -1,187 +1,125 @@
 ---
 title: Equipment Rentals
-slug: equipment-rentals
 sections:
   - type: GenericSection
     title:
-      text: Professional Audio Equipment Catalog
+      text: Professional Equipment Rentals
       color: text-dark
-      styles:
-        self:
-          textAlign: center
       type: TitleBlock
-    subtitle: Sound Systems for Events and Venues
+    subtitle: High-Quality Audio Equipment for Every Event
     text: >
-      Professional audio equipment available for rent in Puerto Rico. 
-      All equipment is maintained and backed by technical support.
-    badge:
-      label: Equipment Catalog
-      color: text-primary
-      styles:
-        self:
-          textAlign: center
-      type: Badge
-    elementId: ''
+      At Sonido Vivo, we offer comprehensive equipment rental services for
+      events of all sizes. Our inventory includes professional-grade audio
+      equipment that ensures your event sounds perfect.
+    actions:
+      - label: Request Quote
+        url: /contact
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        type: Link
     colors: bg-light-fg-dark
     styles:
       self:
+        alignItems: center
         padding:
-          - pt-12
-          - pl-12
-          - pb-6
-          - pr-12
-        justifyContent: center
+          - pt-16
+          - pl-16
+          - pb-16
+          - pr-16
   - type: FeaturedItemsSection
     title:
-      text: Sound Systems & PA Equipment
+      text: Available Equipment
       color: text-dark
       type: TitleBlock
     items:
       - type: FeaturedItem
-        title: PA Systems
-        subtitle: Professional Sound
-        text: |
-          Professional PA systems for events and venues. Premium brands: QSC, sE Electronics. Budget-friendly options: Mackie, Behringer.
-          
-          • Multiple configurations available
-          • Technical support included
-          • Delivery and setup options
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-6
-              - pl-6
-              - pb-6
-              - pr-6
-            borderRadius: x-large
-            flexDirection: col
-    variant: three-col-grid
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-12
-          - pl-12
-          - pb-12
-          - pr-12
-        justifyContent: center
-  - title: Divider
-    colors: bg-neutral-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-5
-          - pl-5
-          - pb-5
-          - pr-5
-    type: DividerSection
-  - type: FeaturedItemsSection
-    title:
-      text: Mixing & Control Equipment
-      color: text-dark
-      type: TitleBlock
-    items:
-      - type: FeaturedItem
-        title: Mixing Consoles
-        subtitle: Audio Control
-        text: |
-          Professional mixing consoles for sound control. Premium brand: Midas. Budget-friendly option: Behringer.
-          
-          • Multiple channel options
-          • Digital and analog available
-          • Technical support included
+        title: Sound Systems & PA Equipment
+        tagline: Premium PA Solutions
+        subtitle: ''
+        text: >
+          Professional sound reinforcement systems perfect for concerts,
+          conferences, and large events. Premium brands: QSC
+        actions: []
         colors: bg-light-fg-dark
         styles:
           self:
             padding:
-              - pt-6
-              - pl-6
-              - pb-6
-              - pr-6
-            borderRadius: x-large
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: medium
             flexDirection: col
-    variant: three-col-grid
-    colors: bg-neutral-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-12
-          - pl-12
-          - pb-12
-          - pr-12
-        justifyContent: center
-  - title: Divider
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-5
-          - pl-5
-          - pb-5
-          - pr-5
-    type: DividerSection
-  - type: FeaturedItemsSection
-    title:
-      text: Microphones & Wireless Systems
-      color: text-dark
-      type: TitleBlock
-    items:
       - type: FeaturedItem
-        title: Microphones
-        subtitle: Professional Audio Capture
+        title: Digital Mixing Consoles
+        tagline: Advanced Control
+        subtitle: ''
         text: |
-          Professional microphones for events. Premium brands: Sennheiser, Shure, Beyerdynamic.
-          
-          • Wireless and wired options
-          • Multiple configurations
-          • Cables and accessories included
-        colors: bg-neutralAlt-fg-dark
+          State-of-the-art digital mixing solutions with comprehensive routing
+          and effects processing capabilities. Top brands: Midas, Behringer
+        actions: []
+        colors: bg-light-fg-dark
         styles:
           self:
             padding:
-              - pt-6
-              - pl-6
-              - pb-6
-              - pr-6
-            borderRadius: x-large
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: medium
             flexDirection: col
+      - type: FeaturedItem
+        title: Professional Microphones
+        tagline: Crystal Clear Audio
+        subtitle: ''
+        text: >
+          Wide selection of professional microphones for vocals,
+          instruments, and recording applications. Premium brands: Shure,
+          sE Electronics
+        actions: []
+        colors: bg-light-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: medium
+            flexDirection: col
+    actions:
+      - label: Contact Us for Pricing
+        url: /contact
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        type: Link
     variant: three-col-grid
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-12
-          - pl-12
-          - pb-12
-          - pr-12
-        justifyContent: center
-  - title: Divider
     colors: bg-neutral-fg-dark
     styles:
       self:
         padding:
-          - pt-5
-          - pl-5
-          - pb-5
-          - pr-5
-    type: DividerSection
+          - pt-16
+          - pl-8
+          - pb-16
+          - pr-8
+        justifyContent: center
+      subtitle:
+        textAlign: center
   - type: GenericSection
     title:
-      text: Need Help Choosing Equipment?
+      text: Why Choose Our Equipment?
       color: text-dark
       type: TitleBlock
-    subtitle: Contact us for more information
+    subtitle: Quality You Can Trust
     text: >
-      Contact us to discuss your equipment needs. 
-      We'll help you select the right audio setup for your event.
+      All our equipment is professionally maintained and regularly serviced to
+      ensure optimal performance. We provide technical support and can assist
+      with setup if needed.
     actions:
-      - label: Contact Us
-        url: /contact
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        type: Button
       - label: View Services
         url: /services
         showIcon: true
@@ -208,4 +146,3 @@ seo:
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
----
