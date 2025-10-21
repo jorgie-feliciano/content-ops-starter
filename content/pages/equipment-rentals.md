@@ -39,47 +39,17 @@ sections:
         tagline: Premium PA Solutions
         subtitle: ''
         text: >
-          Professional sound reinforcement systems perfect for concerts,
-          conferences, and large events. Premium brands: QSC
+          Professional PA systems for events and venues. **Premium brands: QSC**.
+          Budget-friendly options: Mackie, Behringer.
+
+
+          • Multiple configurations available
+
+          • Technical support included
+
+          • Delivery and setup options
         actions: []
-        colors: bg-light-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: medium
-            flexDirection: col
-      - type: FeaturedItem
-        title: Digital Mixing Consoles
-        tagline: Advanced Control
-        subtitle: ''
-        text: |
-          State-of-the-art digital mixing solutions with comprehensive routing
-          and effects processing capabilities. Top brands: Midas, Behringer
-        actions: []
-        colors: bg-light-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: medium
-            flexDirection: col
-      - type: FeaturedItem
-        title: Professional Microphones
-        tagline: Crystal Clear Audio
-        subtitle: ''
-        text: >
-          Wide selection of professional microphones for vocals,
-          instruments, and recording applications. Premium brands: Shure,
-          sE Electronics
-        actions: []
-        colors: bg-light-fg-dark
+        colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
@@ -103,6 +73,131 @@ sections:
       self:
         padding:
           - pt-16
+          - pl-8
+          - pb-8
+          - pr-8
+        justifyContent: center
+      subtitle:
+        textAlign: center
+  - type: DividerSection
+    title:
+      text: ''
+      color: text-dark
+      type: TitleBlock
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-3
+          - pl-3
+          - pb-3
+          - pr-3
+  - type: FeaturedItemsSection
+    title:
+      text: ''
+      color: text-dark
+      type: TitleBlock
+    items:
+      - type: FeaturedItem
+        title: Digital Mixing Consoles
+        tagline: Advanced Control
+        subtitle: ''
+        text: |
+          State-of-the-art digital mixing solutions with comprehensive routing
+          and effects processing capabilities. **Top brands: Midas, Behringer**.
+
+          • Advanced signal processing
+          • Multi-track recording capability
+          • Remote control options
+        actions: []
+        colors: bg-neutralAlt-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: medium
+            flexDirection: col
+    actions:
+      - label: Contact Us for Pricing
+        url: /contact
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        type: Link
+    variant: three-col-grid
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-8
+          - pl-8
+          - pb-8
+          - pr-8
+        justifyContent: center
+      subtitle:
+        textAlign: center
+  - type: DividerSection
+    title:
+      text: ''
+      color: text-dark
+      type: TitleBlock
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-3
+          - pl-3
+          - pb-3
+          - pr-3
+  - type: FeaturedItemsSection
+    title:
+      text: ''
+      color: text-dark
+      type: TitleBlock
+    items:
+      - type: FeaturedItem
+        title: Professional Microphones
+        tagline: Crystal Clear Audio
+        subtitle: ''
+        text: >
+          Professional microphones for events. **Premium brands: Sennheiser,
+          Shure, Beyerdynamic, sE Electronics**.
+
+
+          • Wireless and wired options
+
+          • Various pickup patterns
+
+          • Suitable for all applications
+        actions: []
+        colors: bg-neutralAlt-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: medium
+            flexDirection: col
+    actions:
+      - label: Contact Us for Pricing
+        url: /contact
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        type: Link
+    variant: three-col-grid
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-8
           - pl-8
           - pb-16
           - pr-8
@@ -142,7 +237,9 @@ sections:
           - pr-12
 seo:
   metaTitle: Equipment Rentals - Sonido Vivo Professional Audio
-  metaDescription: Professional audio equipment rentals in Puerto Rico including PA systems, mixing consoles, and microphones.
+  metaDescription: >-
+    Professional audio equipment rentals in Puerto Rico including PA systems,
+    mixing consoles, and microphones.
   socialImage: /images/main-hero.jpg
   type: Seo
-type: PageLayout
+type: PageLayoutb
