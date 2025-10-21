@@ -1,33 +1,33 @@
 {
     "logo": {
         "url": "/images/logo-white.svg",
-        "altText": "Logo light",
+        "altText": "Sonido Vivo",
         "type": "ImageBlock"
     },
-    "text": "A description of your brand",
+    "text": "Professional audio equipment rentals for events of all sizes. Quality sound, expert support.",
     "primaryLinks": {
-        "title": "Product",
+        "title": "Services",
         "links": [
             {
-                "label": "Features",
-                "altText": "Features page",
-                "url": "/",
+                "label": "Equipment Rentals",
+                "altText": "View our equipment catalog",
+                "url": "/equipment-rentals",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Pricing",
-                "url": "/pricing",
+                "label": "Audio Services",
+                "url": "/services",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Documentation",
-                "url": "/",
+                "label": "Get a Quote",
+                "url": "/contact",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
@@ -40,17 +40,17 @@
         "title": "Company",
         "links": [
             {
-                "label": "Careers",
-                "altText": "careers page",
-                "url": "/careers",
+                "label": "About Us",
+                "altText": "Learn about Sonido Vivo",
+                "url": "/",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Blog",
-                "url": "/blog",
+                "label": "Contact",
+                "url": "/contact",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
@@ -61,33 +61,33 @@
     },
     "socialLinks": [
         {
-            "altText": "GitHub link",
-            "url": "https://github.com/netlify",
-            "icon": "github",
+            "altText": "Facebook",
+            "url": "#",
+            "icon": "facebook",
             "type": "Social"
         },
         {
-            "altText": "Twitter link",
-            "url": "https://twitter.com/netlify",
-            "icon": "twitter",
+            "altText": "Instagram",
+            "url": "#",
+            "icon": "instagram",
             "type": "Social"
         },
         {
-            "altText": "LinkedIn link",
-            "url": "https://www.linkedin.com/company/netlify",
+            "altText": "LinkedIn",
+            "url": "#",
             "icon": "linkedin",
             "type": "Social"
         },
         {
-            "altText": "Email link",
-            "url": "/",
+            "altText": "Email",
+            "url": "mailto:info@sonidovivo.com",
             "icon": "mail",
             "type": "Social"
         }
     ],
     "legalLinks": [
         {
-            "label": "Terms",
+            "label": "Terms of Service",
             "url": "/",
             "icon": "arrowRight",
             "iconPosition": "right",
@@ -95,7 +95,7 @@
             "type": "Link"
         },
         {
-            "label": "Privacy",
+            "label": "Privacy Policy",
             "url": "/",
             "icon": "arrowRight",
             "iconPosition": "right",
@@ -103,7 +103,7 @@
             "type": "Link"
         }
     ],
-    "copyrightText": "Powered by [Netlify](https://www.netlify.com/)\n",
+    "copyrightText": "© 2024 Sonido Vivo. All rights reserved.\n",
     "colors": "bg-dark-fg-light",
     "type": "Footer"
 }
