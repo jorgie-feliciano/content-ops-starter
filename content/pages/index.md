@@ -7,12 +7,11 @@ sections:
       text: Professional Audio Equipment Rentals
       color: text-dark
       type: TitleBlock
-    subtitle: Sonido Vivo - Your Premier Audio Partner
+    subtitle: Sonido Vivo - Puerto Rico's Audio Equipment Rental Experts
     text: >
-      Transform your event with professional-grade audio equipment from Sonido Vivo. 
-      Whether you're planning a concert, corporate event, wedding, or festival, 
-      we provide high-quality sound systems and expert technical support to ensure 
-      your audience experiences crystal-clear audio.
+      Professional audio equipment rentals serving Puerto Rico's events and venues. 
+      Sonido Vivo provides high-quality sound systems with expert technical support 
+      for your events.
     actions:
       - label: View Equipment
         altText: Browse our equipment catalog
@@ -54,21 +53,20 @@ sections:
           - pr-16
   - type: FeaturedItemsSection
     title:
-      text: Why Choose Sonido Vivo?
+      text: Our Services
       color: text-dark
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Excellence in Audio Equipment Rentals
+    subtitle: Professional Audio Solutions for Puerto Rico
     items:
       - type: FeaturedItem
-        title: Professional Grade
-        subtitle: Quality Equipment
+        title: Equipment Rentals
+        subtitle: Professional Sound Systems
         text: >-
-          We provide top-tier audio equipment from leading manufacturers, ensuring 
-          pristine sound quality for your event. All equipment is regularly maintained 
-          and tested to meet professional standards.
+          Professional sound equipment available for rent. Quality PA systems, 
+          microphones, and audio gear for events and venues across Puerto Rico.
         actions: []
         elementId: null
         colors: bg-neutralAlt-fg-dark
@@ -85,21 +83,20 @@ sections:
             textAlign: left
         image:
           type: ImageBlock
-          altText: Professional audio quality
+          altText: Equipment rentals
           elementId: ''
           url: /images/icon1.svg
           styles:
             self:
               borderRadius: x-large
-      - title: Expert Support
-        subtitle: Technical Assistance
+      - title: Sound Engineering
+        subtitle: Technical Expertise
         text: >-
-          Our experienced technicians provide setup assistance and on-site support 
-          to ensure your event runs smoothly. We're available to help with any 
-          technical questions or challenges.
+          Professional sound engineering services for your events. 
+          Our experienced technicians ensure optimal audio quality.
         image:
           url: /images/icon2.svg
-          altText: Expert technical support
+          altText: Sound engineering
           elementId: ''
           type: ImageBlock
         actions: []
@@ -116,15 +113,14 @@ sections:
             textAlign: left
             justifyContent: center
         type: FeaturedItem
-      - title: Flexible Options
-        subtitle: Customized Solutions
+      - title: Delivery & Setup
+        subtitle: Complete Support
         text: >-
-          Whether you need a simple PA system or a complete festival setup, 
-          we offer flexible rental packages tailored to your specific event 
-          requirements and budget.
+          Equipment delivery, setup, and technical support services. 
+          We handle the logistics so you can focus on your event.
         image:
           url: /images/icon3.svg
-          altText: Flexible rental options
+          altText: Delivery and setup
           elementId: ''
           type: ImageBlock
         actions: []
@@ -141,7 +137,7 @@ sections:
         type: FeaturedItem
     actions:
       - label: View Equipment
-        altText: Browse our catalog
+        altText: Browse equipment catalog
         url: /equipment-rentals
         showIcon: false
         icon: arrowRight
@@ -150,7 +146,7 @@ sections:
         elementId: ''
         type: Button
     badge:
-      label: Trusted by Events Nationwide
+      label: Serving Puerto Rico
       color: text-primary
       styles:
         self:
@@ -181,7 +177,7 @@ sections:
     type: DividerSection
 seo:
   metaTitle: Sonido Vivo - Professional Audio Equipment Rentals
-  metaDescription: Professional audio equipment rentals for concerts, events, weddings, and corporate functions. High-quality sound systems with expert technical support.
+  metaDescription: Professional audio equipment rentals serving Puerto Rico. Sound systems, engineering services, delivery and technical support for events and venues.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout

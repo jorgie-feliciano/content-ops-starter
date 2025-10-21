@@ -7,10 +7,10 @@ sections:
       text: Get in Touch
       color: text-dark
       type: TitleBlock
-    subtitle: Let's discuss your audio needs
+    subtitle: Contact Sonido Vivo in Puerto Rico
     text: >
-      Ready to rent equipment or need expert advice for your event? Fill out the form below 
-      and our team will respond within 24 hours. We're here to help make your event sound amazing.
+      Have questions about equipment rentals or need audio services for your event? 
+      Contact us and we'll respond as soon as possible.
     badge:
       label: Contact Sonido Vivo
       color: text-primary
@@ -33,8 +33,8 @@ sections:
       type: TitleBlock
     subtitle: Tell us about your event
     text: >
-      Please provide as much detail as possible about your event. This helps us 
-      recommend the perfect equipment package and provide an accurate quote.
+      Please provide information about your event so we can assist you with 
+      the right equipment and services.
     media:
       fields:
         - name: name
@@ -161,16 +161,10 @@ sections:
         title: Phone
         subtitle: Call us directly
         text: >-
-          Prefer to talk? Give us a call during business hours. We're happy to 
-          discuss your needs and answer any questions.
+          Contact us by phone to discuss your audio needs.
           
           
-          **(555) 123-4567**
-          
-          
-          Monday - Friday: 9am - 6pm
-          
-          Saturday: 10am - 4pm
+          **Contact for details**
         image:
           url: /images/icon1.svg
           altText: Phone contact
@@ -190,14 +184,10 @@ sections:
         title: Email
         subtitle: Send us a message
         text: >-
-          For detailed inquiries or to send documents, reach us via email. 
-          We respond to all messages within 24 hours.
+          Send us an email with your event details.
           
           
-          **info@sonidovivo.com**
-          
-          
-          Include your event details for faster service
+          **Contact for details**
         image:
           url: /images/icon2.svg
           altText: Email contact
@@ -214,17 +204,16 @@ sections:
             flexDirection: col
             textAlign: center
       - type: FeaturedItem
-        title: Visit Us
-        subtitle: See our equipment
+        title: Location
+        subtitle: Puerto Rico
         text: >-
-          Want to see our equipment in person? Schedule a visit to our facility. 
-          We'd love to show you our inventory and discuss your needs face-to-face.
+          Sonido Vivo serves events and venues across Puerto Rico.
           
           
-          **By Appointment Only**
+          **Puerto Rico**
           
           
-          Contact us to schedule a visit
+          Contact us for service area details
         image:
           url: /images/icon3.svg
           altText: Visit us
@@ -264,34 +253,29 @@ sections:
     type: DividerSection
   - type: GenericSection
     title:
-      text: Frequently Asked Questions
+      text: About Our Services
       color: text-dark
       type: TitleBlock
-    subtitle: Quick answers to common questions
+    subtitle: Professional audio equipment rentals
     text: |
-      **How far in advance should I book equipment?**
+      **How do I request equipment?**
       
-      We recommend booking at least 2-4 weeks in advance for most events. For large events or peak seasons (spring/summer), book 6-8 weeks ahead.
-      
-      
-      **Do you deliver and set up equipment?**
-      
-      Yes! We offer delivery, setup, and pickup services. Technical support and sound engineering are also available.
+      Use the contact form above or reach out directly to discuss your event needs.
       
       
-      **What if something goes wrong during my event?**
+      **What areas do you serve?**
       
-      All equipment is tested before delivery. We provide on-call technical support and can dispatch a technician if needed.
-      
-      
-      **Do you offer packages or custom quotes?**
-      
-      Both! We have standard packages for common event types and create custom quotes for unique requirements.
+      We serve events and venues across Puerto Rico.
       
       
-      **What is your cancellation policy?**
+      **What services do you offer?**
       
-      Cancellations made 14+ days before your event receive a full refund. Contact us to discuss our complete policy.
+      We provide equipment rentals, sound engineering services, delivery and setup, and technical support.
+      
+      
+      **What equipment is available?**
+      
+      We offer PA systems, mixing consoles, microphones, wireless systems, and related audio equipment.
     colors: bg-light-fg-dark
     styles:
       self:
@@ -302,7 +286,7 @@ sections:
           - pr-16
 seo:
   metaTitle: Contact Us - Sonido Vivo Professional Audio Rentals
-  metaDescription: Get in touch with Sonido Vivo for professional audio equipment rentals. Request a quote, ask questions, or schedule a consultation for your event.
+  metaDescription: Contact Sonido Vivo for professional audio equipment rentals in Puerto Rico. Equipment, sound engineering, and technical support services.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
