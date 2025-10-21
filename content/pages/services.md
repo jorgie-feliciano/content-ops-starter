@@ -7,10 +7,11 @@ sections:
       text: Professional Audio Services
       color: text-dark
       type: TitleBlock
-    subtitle: Sound Equipment Rentals in Puerto Rico
+    subtitle: Complete Audio Solutions for Puerto Rico
     text: >
-      Sonido Vivo provides professional audio equipment rentals and services 
-      for events and venues across Puerto Rico.
+      Sonido Vivo provides professional audio solutions featuring top brands such as QSC, 
+      Midas, Sennheiser, and Shure. Our services include equipment rentals, live session 
+      production, multi-camera video, recording, live projection, streaming, and expert consulting.
     badge:
       label: Professional Services
       color: text-primary
@@ -38,14 +39,14 @@ sections:
     items:
       - type: FeaturedItem
         title: Equipment Rentals
-        tagline: Professional Sound Systems
+        tagline: 'Top Brands: QSC, Midas, Sennheiser, Shure'
         text: |
-          Professional sound equipment available for rent.
+          Professional audio equipment from industry-leading brands.
           
           **Available Equipment:**
-          • PA systems
-          • Mixing consoles
-          • Microphones
+          • PA systems (QSC)
+          • Mixing consoles (Midas)
+          • Microphones (Sennheiser, Shure)
           • Wireless systems
           • Cables and accessories
         image:
@@ -66,16 +67,17 @@ sections:
             borderRadius: x-large
             flexDirection: col
       - type: FeaturedItem
-        title: Sound Engineering Services
-        tagline: Technical Expertise
+        title: Live Production Services
+        tagline: Complete Session Support
         text: |
-          Professional sound engineering for events.
+          Professional live session production with complete technical capabilities.
           
           **Services Include:**
-          • Audio setup
-          • Sound mixing
-          • System optimization
-          • Technical consultation
+          • Multi-camera video production
+          • Live recording for concerts and events
+          • Live projection
+          • Streaming capabilities
+          • Audio engineering
         image:
           url: /images/abstract-feature2.svg
           altText: Sound engineering
@@ -94,16 +96,16 @@ sections:
             borderRadius: x-large
             flexDirection: col
       - type: FeaturedItem
-        title: Delivery & Setup
-        tagline: Logistics Support
+        title: Expert Consulting
+        tagline: Professional Guidance
         text: |
-          Equipment delivery and setup services.
+          Expert consulting to ensure your audio and technical needs are met with confidence and clarity—never hype.
           
-          **We Handle:**
-          • Equipment delivery
-          • System setup
-          • Technical testing
-          • Post-event pickup
+          **We Provide:**
+          • Audio system design
+          • Technical planning
+          • Production consultation
+          • Equipment selection guidance
         image:
           url: /images/abstract-feature3.svg
           altText: Delivery and setup
@@ -122,16 +124,16 @@ sections:
             borderRadius: x-large
             flexDirection: col
       - type: FeaturedItem
-        title: Technical Support
-        tagline: Expert Assistance
+        title: Recording & Streaming
+        tagline: Capture Your Event
         text: |
-          Technical support for your events.
+          Professional recording and streaming services for concerts and events.
           
-          **Support Services:**
-          • On-site assistance
-          • Troubleshooting
-          • Equipment operation guidance
-          • Emergency support
+          **Capabilities:**
+          • Multi-track recording
+          • Live streaming
+          • Video capture
+          • Post-production support
         image:
           url: /images/icon1.svg
           altText: Technical support
@@ -178,8 +180,8 @@ sections:
       type: TitleBlock
     subtitle: Professional audio for Puerto Rico
     text: >
-      We provide audio equipment and services for events and venues across Puerto Rico. 
-      Contact us to discuss your specific needs.
+      We provide professional audio solutions and live production services for events 
+      and venues across Puerto Rico. Reach out to discuss how we can support your unique audio vision.
     actions:
       - label: Contact Us
         url: /contact
@@ -208,8 +210,8 @@ sections:
           - pb-16
           - pr-16
 seo:
-  metaTitle: Services - Sonido Vivo Professional Audio Rentals
-  metaDescription: Professional audio services in Puerto Rico - equipment rentals, sound engineering, delivery, setup, and technical support for events and venues.
+  metaTitle: Services - Sonido Vivo Professional Audio & Live Production
+  metaDescription: Professional audio services in Puerto Rico featuring QSC, Midas, Sennheiser, and Shure. Equipment rentals, live production, multi-camera video, recording, streaming, and expert consulting.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
