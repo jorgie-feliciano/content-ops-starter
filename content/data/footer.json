@@ -1,10 +1,10 @@
 {
     "logo": {
-        "url": "/images/logo-white.svg",
+        "url": "/images/logo-distorted-wave.jpg",
         "altText": "Sonido Vivo",
         "type": "ImageBlock"
     },
-    "text": "Professional audio equipment rentals for events of all sizes. Quality sound, expert support.",
+    "text": "Professional audio equipment rentals for events of all sizes. Quality sound, expert support.\n\nPhone: 321 300 5425 | Email: contacto@sonidovivo.org",
     "primaryLinks": {
         "title": "Services",
         "links": [
@@ -80,7 +80,7 @@
         },
         {
             "altText": "Email",
-            "url": "mailto:info@sonidovivo.com",
+            "url": "mailto:contacto@sonidovivo.org",
             "icon": "mail",
             "type": "Social"
         }
@@ -103,7 +103,7 @@
             "type": "Link"
         }
     ],
-    "copyrightText": "© 2024 Sonido Vivo. All rights reserved.\n",
+    "copyrightText": "© 2025 Sonido Vivo. All rights reserved.",
     "colors": "bg-dark-fg-light",
     "type": "Footer"
 }
