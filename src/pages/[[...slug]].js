@@ -8,6 +8,11 @@ import { seoGenerateTitle, seoGenerateMetaTags, seoGenerateMetaDescription } fro
 
 function Page(props) {
     const { page, site } = props;
+    
+    if (!page || !page.__metadata) {
+        throw new Error(`Invalid page data for path '${props.path}'`);
+    }
+    
     const { modelName } = page.__metadata;
     if (!modelName) {
         throw new Error(`page has no type, page '${props.path}'`);
@@ -24,15 +29,14 @@ function Page(props) {
             <Head>
                 <title>{title}</title>
                 {metaDescription && <meta name="description" content={metaDescription} />}
-                {metaTags.map((metaTag) => {
+                {metaTags && metaTags.length > 0 && metaTags.map((metaTag) => {
                     if (metaTag.format === 'property') {
-                        // OpenGraph meta tags (og:*) should be have the format <meta property="og:…" content="…">
                         return <meta key={metaTag.property} property={metaTag.property} content={metaTag.content} />;
                     }
                     return <meta key={metaTag.property} name={metaTag.property} content={metaTag.content} />;
                 })}
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                {site.favicon && <link rel="icon" href={site.favicon} />}
+                {site?.favicon && <link rel="icon" href={site.favicon} />}
             </Head>
             <PageLayout page={page} site={site} />
         </>

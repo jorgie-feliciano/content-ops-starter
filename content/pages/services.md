@@ -43,10 +43,10 @@ sections:
           Professional sound equipment available for rent.
           
           **Available Equipment:**
-          • PA systems (Premium: QSC, sE Electronics | Budget-friendly: Mackie, Behringer)
+          • PA systems (Premium: QSC | Budget-friendly: Mackie [some products like speakers are professional-grade], Behringer)
           • Mixing consoles (Premium: Midas | Budget-friendly: Behringer)
-          • Microphones (Premium: Sennheiser, Shure, Beyerdynamic)
-          • Wireless systems
+          • Microphones (Premium: Sennheiser, Shure, Beyerdynamic, sE Electronics)
+          • Wireless and wired systems available
           • Cables and accessories
         colors: bg-neutralAlt-fg-dark
         styles:
@@ -65,9 +65,12 @@ sections:
           Professional sound engineering for events.
           
           **Services Include:**
-          • Audio setup
-          • Sound mixing
-          • System optimization
+          • Live sound engineering
+          • System setup and optimization
+          • Live recording sessions
+          • Studio recording services
+          • Podcast recording
+          • Live streaming audio support
           • Technical consultation
         colors: bg-neutralAlt-fg-dark
         styles:

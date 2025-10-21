@@ -43,10 +43,10 @@ sections:
           Equipos de audio profesional disponibles para alquiler.
           
           **Equipos Disponibles:**
-          • Sistemas de PA (Premium: QSC, sE Electronics | Económico: Mackie, Behringer)
+          • Sistemas de PA (Premium: QSC | Económico: Mackie [algunos productos como bocinas son de grado profesional], Behringer)
           • Consolas de mezcla (Premium: Midas | Económico: Behringer)
-          • Micrófonos (Premium: Sennheiser, Shure, Beyerdynamic)
-          • Sistemas inalámbricos
+          • Micrófonos (Premium: Sennheiser, Shure, Beyerdynamic, sE Electronics)
+          • Sistemas inalámbricos y con cable disponibles
           • Cables y accesorios
         colors: bg-neutralAlt-fg-dark
         styles:
@@ -65,9 +65,12 @@ sections:
           Ingeniería de sonido profesional para eventos.
           
           **Los Servicios Incluyen:**
-          • Configuración de audio
-          • Mezcla de sonido
-          • Optimización de sistemas
+          • Ingeniería de sonido en vivo
+          • Configuración y optimización de sistemas
+          • Sesiones de grabación en vivo
+          • Servicios de grabación de estudio
+          • Grabación de podcasts
+          • Soporte de audio para transmisiones en vivo
           • Consultoría técnica
         colors: bg-neutralAlt-fg-dark
         styles:

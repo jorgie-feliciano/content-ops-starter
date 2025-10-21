@@ -183,15 +183,25 @@ export function getPagedItemsForPage(page, items, numOfItemsPerPage) {
 export async function mapDeepAsync(value, iteratee, options = {}) {
     const postOrder = options?.postOrder ?? false;
     async function _mapDeep(value, keyPath, stack) {
+        // Handle null/undefined values early
+        if (value == null) {
+            return value;
+        }
+        
         if (!postOrder) {
             value = await iteratee(value, keyPath, stack);
+            // Re-check after iteratee in case it returned null/undefined
+            if (value == null) {
+                return value;
+            }
         }
         const childrenIterator = (val, key) => {
             return _mapDeep(val, keyPath.concat(key), stack.concat([value]));
         };
         if (value && typeof value == 'object' && value.constructor === Object) {
             const res = {};
-            for (const [key, val] of Object.entries(value)) {
+            const entries = Object.entries(value);
+            for (const [key, val] of entries) {
                 res[key] = await childrenIterator(val, key);
             }
             value = res;

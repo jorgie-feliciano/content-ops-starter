@@ -58,9 +58,9 @@ sections:
         title: Equipment Rentals
         subtitle: Professional Sound Systems
         text: >-
-          Professional audio equipment available for rent. PA systems, 
-          microphones, and audio gear for events and venues. Premium brands include QSC, Midas, 
-          Sennheiser, Shure, sE Electronics, and Beyerdynamic. Budget-friendly options available with Mackie and Behringer.
+          Professional audio equipment available for rent. PA systems (wireless and wired), 
+          microphones (wireless and wired), and audio gear for events and venues. Premium brands include QSC, Midas, 
+          Sennheiser, Shure, and Beyerdynamic. Budget-friendly options available with Mackie (professional-grade speakers) and Behringer.
         actions: []
         elementId: null
         colors: bg-neutralAlt-fg-dark

@@ -12,7 +12,13 @@ import {
 export function resolveStaticProps(urlPath, data) {
     // get root path of paged path: /blog/page/2 => /blog
     const rootUrlPath = getRootPagePath(urlPath);
-    const { __metadata, ...rest } = data.pages.find((page) => page.__metadata.urlPath === rootUrlPath);
+    const foundPage = data.pages.find((page) => page.__metadata.urlPath === rootUrlPath);
+    
+    if (!foundPage) {
+        throw new Error(`Page not found for urlPath: ${urlPath} (rootUrlPath: ${rootUrlPath})`);
+    }
+    
+    const { __metadata, ...rest } = foundPage;
     
     // Determine if this is a Spanish page
     const isSpanishPage = urlPath.startsWith('/es') || urlPath === '/es';
@@ -22,8 +28,12 @@ export function resolveStaticProps(urlPath, data) {
     if (isSpanishPage) {
         const headerEs = data.objects.find(obj => obj.__metadata.id === 'content/data/header-es.json');
         const footerEs = data.objects.find(obj => obj.__metadata.id === 'content/data/footer-es.json');
-        if (headerEs) site.header = headerEs;
-        if (footerEs) site.footer = footerEs;
+        if (headerEs) {
+            site.header = headerEs;
+        }
+        if (footerEs) {
+            site.footer = footerEs;
+        }
     }
     
     const props = {
