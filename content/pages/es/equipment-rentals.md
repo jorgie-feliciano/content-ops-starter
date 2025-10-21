@@ -41,17 +41,17 @@ sections:
         title: Sistemas de Sonido y Equipos de PA
         subtitle: ''
         text: >
-          Sistemas de PA profesionales para eventos y locales. **Marcas premium:
-          QSC**. Opciones económicas: Mackie, Behringer.
+          Sistemas de PA profesionales para eventos y locales. Sistemas inalámbricos y con cable disponibles. **Marcas premium:
+          QSC**. Opciones económicas: Mackie (algunos productos como bocinas son de grado profesional), Behringer.
 
-
-          • PA systems (Premium: QSC | Budget-friendly: Mackie, Behringer)
 
           • Line arrays y point source
 
           • Subwoofers activos y pasivos
 
           • Procesadores de sistema
+
+          • Soporte técnico incluido
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
@@ -103,7 +103,7 @@ sections:
         subtitle: ''
         text: >
           Consolas digitales de última generación con capacidades completas de
-          enrutamiento y procesamiento de efectos. **Marcas principales: Midas,
+          enrutamiento y procesamiento de efectos. Sistemas inalámbricos y con cable disponibles. **Marcas principales: Midas,
           Behringer**.
 
 
@@ -164,11 +164,11 @@ sections:
         title: Micrófonos y Sistemas Inalámbricos
         subtitle: ''
         text: >
-          Micrófonos profesionales para eventos. **Marcas premium: Sennheiser,
+          Micrófonos profesionales para eventos. Sistemas inalámbricos y con cable disponibles. **Marcas premium: Sennheiser,
           Shure, Beyerdynamic, sE Electronics**.
 
 
-          • Sistemas inalámbricos digitales
+          • Sistemas inalámbricos digitales y con cable disponibles
 
           • Micrófonos de condensador y dinámicos
 
@@ -244,3 +244,4 @@ seo:
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
+---
