@@ -41,147 +41,133 @@ sections:
         title: Sistemas de PA
         subtitle: Sonido Profesional
         text: |
-          Sistemas de PA profesionales para eventos y locales. Marcas premium: QSC, sE Electronics. Opciones económicas: Mackie, Behringer.
+          Sistemas de PA profesionales para eventos y locales. Marcas premium: QSC. Opciones económicas: Mackie, Behringer.
           
           • Múltiples configuraciones disponibles
           • Soporte técnico incluido
           • Opciones de entrega e instalación
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-6
-              - pl-6
-              - pb-6
-              - pr-6
-            borderRadius: x-large
-            flexDirection: col
-    variant: three-col-grid
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-12
-          - pl-12
-          - pb-12
-          - pr-12
-        justifyContent: center
-  - title: Divider
-    colors: bg-neutral-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-5
-          - pl-5
-          - pb-5
-          - pr-5
-    type: DividerSection
-  - type: FeaturedItemsSection
-    title:
-      text: Equipos de Mezcla y Control
-      color: text-dark
-      type: TitleBlock
-    items:
-      - type: FeaturedItem
-        title: Consolas de Mezcla
-        subtitle: Control de Audio
-        text: |
-          Consolas de mezcla profesionales para control de sonido. Marca premium: Midas. Opción económica: Behringer.
-          
-          • Múltiples opciones de canales
-          • Digital y análogo disponible
-          • Soporte técnico incluido
+        actions: []
         colors: bg-light-fg-dark
         styles:
           self:
             padding:
-              - pt-6
-              - pl-6
-              - pb-6
-              - pr-6
-            borderRadius: x-large
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: medium
             flexDirection: col
+    actions:
+      - label: Solicitar Presupuesto
+        url: /es/contact
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        type: Link
     variant: three-col-grid
     colors: bg-neutral-fg-dark
     styles:
       self:
         padding:
-          - pt-12
-          - pl-12
-          - pb-12
-          - pr-12
+          - pt-16
+          - pl-8
+          - pb-8
+          - pr-8
         justifyContent: center
-  - title: Divider
-    colors: bg-light-fg-dark
+  - type: FeaturedItemsSection
+    title:
+      text: Consolas de Mezcla Digitales
+      color: text-dark
+      type: TitleBlock
+    items:
+      - type: FeaturedItem
+        title: Mesas de Mezcla
+        subtitle: Control Avanzado
+        text: >
+          Consolas de mezcla digital con procesamiento de efectos y capacidades
+          de enrutamiento completas. Marcas principales: Midas, Behringer.
+        actions: []
+        colors: bg-light-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: medium
+            flexDirection: col
+    actions:
+      - label: Solicitar Presupuesto
+        url: /es/contact
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        type: Link
+    variant: three-col-grid
+    colors: bg-neutral-fg-dark
     styles:
       self:
         padding:
-          - pt-5
-          - pl-5
-          - pb-5
-          - pr-5
-    type: DividerSection
+          - pt-8
+          - pl-8
+          - pb-8
+          - pr-8
+        justifyContent: center
   - type: FeaturedItemsSection
     title:
-      text: Micrófonos y Sistemas Inalámbricos
+      text: Micrófonos Profesionales
       color: text-dark
       type: TitleBlock
     items:
       - type: FeaturedItem
         title: Micrófonos
-        subtitle: Captura de Audio Profesional
-        text: |
-          Micrófonos profesionales para eventos. Marcas premium: Sennheiser, Shure, Beyerdynamic.
-          
-          • Opciones inalámbricas y con cable
-          • Múltiples configuraciones
-          • Cables y accesorios incluidos
-        colors: bg-neutralAlt-fg-dark
+        subtitle: Audio Cristalino
+        text: >
+          Amplia selección de micrófonos profesionales para voces, instrumentos
+          y aplicaciones de grabación. Marcas premium: Shure, sE Electronics.
+        actions: []
+        colors: bg-light-fg-dark
         styles:
           self:
             padding:
-              - pt-6
-              - pl-6
-              - pb-6
-              - pr-6
-            borderRadius: x-large
+              - pt-8
+              - pl-8
+              - pb-8
+              - pr-8
+            borderRadius: medium
             flexDirection: col
+    actions:
+      - label: Solicitar Presupuesto
+        url: /es/contact
+        showIcon: true
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        type: Link
     variant: three-col-grid
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-12
-          - pl-12
-          - pb-12
-          - pr-12
-        justifyContent: center
-  - title: Divider
     colors: bg-neutral-fg-dark
     styles:
       self:
         padding:
-          - pt-5
-          - pl-5
-          - pb-5
-          - pr-5
-    type: DividerSection
+          - pt-8
+          - pl-8
+          - pb-16
+          - pr-8
+        justifyContent: center
   - type: GenericSection
     title:
-      text: ¿Necesita Ayuda para Elegir Equipos?
+      text: ¿Por Qué Elegir Nuestros Equipos?
       color: text-dark
       type: TitleBlock
-    subtitle: Contáctenos para más información
+    subtitle: Calidad en la Que Puedes Confiar
     text: >
-      Contáctenos para discutir sus necesidades de equipos. 
-      Le ayudaremos a seleccionar el sistema de audio adecuado para su evento.
+      Todo nuestro equipo es mantenido profesionalmente y revisado regularmente
+      para asegurar un rendimiento óptimo. Proporcionamos soporte técnico y
+      podemos ayudar con la configuración si es necesario.
     actions:
-      - label: Contáctanos
-        url: /es/contact
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        type: Button
       - label: Ver Servicios
         url: /es/services
         showIcon: true
@@ -190,7 +176,7 @@ sections:
         style: secondary
         type: Link
     badge:
-      label: Asistencia Especializada
+      label: Asistencia Experta
       color: text-primary
       type: Badge
     colors: bg-light-fg-dark
@@ -204,8 +190,7 @@ sections:
           - pr-12
 seo:
   metaTitle: Alquiler de Equipos - Sonido Vivo Audio Profesional
-  metaDescription: Alquiler de equipos de audio profesional en Puerto Rico incluyendo sistemas PA, consolas de mezcla y micrófonos de QSC, Midas, Sennheiser, Shure, Mackie y Behringer.
+  metaDescription: Alquiler de equipos de audio profesional en Puerto Rico incluyendo sistemas de PA, consolas de mezcla y micrófonos.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
----
