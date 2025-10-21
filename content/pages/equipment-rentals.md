@@ -10,10 +10,10 @@ sections:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Sound Systems for Events and Venues
+    subtitle: QSC, Midas, Sennheiser, and Shure
     text: >
-      Professional audio equipment available for rent in Puerto Rico. 
-      All equipment is maintained and backed by technical support.
+      Professional audio equipment from top brands available for rent in Puerto Rico. 
+      All equipment is maintained to professional standards and backed by expert technical support.
     badge:
       label: Equipment Catalog
       color: text-primary
@@ -33,18 +33,19 @@ sections:
         justifyContent: center
   - type: FeaturedItemsSection
     title:
-      text: Sound Systems & PA Equipment
+      text: PA Systems & Speakers
       color: text-dark
       type: TitleBlock
     items:
       - type: FeaturedItem
-        title: PA Systems
+        title: QSC PA Systems
         subtitle: Professional Sound
         text: |
-          Professional PA systems for events and venues.
+          Professional PA systems from QSC for events and venues.
           
           • Multiple configurations available
-          • Technical support included
+          • Suitable for concerts, corporate events, and more
+          • Expert technical support included
           • Delivery and setup options
         image:
           url: /images/abstract-feature1.svg
@@ -85,19 +86,20 @@ sections:
     type: DividerSection
   - type: FeaturedItemsSection
     title:
-      text: Mixing & Control Equipment
+      text: Mixing Consoles
       color: text-dark
       type: TitleBlock
     items:
       - type: FeaturedItem
-        title: Mixing Consoles
-        subtitle: Audio Control
+        title: Midas Mixing Consoles
+        subtitle: Professional Audio Control
         text: |
-          Professional mixing consoles for sound control.
+          Professional mixing consoles from Midas for precise audio control.
           
-          • Multiple channel options
-          • Digital and analog available
-          • Technical support included
+          • Digital and analog options
+          • Multiple channel configurations
+          • Suitable for live production and recording
+          • Technical consultation available
         image:
           url: /images/icon1.svg
           altText: Mixing consoles
@@ -139,13 +141,14 @@ sections:
       type: TitleBlock
     items:
       - type: FeaturedItem
-        title: Microphones
+        title: Sennheiser & Shure Microphones
         subtitle: Professional Audio Capture
         text: |
-          Professional microphones for events.
+          Professional microphones from Sennheiser and Shure.
           
           • Wireless and wired options
-          • Multiple configurations
+          • Handheld, lavalier, and instrument microphones
+          • Multiple configurations for various applications
           • Cables and accessories included
         image:
           url: /images/abstract-feature1.svg
@@ -188,8 +191,8 @@ sections:
       type: TitleBlock
     subtitle: Contact us for more information
     text: >
-      Contact us to discuss your equipment needs. 
-      We'll help you select the right audio setup for your event.
+      Contact us for expert consulting to discuss your equipment needs. 
+      We'll help you select the right audio setup for your specific event requirements.
     actions:
       - label: Contact Us
         url: /contact
@@ -218,8 +221,8 @@ sections:
           - pb-16
           - pr-16
 seo:
-  metaTitle: Equipment Rentals - Sonido Vivo Professional Audio
-  metaDescription: Professional audio equipment rentals in Puerto Rico including PA systems, mixing consoles, and microphones.
+  metaTitle: Equipment Rentals - QSC, Midas, Sennheiser, Shure | Sonido Vivo
+  metaDescription: Professional audio equipment rentals in Puerto Rico featuring QSC PA systems, Midas mixing consoles, Sennheiser and Shure microphones. Expert consulting and technical support.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout

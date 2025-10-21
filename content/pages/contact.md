@@ -9,8 +9,8 @@ sections:
       type: TitleBlock
     subtitle: Contact Sonido Vivo in Puerto Rico
     text: >
-      Have questions about equipment rentals or need audio services for your event? 
-      Contact us and we'll respond as soon as possible.
+      Have questions about equipment rentals, live production services, or need expert consulting for your event? 
+      Contact us and we'll respond as soon as possible to discuss how we can support your unique audio vision.
     badge:
       label: Contact Sonido Vivo
       color: text-primary
@@ -33,8 +33,8 @@ sections:
       type: TitleBlock
     subtitle: Tell us about your event
     text: >
-      Please provide information about your event so we can assist you with 
-      the right equipment and services.
+      Please provide information about your event so we can provide expert consulting 
+      and recommend the right audio solutions and production services for your needs.
     media:
       fields:
         - name: name
@@ -89,7 +89,7 @@ sections:
         - name: equipment
           label: Equipment Needed
           hideLabel: true
-          placeholder: What equipment are you interested in? (PA system, microphones, etc.)
+          placeholder: What equipment or services are you interested in? (Audio equipment, video production, streaming, recording, consulting, etc.)
           isRequired: false
           width: full
           type: TextareaFormControl
@@ -258,9 +258,9 @@ sections:
       type: TitleBlock
     subtitle: Professional audio equipment rentals
     text: |
-      **How do I request equipment?**
+      **How do I request equipment or services?**
       
-      Use the contact form above or reach out directly to discuss your event needs.
+      Use the contact form above or reach out directly to discuss your event needs and receive expert consulting.
       
       
       **What areas do you serve?**
@@ -270,12 +270,12 @@ sections:
       
       **What services do you offer?**
       
-      We provide equipment rentals, sound engineering services, delivery and setup, and technical support.
+      We provide equipment rentals featuring QSC, Midas, Sennheiser, and Shure, complete support for live session production including multi-camera video, recording for concerts and events, live projection, streaming capabilities, and expert consulting.
       
       
       **What equipment is available?**
       
-      We offer PA systems, mixing consoles, microphones, wireless systems, and related audio equipment.
+      We offer PA systems (QSC), mixing consoles (Midas), microphones (Sennheiser, Shure), wireless systems, and complete audio packages.
     colors: bg-light-fg-dark
     styles:
       self:
@@ -285,8 +285,8 @@ sections:
           - pb-16
           - pr-16
 seo:
-  metaTitle: Contact Us - Sonido Vivo Professional Audio Rentals
-  metaDescription: Contact Sonido Vivo for professional audio equipment rentals in Puerto Rico. Equipment, sound engineering, and technical support services.
+  metaTitle: Contact Us - Sonido Vivo Professional Audio & Live Production
+  metaDescription: Contact Sonido Vivo for professional audio solutions, equipment rentals, live production services, multi-camera video, recording, streaming, and expert consulting in Puerto Rico.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
