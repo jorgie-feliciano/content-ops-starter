@@ -59,32 +59,6 @@
         ],
         "type": "FooterLinksGroup"
     },
-    "socialLinks": [
-        {
-            "altText": "Facebook",
-            "url": "#",
-            "icon": "facebook",
-            "type": "Social"
-        },
-        {
-            "altText": "Instagram",
-            "url": "#",
-            "icon": "instagram",
-            "type": "Social"
-        },
-        {
-            "altText": "LinkedIn",
-            "url": "#",
-            "icon": "linkedin",
-            "type": "Social"
-        },
-        {
-            "altText": "Email",
-            "url": "mailto:contacto@sonidovivo.org",
-            "icon": "mail",
-            "type": "Social"
-        }
-    ],
     "legalLinks": [
         {
             "label": "Terms of Service",
