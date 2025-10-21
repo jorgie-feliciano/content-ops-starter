@@ -1,42 +1,45 @@
 ---
 title: Equipment Rentals
+slug: equipment-rentals
 sections:
   - type: GenericSection
     title:
       text: Professional Equipment Rentals
       color: text-dark
+      styles:
+        self:
+          textAlign: center
       type: TitleBlock
     subtitle: High-Quality Audio Equipment for Every Event
     text: >
       At Sonido Vivo, we offer comprehensive equipment rental services for
       events of all sizes. Our inventory includes professional-grade audio
       equipment that ensures your event sounds perfect.
-    actions:
-      - label: Request Quote
-        url: /contact
-        showIcon: true
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        type: Link
+    badge:
+      label: Audio Excellence
+      color: text-primary
+      styles:
+        self:
+          textAlign: center
+      type: Badge
+    elementId: ''
     colors: bg-light-fg-dark
     styles:
       self:
-        alignItems: center
         padding:
-          - pt-16
-          - pl-16
-          - pb-16
-          - pr-16
+          - pt-12
+          - pl-12
+          - pb-6
+          - pr-12
+        justifyContent: center
   - type: FeaturedItemsSection
     title:
-      text: Available Equipment
+      text: ''
       color: text-dark
       type: TitleBlock
     items:
       - type: FeaturedItem
         title: Sound Systems & PA Equipment
-        tagline: Premium PA Solutions
         subtitle: ''
         text: >
           Professional PA systems for events and venues. **Premium brands: QSC**.
@@ -48,31 +51,32 @@ sections:
           • Technical support included
 
           • Delivery and setup options
-        actions: []
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
             borderRadius: x-large
             flexDirection: col
     actions:
       - label: Contact Us for Pricing
+        altText: ''
         url: /contact
         showIcon: true
         icon: arrowRight
         iconPosition: right
         style: primary
+        elementId: ''
         type: Link
     variant: three-col-grid
     colors: bg-neutral-fg-dark
     styles:
       self:
         padding:
-          - pt-16
+          - pt-8
           - pl-8
           - pb-8
           - pr-8
@@ -95,7 +99,6 @@ sections:
     items:
       - type: FeaturedItem
         title: Digital Mixing Consoles
-        tagline: Advanced Control
         subtitle: ''
         text: |
           State-of-the-art digital mixing solutions with comprehensive routing
@@ -104,24 +107,25 @@ sections:
           • Advanced signal processing
           • Multi-track recording capability
           • Remote control options
-        actions: []
-        colors: bg-neutralAlt-fg-dark
+        colors: bg-light-fg-dark
         styles:
           self:
             padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
             borderRadius: x-large
             flexDirection: col
     actions:
       - label: Contact Us for Pricing
+        altText: ''
         url: /contact
         showIcon: true
         icon: arrowRight
         iconPosition: right
         style: primary
+        elementId: ''
         type: Link
     variant: three-col-grid
     colors: bg-neutral-fg-dark
@@ -151,7 +155,6 @@ sections:
     items:
       - type: FeaturedItem
         title: Professional Microphones
-        tagline: Crystal Clear Audio
         subtitle: ''
         text: >
           Professional microphones for events. **Premium brands: Sennheiser,
@@ -163,24 +166,25 @@ sections:
           • Various pickup patterns
 
           • Suitable for all applications
-        actions: []
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
             padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
             borderRadius: x-large
             flexDirection: col
     actions:
       - label: Contact Us for Pricing
+        altText: ''
         url: /contact
         showIcon: true
         icon: arrowRight
         iconPosition: right
         style: primary
+        elementId: ''
         type: Link
     variant: three-col-grid
     colors: bg-neutral-fg-dark
