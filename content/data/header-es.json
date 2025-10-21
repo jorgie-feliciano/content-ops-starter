@@ -11,44 +11,44 @@
     },
     "primaryLinks": [
         {
-            "label": "Home",
-            "url": "/",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
-        },
-        {
-            "label": "Equipment Rentals",
-            "altText": "Browse our equipment catalog",
-            "url": "/equipment-rentals",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
-        },
-        {
-            "label": "Services",
-            "altText": "Our audio services",
-            "url": "/services",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
-        },
-        {
-            "label": "Contact",
-            "altText": "Get in touch",
-            "url": "/contact",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
-        },
-        {
-            "label": "ES",
-            "altText": "Español",
+            "label": "Inicio",
             "url": "/es",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "Alquiler de Equipos",
+            "altText": "Ver catálogo de equipos",
+            "url": "/es/equipment-rentals",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "Servicios",
+            "altText": "Nuestros servicios de audio",
+            "url": "/es/services",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "Contacto",
+            "altText": "Comuníquese con nosotros",
+            "url": "/es/contact",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "EN",
+            "altText": "English",
+            "url": "/",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
@@ -57,9 +57,9 @@
     ],
     "secondaryLinks": [
         {
-            "label": "Get a Quote",
-            "altText": "Request a quote",
-            "url": "/contact",
+            "label": "Obtener Cotización",
+            "altText": "Obtener cotización",
+            "url": "/es/contact",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "primary",

@@ -4,30 +4,30 @@
         "altText": "Sonido Vivo",
         "type": "ImageBlock"
     },
-    "text": "Professional audio equipment rentals for events of all sizes. Quality sound, technical support.\n\nPhone: 321 300 5425 | Email: contacto@sonidovivo.org",
+    "text": "Alquiler de equipos de audio profesional para eventos de todos los tamaños. Sonido de calidad, soporte especializado.\n\nTeléfono: 321 300 5425 | Email: contacto@sonidovivo.org",
     "primaryLinks": {
-        "title": "Services",
+        "title": "Servicios",
         "links": [
             {
-                "label": "Equipment Rentals",
-                "altText": "View our equipment catalog",
-                "url": "/equipment-rentals",
+                "label": "Alquiler de Equipos",
+                "altText": "Ver catálogo de equipos",
+                "url": "/es/equipment-rentals",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Audio Services",
-                "url": "/services",
+                "label": "Servicios de Audio",
+                "url": "/es/services",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Get a Quote",
-                "url": "/contact",
+                "label": "Obtener Cotización",
+                "url": "/es/contact",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
@@ -37,20 +37,20 @@
         "type": "FooterLinksGroup"
     },
     "secondaryLinks": {
-        "title": "Company",
+        "title": "Compañía",
         "links": [
             {
-                "label": "About Us",
-                "altText": "Learn about Sonido Vivo",
-                "url": "/",
+                "label": "Sobre Nosotros",
+                "altText": "Conozca sobre Sonido Vivo",
+                "url": "/es",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
                 "type": "Link"
             },
             {
-                "label": "Contact",
-                "url": "/contact",
+                "label": "Contacto",
+                "url": "/es/contact",
                 "icon": "arrowRight",
                 "iconPosition": "right",
                 "style": "secondary",
@@ -87,23 +87,23 @@
     ],
     "legalLinks": [
         {
-            "label": "Terms of Service",
-            "url": "/",
+            "label": "Términos de Servicio",
+            "url": "/es",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
             "type": "Link"
         },
         {
-            "label": "Privacy Policy",
-            "url": "/",
+            "label": "Política de Privacidad",
+            "url": "/es",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
             "type": "Link"
         }
     ],
-    "copyrightText": "© 2025 Sonido Vivo. All rights reserved.",
+    "copyrightText": "© 2025 Sonido Vivo. Todos los derechos reservados.",
     "colors": "bg-dark-fg-light",
     "type": "Footer"
 }

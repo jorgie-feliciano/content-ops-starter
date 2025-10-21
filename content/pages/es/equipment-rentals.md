@@ -1,21 +1,21 @@
 ---
-title: Equipment Rentals
-slug: equipment-rentals
+title: Alquiler de Equipos
+slug: es/equipment-rentals
 sections:
   - type: GenericSection
     title:
-      text: Professional Audio Equipment Catalog
+      text: Catálogo de Equipos de Audio Profesional
       color: text-dark
       styles:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Sound Systems for Events and Venues
+    subtitle: Sistemas de Sonido para Eventos y Locales
     text: >
-      Professional audio equipment available for rent in Puerto Rico. 
-      All equipment is maintained and backed by technical support.
+      Equipos de audio profesional disponibles para alquiler en Puerto Rico. 
+      Todo el equipo está mantenido y respaldado por soporte técnico.
     badge:
-      label: Equipment Catalog
+      label: Catálogo de Equipos
       color: text-primary
       styles:
         self:
@@ -33,19 +33,19 @@ sections:
         justifyContent: center
   - type: FeaturedItemsSection
     title:
-      text: Sound Systems & PA Equipment
+      text: Sistemas de Sonido y Equipos de PA
       color: text-dark
       type: TitleBlock
     items:
       - type: FeaturedItem
-        title: PA Systems
-        subtitle: Professional Sound
+        title: Sistemas de PA
+        subtitle: Sonido Profesional
         text: |
-          Professional PA systems for events and venues. Premium brands: QSC, sE Electronics. Budget-friendly options: Mackie, Behringer.
+          Sistemas de PA profesionales para eventos y locales. Marcas premium: QSC, sE Electronics. Opciones económicas: Mackie, Behringer.
           
-          • Multiple configurations available
-          • Technical support included
-          • Delivery and setup options
+          • Múltiples configuraciones disponibles
+          • Soporte técnico incluido
+          • Opciones de entrega e instalación
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
@@ -78,19 +78,19 @@ sections:
     type: DividerSection
   - type: FeaturedItemsSection
     title:
-      text: Mixing & Control Equipment
+      text: Equipos de Mezcla y Control
       color: text-dark
       type: TitleBlock
     items:
       - type: FeaturedItem
-        title: Mixing Consoles
-        subtitle: Audio Control
+        title: Consolas de Mezcla
+        subtitle: Control de Audio
         text: |
-          Professional mixing consoles for sound control. Premium brand: Midas. Budget-friendly option: Behringer.
+          Consolas de mezcla profesionales para control de sonido. Marca premium: Midas. Opción económica: Behringer.
           
-          • Multiple channel options
-          • Digital and analog available
-          • Technical support included
+          • Múltiples opciones de canales
+          • Digital y análogo disponible
+          • Soporte técnico incluido
         colors: bg-light-fg-dark
         styles:
           self:
@@ -123,19 +123,19 @@ sections:
     type: DividerSection
   - type: FeaturedItemsSection
     title:
-      text: Microphones & Wireless Systems
+      text: Micrófonos y Sistemas Inalámbricos
       color: text-dark
       type: TitleBlock
     items:
       - type: FeaturedItem
-        title: Microphones
-        subtitle: Professional Audio Capture
+        title: Micrófonos
+        subtitle: Captura de Audio Profesional
         text: |
-          Professional microphones for events. Premium brands: Sennheiser, Shure, Beyerdynamic.
+          Micrófonos profesionales para eventos. Marcas premium: Sennheiser, Shure, Beyerdynamic.
           
-          • Wireless and wired options
-          • Multiple configurations
-          • Cables and accessories included
+          • Opciones inalámbricas y con cable
+          • Múltiples configuraciones
+          • Cables y accesorios incluidos
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
@@ -168,29 +168,29 @@ sections:
     type: DividerSection
   - type: GenericSection
     title:
-      text: Need Help Choosing Equipment?
+      text: ¿Necesita Ayuda para Elegir Equipos?
       color: text-dark
       type: TitleBlock
-    subtitle: Contact us for more information
+    subtitle: Contáctenos para más información
     text: >
-      Contact us to discuss your equipment needs. 
-      We'll help you select the right audio setup for your event.
+      Contáctenos para discutir sus necesidades de equipos. 
+      Le ayudaremos a seleccionar el sistema de audio adecuado para su evento.
     actions:
-      - label: Contact Us
-        url: /contact
+      - label: Contáctanos
+        url: /es/contact
         icon: arrowRight
         iconPosition: right
         style: primary
         type: Button
-      - label: View Services
-        url: /services
+      - label: Ver Servicios
+        url: /es/services
         showIcon: true
         icon: arrowRight
         iconPosition: right
         style: secondary
         type: Link
     badge:
-      label: Expert Assistance
+      label: Asistencia Especializada
       color: text-primary
       type: Badge
     colors: bg-light-fg-dark
@@ -203,8 +203,8 @@ sections:
           - pb-12
           - pr-12
 seo:
-  metaTitle: Equipment Rentals - Sonido Vivo Professional Audio
-  metaDescription: Professional audio equipment rentals in Puerto Rico including PA systems, mixing consoles, and microphones.
+  metaTitle: Alquiler de Equipos - Sonido Vivo Audio Profesional
+  metaDescription: Alquiler de equipos de audio profesional en Puerto Rico incluyendo sistemas PA, consolas de mezcla y micrófonos de QSC, Midas, Sennheiser, Shure, Mackie y Behringer.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
