@@ -62,7 +62,7 @@ sections:
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: medium
+            borderRadius: x-large
             flexDirection: col
     actions:
       - label: Contactar
@@ -84,21 +84,16 @@ sections:
           - pb-8
           - pr-8
         justifyContent: center
-      subtitle:
-        textAlign: center
-  - type: DividerSection
-    title:
-      text: ''
-      color: text-dark
-      type: TitleBlock
-    colors: bg-light-fg-dark
+  - title: Divider
+    colors: bg-neutral-fg-dark
     styles:
       self:
         padding:
-          - pt-3
-          - pl-3
-          - pb-3
-          - pr-3
+          - pt-5
+          - pl-5
+          - pb-5
+          - pr-5
+    type: DividerSection
   - type: FeaturedItemsSection
     title:
       text: ''
@@ -131,7 +126,7 @@ sections:
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: medium
+            borderRadius: x-large
             flexDirection: col
     actions:
       - label: Contactar
@@ -153,21 +148,16 @@ sections:
           - pb-8
           - pr-8
         justifyContent: center
-      subtitle:
-        textAlign: center
-  - type: DividerSection
-    title:
-      text: ''
-      color: text-dark
-      type: TitleBlock
-    colors: bg-light-fg-dark
+  - title: Divider
+    colors: bg-neutral-fg-dark
     styles:
       self:
         padding:
-          - pt-3
-          - pl-3
-          - pb-3
-          - pr-3
+          - pt-5
+          - pl-5
+          - pb-5
+          - pr-5
+    type: DividerSection
   - type: FeaturedItemsSection
     title:
       text: ''
@@ -199,7 +189,7 @@ sections:
               - pl-8
               - pb-8
               - pr-8
-            borderRadius: medium
+            borderRadius: x-large
             flexDirection: col
     actions:
       - label: Contactar
@@ -221,8 +211,6 @@ sections:
           - pb-16
           - pr-8
         justifyContent: center
-      subtitle:
-        textAlign: center
   - type: GenericSection
     title:
       text: ¿Por Qué Elegir Nuestros Equipos?
