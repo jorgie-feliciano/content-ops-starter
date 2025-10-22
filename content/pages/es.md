@@ -4,7 +4,7 @@ slug: /es
 sections:
   - type: GenericSection
     title:
-      text: Alquiler Profesional de Equipos de Audio
+      text: Expertos Profesionales de Audio
       color: text-dark
       type: TitleBlock
     subtitle: Eleve Su Evento con Sonido Cristalino
