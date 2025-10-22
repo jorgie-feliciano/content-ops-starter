@@ -42,9 +42,8 @@ sections:
         title: Sound Systems & PA Equipment
         subtitle: ''
         text: >
-          Professional PA systems for events and venues. Premium brands: QSC.
-          Budget-friendly options: Mackie (some products like speakers are
-          professional-grade), Behringer.
+          Professional PA systems for events and venues. QSC, Mackie & Behringer
+          (for more budget friendly options).
 
 
           • Line arrays and point source systems
