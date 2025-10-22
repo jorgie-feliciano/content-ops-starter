@@ -106,7 +106,6 @@ export default function FormBlock(props) {
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true"
-            onSubmit={handleSubmit}
             ref={formRef}
             data-sb-field-path= {fieldPath}
         >
