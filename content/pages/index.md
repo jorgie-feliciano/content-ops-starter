@@ -4,12 +4,16 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: Professional Audio Equipment Rentals
+      text: Professional Audio Experts
       color: text-dark
       type: TitleBlock
     subtitle: Elevate Your Event with Crystal Clear Sound
     text: >
-      Transform your events with professional audio excellence. From intimate gatherings to large-scale productions, Sonido Vivo delivers premium sound systems, expert engineering, and comprehensive technical support throughout Puerto Rico. Experience the difference that professional audio makes.
+      Transform your events with professional audio excellence. From intimate
+      gatherings to large-scale productions, Sonido Vivo delivers premium sound
+      systems, expert engineering, and comprehensive technical support
+      throughout Puerto Rico. Experience the difference that professional audio
+      makes.
     actions:
       - label: View Equipment
         altText: Browse our equipment catalog
@@ -30,7 +34,7 @@ sections:
         elementId: ''
         type: Link
     badge:
-      label: Professional Service
+      label: BALANCING THE FREQUENCIES
       color: text-primary
       type: Badge
     elementId: ''
@@ -57,10 +61,12 @@ sections:
       - type: FeaturedItem
         title: Equipment Rentals
         subtitle: Professional Sound Systems
-        text: >-
-          Professional audio equipment available for rent. PA systems (wireless and wired), 
-          microphones (wireless and wired), and audio gear for events and venues. Premium brands include QSC, Midas, 
-          Sennheiser, Shure, and Beyerdynamic. Budget-friendly options available with Mackie (professional-grade speakers) and Behringer.
+        text: >
+          Professional audio equipment available for rent. PA systems, 
+          microphones (wireless and wired), and audio gear for events and
+          venues. Premium brands include QSC, Midas,  Sennheiser, Shure, and
+          Beyerdynamic. Mid & Budget-friendly options available with Mackie and
+          Behringer.
         actions: []
         elementId: null
         colors: bg-neutralAlt-fg-dark
@@ -78,8 +84,8 @@ sections:
       - title: Sound Engineering
         subtitle: Technical Expertise
         text: >-
-          Professional sound engineering services for events. 
-          Experienced technicians ensure optimal audio quality.
+          Professional sound engineering services for events.  Experienced
+          technicians ensure optimal audio quality.
         actions: []
         colors: bg-neutralAlt-fg-dark
         styles:
@@ -97,8 +103,8 @@ sections:
       - title: Delivery & Setup
         subtitle: Complete Support
         text: >-
-          Equipment delivery, setup, and technical support services. 
-          Logistics handled so you can focus on your event.
+          Equipment delivery, setup, and technical support services.  Logistics
+          handled so you can focus on your event.
         actions: []
         colors: bg-neutralAlt-fg-dark
         styles:
@@ -161,7 +167,8 @@ sections:
       type: TitleBlock
     subtitle: All of Puerto Rico
     text: >
-      We proudly serve events and venues throughout Puerto Rico. From San Juan to Ponce, Mayagüez to Fajardo-- Wherever your event is, we're there.
+      We proudly serve events and venues throughout Puerto Rico. From San Juan
+      to Ponce, Mayagüez to Fajardo-- Wherever your event is, we're there.
 
 
       **Island-Wide Coverage**
@@ -209,7 +216,11 @@ sections:
       type: TitleBlock
     subtitle: Get Professional Audio Solutions Today
     text: >
-      Whether you're planning an intimate gathering or a large-scale production, Sonido Vivo provides the professional audio equipment and technical expertise to make your event exceptional. Contact us today to discuss your audio needs and discover how our premium sound systems and experienced team can transform your event.
+      Whether you're planning an intimate gathering or a large-scale production,
+      Sonido Vivo provides the professional audio equipment and technical
+      expertise to make your event exceptional. Contact us today to discuss your
+      audio needs and discover how our premium sound systems and experienced
+      team can transform your event.
     actions:
       - label: Get a Quote
         altText: Request a quote for your event
@@ -257,7 +268,9 @@ sections:
     type: DividerSection
 seo:
   metaTitle: Sonido Vivo - Professional Audio Equipment Rentals
-  metaDescription: Professional audio equipment rentals serving Puerto Rico. Sound systems, engineering services, delivery and technical support for events and venues.
+  metaDescription: >-
+    Professional audio equipment rentals serving Puerto Rico. Sound systems,
+    engineering services, delivery and technical support for events and venues.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
