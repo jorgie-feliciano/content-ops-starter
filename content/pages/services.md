@@ -58,8 +58,8 @@ sections:
           • Cables and accessories
 
 
-          *   Pro Sony Cameras, Projectors & Screens available for special
-          occasions
+          *   Pro Sony Cameras, Projectors & Screens available for select
+          projects
 
         colors: bg-neutralAlt-fg-dark
         styles:
