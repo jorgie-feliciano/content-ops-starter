@@ -19,29 +19,15 @@ export default function FormBlock(props) {
 
     }
 
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        setIsSubmitting(true);
-        
-        const form = event.currentTarget;
-        const formData = new FormData(form);
-        
-        try {
-            const response = await fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData as any).toString()
-            });
-            
-            if (response.ok) {
+        // Check if form was submitted successfully
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true' || document.referrer.includes(window.location.pathname)) {
                 setIsSubmitted(true);
             }
-        } catch (error) {
-            console.error('Form submission failed:', error);
-        } finally {
-            setIsSubmitting(false);
         }
-    };
+    }, []);
 
     if (isSubmitted) {
         return (
@@ -107,8 +93,8 @@ export default function FormBlock(props) {
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true
-            data-sb-field-path= {fieldPat}h
-                        onSubmit={handleSubmit}}
+            data-sb-field-path= {fieldPat}
+                        action="?success=true"h
         >
             <input type="hidden" name="form-name" value="contact" />
             <div style={{ display: 'none' }}>
