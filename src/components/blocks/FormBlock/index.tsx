@@ -101,7 +101,7 @@ export default function FormBlock(props) {
                     : undefined,
                 styles?.self?.borderRadius ? mapStyles({ borderRadius: styles?.self?.borderRadius }) : undefined
             )}
-            name={elementId}
+            name="contact"
             id={elementId}
             method="POST"
             data-netlify="true"
@@ -110,12 +110,20 @@ export default function FormBlock(props) {
             ref={formRef}
             data-sb-field-path= {fieldPath}
         >
+            <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden">
+                <label>
+                    Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+            </p>
             <div
                 className={classNames('w-full', 'flex', 'flex-wrap', 'gap-8', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }))}
                 {...(fieldPath && { 'data-sb-field-path': '.fields' })}
             >
-                <input type="hidden" name="form-name" value={elementId} />
                 {fields.map((field, index) => {
+                    if (field.name === 'bot-field') {
+                        return null;
+                    }
                     const modelName = field.__metadata.modelName;
                     if (!modelName) {
                         throw new Error(`form field does not have the 'modelName' property`);
