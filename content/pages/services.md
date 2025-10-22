@@ -12,7 +12,7 @@ sections:
       Sonido Vivo provides professional audio equipment rentals and services 
       for events and venues in Puerto Rico.
     badge:
-      label: Professional Services
+      label: ready to provide
       color: text-primary
       type: Badge
     elementId: ''
