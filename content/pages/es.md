@@ -4,12 +4,16 @@ slug: /es
 sections:
   - type: GenericSection
     title:
-      text: Alquiler Profesional de Equipos de Audio
+      text: Expertos Profesionales de Audio
       color: text-dark
       type: TitleBlock
     subtitle: Eleve Su Evento con Sonido Cristalino
     text: >
-      Transforme sus eventos con excelencia en audio profesional. Desde reuniones íntimas hasta producciones de gran escala, Sonido Vivo ofrece sistemas de sonido premium, ingeniería experta y soporte técnico integral en todo Puerto Rico. Experimente la diferencia que hace el audio profesional.
+      Transforme sus eventos con excelencia en audio profesional. Desde
+      reuniones íntimas hasta producciones de gran escala, Sonido Vivo ofrece
+      sistemas de sonido premium, ingeniería experta y soporte técnico integral
+      en todo Puerto Rico. Experimente la diferencia que hace el audio
+      profesional.
     actions:
       - label: Ver Equipos
         altText: Ver catálogo de equipos
@@ -30,7 +34,7 @@ sections:
         elementId: ''
         type: Link
     badge:
-      label: Servicio Profesional
+      label: BALANCEANDO LAS FRECUENCIAS
       color: text-primary
       type: Badge
     elementId: ''
@@ -57,10 +61,12 @@ sections:
       - type: FeaturedItem
         title: Alquiler de Equipos
         subtitle: Sistemas de Sonido Profesional
-        text: >-
-          Equipos de audio profesional disponibles para alquiler. Sistemas de PA (inalámbricos y con cable), 
-          micrófonos (inalámbricos y con cable) y equipos de calidad para eventos y locales en Puerto Rico. 
-          Marcas premium incluyendo QSC, Midas, Sennheiser, Shure y Beyerdynamic. Opciones económicas disponibles con Mackie (bocinas de grado profesional) y Behringer.
+        text: >
+          Equipos de audio profesional disponibles para alquiler. Sistemas de
+          PA,  micrófonos (inalámbricos y con cable) y equipos de calidad para
+          eventos y locales en Puerto Rico.  Marcas premium incluyendo QSC,
+          Midas, Sennheiser, Shure y Beyerdynamic. Opciones moderadas &
+          económicas disponibles con Mackie y Behringer.
         actions: []
         elementId: null
         colors: bg-neutralAlt-fg-dark
@@ -161,7 +167,9 @@ sections:
       type: TitleBlock
     subtitle: Todo Puerto Rico
     text: >
-      Servimos con orgullo eventos y locaciones en todo Puerto Rico. Desde San Juan hasta Ponce, Mayagüez hasta Fajardo—donde sea que esté tu evento, ahí estaremos.
+      Servimos con orgullo eventos y locaciones en todo Puerto Rico. Desde San
+      Juan hasta Ponce, Mayagüez hasta Fajardo—donde sea que esté tu evento, ahí
+      estaremos.
 
 
       **Cobertura en Toda la Isla**
@@ -209,7 +217,11 @@ sections:
       type: TitleBlock
     subtitle: Obtenga Soluciones de Audio Profesional Hoy
     text: >
-      Ya sea que esté planificando una reunión íntima o una producción de gran escala, Sonido Vivo provee los equipos de audio profesional y la experiencia técnica para hacer su evento excepcional. Contáctenos hoy para discutir sus necesidades de audio y descubra cómo nuestros sistemas de sonido premium y equipo experimentado pueden transformar su evento.
+      Ya sea que esté planificando una reunión íntima o una producción de gran
+      escala, Sonido Vivo provee los equipos de audio profesional y la
+      experiencia técnica para hacer su evento excepcional. Contáctenos hoy para
+      discutir sus necesidades de audio y descubra cómo nuestros sistemas de
+      sonido premium y equipo experimentado pueden transformar su evento.
     actions:
       - label: Solicitar Cotización
         altText: Solicitar cotización para su evento
@@ -257,7 +269,9 @@ sections:
     type: DividerSection
 seo:
   metaTitle: Sonido Vivo - Alquiler Profesional de Equipos de Audio
-  metaDescription: Alquiler de equipos de audio profesional en Puerto Rico. Sistemas de sonido, servicios de ingeniería, entrega y soporte técnico para eventos y locales.
+  metaDescription: >-
+    Alquiler de equipos de audio profesional en Puerto Rico. Sistemas de sonido,
+    servicios de ingeniería, entrega y soporte técnico para eventos y locales.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
