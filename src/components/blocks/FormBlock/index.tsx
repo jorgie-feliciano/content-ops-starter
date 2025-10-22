@@ -27,6 +27,32 @@ export default function FormBlock(props) {
         }
     }, []);
 
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        setIsSubmitting(true);
+
+        const form = event.currentTarget;
+        const formData = new FormData(form);
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData as any).toString()
+        })
+            .then(() => {
+                setIsSubmitting(false);
+                setIsSubmitted(true);
+                if (typeof window !== 'undefined') {
+                    window.history.pushState({}, '', '?success=true');
+                }
+            })
+            .catch((error) => {
+                setIsSubmitting(false);
+                alert(isSpanish ? 'Error al enviar el formulario. Por favor, inténtelo de nuevo.' : 'Error submitting form. Please try again.');
+                console.error(error);
+            });
+    };
+
     if (isSubmitted) {
         return (
             <div
@@ -92,7 +118,7 @@ export default function FormBlock(props) {
             data-netlify-honeypot="bot-field"
             data-netlify="true"
             data-sb-field-path={fieldPath}
-            action="?success=true"
+            onSubmit={handleSubmit}
         >
             <input type="hidden" name="form-name" value="contact" />
             <div style={{ display: 'none' }}>
