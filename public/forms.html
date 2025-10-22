@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contact Forms</title>
+    <title>Contact Forms</title>
 </head>
 <body>
-  <!-- This file is used by Netlify to detect forms at build time -->
-  <!-- The actual form is rendered by React/Next.js -->
-  
-  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-    <input type="hidden" name="form-name" value="contact" />
-    <p hidden>
-      <label>
-        Don't fill this out if you're human: <input name="bot-field" />
-      </label>
-    </p>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <input type="text" name="phone" />
-    <input type="text" name="event-type" />
-    <input type="text" name="event-date" />
-    <input type="text" name="venue" />
-    <input type="text" name="attendees" />
-    <textarea name="equipment"></textarea>
-    <textarea name="message"></textarea>
-  </form>
+    <!-- This file is used by Netlify to detect forms at build time -->
+    <!-- The actual form is rendered by React/Next.js -->
+
+    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+            <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+            </label>
+        </p>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="phone" />
+        <input type="text" name="event-type" />
+        <input type="text" name="event-date" />
+        <input type="text" name="venue" />
+        <input type="text" name="attendees" />
+        <textarea name="equipment"></textarea>
+        <textarea name="message"></textarea>
+    </form>
+
 </body>
 </html>
