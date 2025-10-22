@@ -9,8 +9,8 @@ sections:
       type: TitleBlock
     subtitle: Contact Sonido Vivo in Puerto Rico
     text: >
-      Have questions about equipment rentals or need audio services for your event? 
-      Contact us and we'll respond as soon as possible.
+      Have questions about equipment rentals or need audio services for your
+      event?  Contact us and we'll respond as soon as possible.
     badge:
       label: Contact Sonido Vivo
       color: text-primary
@@ -33,8 +33,8 @@ sections:
       type: TitleBlock
     subtitle: Tell us about your event
     text: >
-      Please provide information about your event so we can assist you with 
-      the right equipment and services.
+      Please provide information about your event so we can assist you with  the
+      right equipment and services.
     media:
       fields:
         - name: name
@@ -61,7 +61,7 @@ sections:
         - name: event-type
           label: Event Type
           hideLabel: true
-          placeholder: Type of event (concert, wedding, corporate, etc.)
+          placeholder: 'Type of event (concert, wedding, corporate, etc.)'
           isRequired: true
           width: full
           type: TextFormControl
@@ -89,7 +89,7 @@ sections:
         - name: equipment
           label: Equipment Needed
           hideLabel: true
-          placeholder: What equipment are you interested in? (PA system, microphones, etc.)
+          placeholder: 'What equipment are you interested in? (PA system, microphones, etc.)'
           isRequired: false
           width: full
           type: TextareaFormControl
@@ -160,10 +160,9 @@ sections:
       - type: FeaturedItem
         title: Phone
         subtitle: Call us directly
-        text: >-
+        text: |-
           Contact by phone to discuss audio needs.
-          
-          
+
           **321 300 5425**
         colors: bg-neutralAlt-fg-dark
         styles:
@@ -179,10 +178,9 @@ sections:
       - type: FeaturedItem
         title: Email
         subtitle: Send us a message
-        text: >-
+        text: |-
           Send an email with event details.
-          
-          
+
           **contacto@sonidovivo.org**
         colors: bg-neutralAlt-fg-dark
         styles:
@@ -199,12 +197,14 @@ sections:
         title: Location
         subtitle: Puerto Rico
         text: >-
-          Sonido Vivo serves events and venues across Puerto Rico including San Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo, Toa Baja, Trujillo Alto, and surrounding areas.
-          
-          
+          Sonido Vivo serves events and venues across Puerto Rico including San
+          Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo,
+          Toa Baja, Trujillo Alto, and surrounding areas.
+
+
           **Puerto Rico**
-          
-          
+
+
           Island-wide service available
         colors: bg-neutralAlt-fg-dark
         styles:
@@ -249,7 +249,8 @@ sections:
       type: TitleBlock
     subtitle: All of Puerto Rico
     text: >
-      We proudly serve events and venues throughout Puerto Rico. From San Juan to Ponce, Mayagüez to Fajardo-- Wherever your event is, we're there.
+      We proudly serve events and venues throughout Puerto Rico. From San Juan
+      to Ponce, Mayagüez to Fajardo-- Wherever your event is, we're there.
 
 
       **Island-Wide Coverage**
@@ -293,50 +294,83 @@ sections:
       color: text-dark
       type: TitleBlock
     subtitle: Everything you need to know about our audio services
-    text: |
+    text: >
       **How do I request equipment for my event?**
-      
-      Use the contact form above to provide details about your event, or reach out directly via phone (321 300 5425) or email (contacto@sonidovivo.org). We'll discuss your specific audio needs and provide a customized quote based on your event requirements.
-      
-      
+
+
+      Use the contact form above to provide details about your event, or reach
+      out directly via phone (321-300-5425) or email
+      (<contacto@sonidovivo.org>). We'll discuss your specific audio needs and
+      provide a customized quote based on your event requirements.
+
+
       **What areas of Puerto Rico do you serve?**
-      
-      We serve events and venues across Puerto Rico including San Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo, Toa Baja, Trujillo Alto, and surrounding municipalities throughout the island. No matter where your event is located, we can deliver professional audio solutions to your venue.
-      
-      
+
+
+      We serve events and venues across Puerto Rico including San Juan, Bayamón,
+      Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo, Toa Baja, Trujillo
+      Alto, and surrounding municipalities throughout the island. No matter
+      where your event is located, we can deliver professional audio solutions
+      to your venue.
+
+
       **What services do you offer?**
-      
-      We provide comprehensive audio solutions including professional equipment rentals, sound engineering services, delivery and setup, technical support during events, and system optimization. Audio is our primary service, with video solutions available as an optional extension for select projects.
-      
-      
+
+
+      We provide comprehensive audio solutions including professional equipment
+      rentals, sound engineering services, delivery and setup, technical support
+      during events, and system optimization. Audio is our primary service, with
+      video solutions available as an optional extension for select projects.
+
+
       **What equipment brands do you carry?**
-      
-      We offer premium brands including QSC, Midas, Sennheiser, Shure, sE Electronics, and Beyerdynamic for clients seeking top-tier audio quality. We also provide budget-friendly options from Mackie and Behringer, ensuring quality sound solutions for events of all budget levels.
-      
-      
+
+
+      We offer premium brands including QSC, Midas, Sennheiser, Shure, sE
+      Electronics, and Beyerdynamic for clients seeking top-tier audio quality.
+      We also provide budget-friendly options from Mackie and Behringer,
+      ensuring quality sound solutions for events of all budget levels.
+
+
       **What types of equipment are available?**
-      
-      Our inventory includes PA systems, line array speakers, powered and passive speakers, mixing consoles (digital and analog), microphones (dynamic, condenser, wireless), wireless systems, cables, and all necessary audio accessories.
-      
-      
+
+
+      Our inventory includes PA systems, powered and speakers, mixing consoles,
+      microphones (dynamic, condenser, wireless), in ear monitors (wireless &
+      wired systems), cables, and all necessary audio accessories.
+
+
       **Do you provide sound engineers for events?**
-      
-      Yes, we offer professional sound engineering services. Our experienced technicians can handle audio setup, live mixing, system optimization, and troubleshooting to ensure optimal sound quality throughout your event.
-      
-      
+
+
+      Yes, we offer professional sound engineering services. Our experienced
+      technicians can handle audio setup, live mixing, system optimization, and
+      troubleshooting to ensure optimal sound quality throughout your event.
+
+
       **How far in advance should I book equipment?**
-      
-      We recommend booking as early as possible, especially for weekend events and peak seasons. Contact us with your event date, and we'll confirm availability and reserve the equipment you need.
-      
-      
+
+
+      We recommend booking as early as possible, especially for weekend events
+      and peak seasons. Contact us with your event date, and we'll confirm
+      availability and reserve the equipment you need.
+
+
       **Do you offer delivery, setup, and pickup services?**
-      
-      Yes, we provide complete logistics support including equipment delivery to your venue, professional setup and testing, and post-event pickup. Our team ensures everything is properly installed and functioning before your event begins.
-      
-      
+
+
+      Yes, we provide complete logistics support including equipment delivery to
+      your venue, professional setup and testing, and post-event pickup. Our
+      team ensures everything is properly installed and functioning before your
+      event begins.
+
+
       **What types of events do you serve?**
-      
-      We serve all types of events including concerts, weddings, corporate events, conferences, festivals, church services, school events, private parties, and venue installations throughout Puerto Rico.
+
+
+      We serve all types of events including concerts, weddings, corporate
+      events, conferences, festivals, church services, school events, private
+      parties, and venue installations throughout Puerto Rico.
     colors: bg-light-fg-dark
     styles:
       self:
@@ -347,7 +381,9 @@ sections:
           - pr-12
 seo:
   metaTitle: Contact Us - Sonido Vivo Professional Audio Rentals
-  metaDescription: Contact Sonido Vivo for professional audio equipment rentals in Puerto Rico. Equipment, sound engineering, and technical support services.
+  metaDescription: >-
+    Contact Sonido Vivo for professional audio equipment rentals in Puerto Rico.
+    Equipment, sound engineering, and technical support services.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
