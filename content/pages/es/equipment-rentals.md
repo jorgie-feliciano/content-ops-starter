@@ -41,8 +41,10 @@ sections:
         title: Sistemas de Sonido y Equipos de PA
         subtitle: ''
         text: >
-          Sistemas de PA profesionales para eventos y locales. Sistemas inalámbricos y con cable disponibles. **Marcas premium:
-          QSC**. Opciones económicas: Mackie (algunos productos como bocinas son de grado profesional), Behringer.
+          Sistemas de PA profesionales para eventos y locales. Sistemas
+          inalámbricos y con cable disponibles. **Marcas premium: QSC**.
+          Opciones económicas: Mackie (algunos productos como bocinas son de
+          grado profesional), Behringer.
 
 
           • Line arrays y point source
@@ -102,9 +104,10 @@ sections:
         title: Consolas de Mezcla Digitales
         subtitle: ''
         text: >
-          Consolas digitales de última generación con capacidades completas de
-          enrutamiento y procesamiento de efectos. Sistemas inalámbricos y con cable disponibles. **Marcas principales: Midas,
-          Behringer**.
+          Consolas digitales de última generación MIDAS y Behringer con
+          capacidades completas de enrutamiento y procesamiento de efectos.
+          Sistemas de monitoreo In-EAR inalámbricos Sennheiser y Behringer con
+          cable disponibles. 
 
 
           • Control de mezclas inalámbricas
@@ -164,8 +167,9 @@ sections:
         title: Micrófonos y Sistemas Inalámbricos
         subtitle: ''
         text: >
-          Micrófonos profesionales para eventos. Sistemas inalámbricos y con cable disponibles. **Marcas premium: Sennheiser,
-          Shure, Beyerdynamic, sE Electronics**.
+          Micrófonos profesionales para eventos. Sistemas inalámbricos y con
+          cable disponibles. **Marcas premium: Sennheiser, Shure, Beyerdynamic,
+          sE Electronics**.
 
 
           • Sistemas inalámbricos digitales y con cable disponibles
