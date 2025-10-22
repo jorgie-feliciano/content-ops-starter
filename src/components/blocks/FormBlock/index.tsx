@@ -17,32 +17,6 @@ export default function FormBlock(props) {
 
     const isSpanish = typeof window !== 'undefined' && window.location.pathname.startsWith('/es');
 
-    function handleSubmit(event) {
-        setIsSubmitting(true);
-
-        const form = formRef.current;
-        if (!form) return;
-
-        const formData = new FormData(form);
-
-        
-        event.preventDefault();
-
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData as any).toString()
-        })
-            .then(() => {
-                setIsSubmitted(true);
-                setIsSubmitting(false);
-            })
-            .catch((error) => {
-                console.error('Form submission error:', error);
-                setIsSubmitting(false);
-                alert(isSpanish ? 'Error al enviar el formulario. Por favor, inténtelo de nuevo.' : 'Error submitting form. Please try again.');
-            });
-        
     }
 
     if (isSubmitted) {
@@ -109,7 +83,6 @@ export default function FormBlock(props) {
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true
-                        onSubmit={handleSubmit}"
             ref={formRef}
             data-sb-field-path= {fieldPath}
         >
