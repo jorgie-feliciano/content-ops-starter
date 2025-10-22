@@ -42,13 +42,13 @@ sections:
         title: Sound Systems & PA Equipment
         subtitle: ''
         text: >
-          Professional PA systems for events and venues. Wireless and wired systems available. **Premium brands: QSC**.
-          Budget-friendly options: Mackie (some products like speakers are professional-grade), Behringer.
+          Professional PA systems for events and venues. QSC, Mackie & Behringer
+          (for more budget friendly options).
 
 
-          • Line arrays and point source systems
+          • Point source systems
 
-          • Active and passive subwoofers
+          • Active subwoofers
 
           • System processors
 
@@ -102,12 +102,18 @@ sections:
       - type: FeaturedItem
         title: Digital Mixing Consoles
         subtitle: ''
-        text: |
-          State-of-the-art digital mixing solutions with comprehensive routing
-          and effects processing capabilities. Wireless and wired systems available. **Top brands: Midas, Behringer**.
+        text: >
+          State-of-the-art MIDAS & Behringer digital mixing solutions with
+          comprehensive routing
+
+          and effects processing capabilities. Sennheiser wireless and Behringer
+          wired in ear monitor systems available. 
+
 
           • Advanced signal processing
+
           • Multi-track recording capability
+
           • Remote control options
         colors: bg-light-fg-dark
         styles:
@@ -159,8 +165,9 @@ sections:
         title: Professional Microphones
         subtitle: ''
         text: >
-          Professional microphones for events. Wireless and wired systems available. **Premium brands: Sennheiser,
-          Shure, Beyerdynamic, sE Electronics**.
+          Professional microphones for events. Wireless and wired systems
+          available. **Premium brands: Sennheiser, Shure, Beyerdynamic, sE
+          Electronics**.
 
 
           • Wireless and wired options available
