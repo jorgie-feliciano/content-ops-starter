@@ -4,7 +4,7 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: Professional Audio Equipment Rentals
+      text: Professional Audio Experts
       color: text-dark
       type: TitleBlock
     subtitle: Elevate Your Event with Crystal Clear Sound
