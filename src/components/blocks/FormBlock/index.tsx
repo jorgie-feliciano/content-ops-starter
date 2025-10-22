@@ -8,17 +8,79 @@ import SubmitButtonFormControl from './SubmitButtonFormControl';
 export default function FormBlock(props) {
     const formRef = React.createRef<HTMLFormElement>();
     const { fields = [], elementId, submitButton, className, styles = {}, 'data-sb-field-path': fieldPath } = props;
+    const [isSubmitted, setIsSubmitted] = React.useState(false);
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
 
     if (fields.length === 0) {
         return null;
     }
 
+    const isSpanish = typeof window !== 'undefined' && window.location.pathname.startsWith('/es');
+
     function handleSubmit(event) {
         event.preventDefault();
+        setIsSubmitting(true);
 
-        const data = new FormData(formRef.current);
-        const value = Object.fromEntries(data.entries());
-        alert(`Form data: ${JSON.stringify(value)}`);
+        const form = formRef.current;
+        if (!form) return;
+
+        const formData = new FormData(form);
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData as any).toString()
+        })
+            .then(() => {
+                setIsSubmitted(true);
+                setIsSubmitting(false);
+                form.reset();
+            })
+            .catch((error) => {
+                console.error('Form submission error:', error);
+                setIsSubmitting(false);
+            });
+    }
+
+    if (isSubmitted) {
+        return (
+            <div
+                className={classNames(
+                    'sb-component',
+                    'sb-component-block',
+                    'sb-component-form-block',
+                    className,
+                    styles?.self?.margin ? mapStyles({ margin: styles?.self?.margin }) : undefined,
+                    styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : undefined,
+                    'bg-primary',
+                    'text-white',
+                    'rounded-lg',
+                    'p-8',
+                    'text-center'
+                )}
+            >
+                <svg
+                    className="w-16 h-16 mx-auto mb-4 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                </svg>
+                <h3 className="text-2xl font-bold mb-2">
+                    {isSpanish ? '¡Gracias por contactarnos!' : 'Thanks for reaching out!'}
+                </h3>
+                <p className="text-lg">
+                    {isSpanish ? 'Le responderemos lo antes posible.' : 'We will get back to you shortly.'}
+                </p>
+            </div>
+        );
     }
 
     return (
@@ -41,6 +103,9 @@ export default function FormBlock(props) {
             )}
             name={elementId}
             id={elementId}
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             ref={formRef}
             data-sb-field-path= {fieldPath}
@@ -64,7 +129,7 @@ export default function FormBlock(props) {
             </div>
             {submitButton && (
                 <div className={classNames('mt-8', 'flex', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }))}>
-                    <SubmitButtonFormControl {...submitButton} {...(fieldPath && { 'data-sb-field-path': '.submitButton' })} />
+                    <SubmitButtonFormControl {...submitButton} {...(fieldPath && { 'data-sb-field-path': '.submitButton' })} disabled={isSubmitting} />
                 </div>
             )}
         </form>
