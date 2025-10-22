@@ -17,9 +17,7 @@ export default function FormBlock(props) {
 
     const isSpanish = typeof window !== 'undefined' && window.location.pathname.startsWith('/es');
 
-    }
-
-        // Check if form was submitted successfully
+    // Check if form was submitted successfully
     React.useEffect(() => {
         if (typeof window !== 'undefined') {
             const urlParams = new URLSearchParams(window.location.search);
@@ -92,9 +90,9 @@ export default function FormBlock(props) {
             id={elementId}
             method="POST"
             netlify-honeypot="bot-field"
-            data-netlify="true
-            data-sb-field-path= {fieldPat}
-                        action="?success=true"h
+            data-netlify="true"
+            data-sb-field-path={fieldPath}
+            action="?success=true"
         >
             <input type="hidden" name="form-name" value="contact" />
             <div style={{ display: 'none' }}>
