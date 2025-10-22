@@ -33,6 +33,8 @@ export default function FormBlock(props) {
 
         const form = event.currentTarget;
         const formData = new FormData(form);
+                // Ensure form-name is included for Netlify
+        formData.append('form-name', 'contact');
 
         fetch('/', {
             method: 'POST',
