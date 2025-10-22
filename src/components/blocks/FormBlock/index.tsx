@@ -104,18 +104,18 @@ export default function FormBlock(props) {
             name="contact"
             id={elementId}
             method="POST"
+            netlify-honeypot="bot-field"
             data-netlify="true"
-            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             ref={formRef}
             data-sb-field-path= {fieldPath}
         >
             <input type="hidden" name="form-name" value="contact" />
-            <p className="hidden">
+            <div style={{ display: 'none' }}>
                 <label>
-                    Don't fill this out if you're human: <input name="bot-field" />
+                    Don't fill this out if you're human: <input name="bot-field" tabIndex={-1} autoComplete="off" />
                 </label>
-            </p>
+            </div>
             <div
                 className={classNames('w-full', 'flex', 'flex-wrap', 'gap-8', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }))}
                 {...(fieldPath && { 'data-sb-field-path': '.fields' })}
