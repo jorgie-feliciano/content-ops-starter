@@ -26,7 +26,23 @@ export default function FormBlock(props) {
         const formData = new FormData(form);
 
         
-            ;
+        event.preventDefault();
+
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData as any).toString()
+        })
+            .then(() => {
+                setIsSubmitted(true);
+                setIsSubmitting(false);
+            })
+            .catch((error) => {
+                console.error('Form submission error:', error);
+                setIsSubmitting(false);
+                alert(isSpanish ? 'Error al enviar el formulario. Por favor, inténtelo de nuevo.' : 'Error submitting form. Please try again.');
+            });
+        
     }
 
     if (isSubmitted) {
