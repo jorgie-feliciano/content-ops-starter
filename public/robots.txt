@@ -1,0 +1,47 @@
+# robots.txt for Sonido Vivo - Professional Audio Equipment Rentals
+# https://sonidovivo.org
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sonidovivo.org/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Disallow admin and build files
+Disallow: /admin/
+Disallow: /_next/static/
+Disallow: /api/
+
+# Allow all media files
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Block common bad bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Allow good search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
