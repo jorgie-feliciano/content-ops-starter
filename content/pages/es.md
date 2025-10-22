@@ -65,8 +65,8 @@ sections:
           Equipos de audio profesional disponibles para alquiler. Sistemas de
           PA,  micrófonos (inalámbricos y con cable) y equipos de calidad para
           eventos y locales en Puerto Rico.  Marcas premium incluyendo QSC,
-          Midas, Sennheiser, Shure y Beyerdynamic. Opciones económicas
-          disponibles con Mackie y Behringer.
+          Midas, Sennheiser, Shure y Beyerdynamic. Opciones moderadas &
+          económicas disponibles con Mackie y Behringer.
         actions: []
         elementId: null
         colors: bg-neutralAlt-fg-dark
