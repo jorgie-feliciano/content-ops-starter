@@ -33,8 +33,6 @@ export default function FormBlock(props) {
 
         const form = event.currentTarget;
         const formData = new FormData(form);
-                // Ensure form-name is included for Netlify
-        formData.append('form-name', 'contact');
 
         fetch('/', {
             method: 'POST',
@@ -120,7 +118,7 @@ export default function FormBlock(props) {
             data-netlify-honeypot="bot-field"
             data-netlify="true"
             data-sb-field-path={fieldPath}
-            onSubmit={handleSubmit}
+            
         >
             <input type="hidden" name="form-name" value="contact" />
             <div style={{ display: 'none' }}>
