@@ -57,7 +57,7 @@ sections:
           • Cables y accesorios
 
 
-          *   Cámara Pro Sony, Proyectores y Pantallas disponibles para algunos
+          *   Cámaras Pro Sony, Proyectores y Pantallas disponibles para algunos
           eventos
 
         colors: bg-neutralAlt-fg-dark
