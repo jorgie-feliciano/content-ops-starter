@@ -21,7 +21,7 @@ export default function FormBlock(props) {
     React.useEffect(() => {
         if (typeof window !== 'undefined') {
             const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('success') === 'true' || document.referrer.includes(window.location.pathname)) {
+            if (urlParams.get('success') === 'true') {
                 setIsSubmitted(true);
             }
         }
@@ -34,10 +34,14 @@ export default function FormBlock(props) {
         const form = event.currentTarget;
         const formData = new FormData(form);
 
+        // Encode form data as URL-encoded string
+        const params = new URLSearchParams(formData as any);
+
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams([...formData as any]).toString()        })
+            body: params.toString()
+        })
             .then(() => {
                 setIsSubmitting(false);
                 setIsSubmitted(true);
@@ -60,17 +64,12 @@ export default function FormBlock(props) {
                     'sb-component-block',
                     'sb-component-form-block',
                     className,
-                    styles?.self?.margin ? mapStyles({ margin: styles?.self?.margin }) : undefined,
-                    styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : undefined,
-                    'bg-primary',
-                    'text-white',
-                    'rounded-lg',
-                    'p-8',
-                    'text-center'
+                    'text-center',
+                    'py-12'
                 )}
             >
                 <svg
-                    className="w-16 h-16 mx-auto mb-4 text-white"
+                    className="w-16 h-16 mx-auto mb-4 text-green-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -117,7 +116,7 @@ export default function FormBlock(props) {
             data-netlify-honeypot="bot-field"
             data-netlify="true"
             data-sb-field-path={fieldPath}
-            
+            onSubmit={handleSubmit}
         >
             <input type="hidden" name="form-name" value="contact" />
             <div style={{ display: 'none' }}>
@@ -146,7 +145,7 @@ export default function FormBlock(props) {
             </div>
             {submitButton && (
                 <div className={classNames('mt-8', 'flex', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }))}>
-                    <SubmitButtonFormControl {...submitButton} {...(fieldPath && { 'data-sb-field-path': '.submitButton' })} disabled={isSubmitting} />
+                    <SubmitButtonFormControl {...submitButton} isSubmitting={isSubmitting} {...(fieldPath && { 'data-sb-field-path': '.submitButton' })} />
                 </div>
             )}
         </form>
