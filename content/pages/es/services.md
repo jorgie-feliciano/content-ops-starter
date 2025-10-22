@@ -39,14 +39,13 @@ sections:
       - type: FeaturedItem
         title: Alquiler de Equipos
         tagline: Sistemas de Sonido Profesional
-        text: >
+        text: >+
           Equipos de audio profesional disponibles para alquiler.
 
 
           **Equipos Disponibles:**
 
-          • Sistemas de PA (Premium: QSC | Económico: Mackie [algunos productos
-          como bocinas son de grado profesional], Behringer)
+          • Sistemas de PA (Premium: QSC | Medio: Mackie | Económico: Behringer)
 
           • Consolas de mezcla (Premium: Midas | Económico: Behringer)
 
@@ -56,6 +55,11 @@ sections:
           • Sistemas inalámbricos y con cable disponibles
 
           • Cables y accesorios
+
+
+          *   Cámara Pro Sony, Proyectores y Pantallas disponibles para algunos
+          eventos
+
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
