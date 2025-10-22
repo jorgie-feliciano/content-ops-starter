@@ -46,7 +46,7 @@ sections:
           (for more budget friendly options).
 
 
-          • Line arrays and point source systems
+          • Point source systems
 
           • Active subwoofers
 
