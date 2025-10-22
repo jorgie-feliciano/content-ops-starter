@@ -12,7 +12,7 @@ sections:
       Sonido Vivo provides professional audio equipment rentals and services 
       for events and venues in Puerto Rico.
     badge:
-      label: Professional Services
+      label: ready to provide
       color: text-primary
       type: Badge
     elementId: ''
@@ -39,15 +39,28 @@ sections:
       - type: FeaturedItem
         title: Equipment Rentals
         tagline: Professional Sound Systems
-        text: |
+        text: >+
           Professional sound equipment available for rent.
-          
+
+
           **Available Equipment:**
-          • PA systems (Premium: QSC | Budget-friendly: Mackie [some products like speakers are professional-grade], Behringer)
+
+          • PA systems (Premium: QSC | Mid Tier: Mackie | Budget-friendly:
+          Behringer)
+
           • Mixing consoles (Premium: Midas | Budget-friendly: Behringer)
-          • Microphones (Premium: Sennheiser, Shure, Beyerdynamic, sE Electronics)
+
+          • Microphones (Premium: Sennheiser, Shure, Beyerdynamic, sE
+          Electronics)
+
           • Wireless and wired systems available
+
           • Cables and accessories
+
+
+          *   Pro Sony Cameras, Projectors & Screens available for select
+          projects
+
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
@@ -63,7 +76,7 @@ sections:
         tagline: Technical Expertise
         text: |
           Professional sound engineering for events.
-          
+
           **Services Include:**
           • Live sound engineering
           • System setup and optimization
@@ -87,7 +100,7 @@ sections:
         tagline: Logistics Support
         text: |
           Equipment delivery and setup services.
-          
+
           **We Handle:**
           • Equipment delivery
           • System setup
@@ -108,7 +121,7 @@ sections:
         tagline: Expert Assistance
         text: |
           Technical support for your events.
-          
+
           **Support Services:**
           • On-site assistance
           • Troubleshooting
@@ -153,8 +166,11 @@ sections:
       type: TitleBlock
     subtitle: Professional audio for Puerto Rico
     text: >
-      Professional audio equipment and services for events and venues throughout Puerto Rico. We serve San Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo, and surrounding areas. Audio is our primary service, with video solutions available as an optional extension for select projects. 
-      Contact us to discuss specific needs.
+      Professional audio equipment and services for events and venues throughout
+      Puerto Rico. We serve San Juan, Bayamón, Carolina, Ponce, Caguas,
+      Guaynabo, Mayagüez, Arecibo, and surrounding areas. Audio is our primary
+      service, with video solutions available as an optional extension for
+      select projects.  Contact us to discuss specific needs.
     actions:
       - label: Contact Us
         url: /contact
@@ -202,7 +218,8 @@ sections:
       type: TitleBlock
     subtitle: All of Puerto Rico
     text: >
-      We proudly serve events and venues throughout Puerto Rico. From San Juan to Ponce, Mayagüez to Fajardo-- Wherever your event is, we're there.
+      We proudly serve events and venues throughout Puerto Rico. From San Juan
+      to Ponce, Mayagüez to Fajardo-- Wherever your event is, we're there.
 
 
       **Island-Wide Coverage**
@@ -232,7 +249,9 @@ sections:
           - pr-12
 seo:
   metaTitle: Services - Sonido Vivo Professional Audio Rentals
-  metaDescription: Professional audio services in Puerto Rico - equipment rentals, sound engineering, delivery, setup, and technical support for events and venues.
+  metaDescription: >-
+    Professional audio services in Puerto Rico - equipment rentals, sound
+    engineering, delivery, setup, and technical support for events and venues.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
