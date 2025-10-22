@@ -34,15 +34,28 @@ export default function FormBlock(props) {
         const form = event.currentTarget;
         const formData = new FormData(form);
 
-        // Encode form data as URL-encoded string
-        const params = new URLSearchParams(formData as any);
+        // Ensure the Netlify form name is part of the encoded payload
+        const formName = form.getAttribute('name');
+        if (formName) {
+            formData.set('form-name', formName);
+        }
+
+        const params = new URLSearchParams();
+        formData.forEach((value, key) => {
+            if (typeof value === 'string') {
+                params.append(key, value);
+            }
+        });
 
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: params.toString()
         })
-            .then(() => {
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Request failed with status ${response.status}`);
+                }
                 setIsSubmitting(false);
                 setIsSubmitted(true);
                 if (typeof window !== 'undefined') {
