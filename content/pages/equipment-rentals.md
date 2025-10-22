@@ -104,10 +104,11 @@ sections:
         title: Digital Mixing Consoles
         subtitle: ''
         text: >
-          State-of-the-art digital mixing solutions with comprehensive routing
+          State-of-the-art MIDAS & Behringer digital mixing solutions with
+          comprehensive routing
 
-          and effects processing capabilities. Wireless and wired systems
-          available. **Top brands: Midas, Behringer**.
+          and effects processing capabilities. Sennheiser wireless and Behringer
+          wired in ear monitor systems available. 
 
 
           • Advanced signal processing
