@@ -39,7 +39,7 @@ sections:
       - type: FeaturedItem
         title: Equipment Rentals
         tagline: Professional Sound Systems
-        text: >
+        text: >+
           Professional sound equipment available for rent.
 
 
@@ -56,6 +56,11 @@ sections:
           • Wireless and wired systems available
 
           • Cables and accessories
+
+
+          *   Pro Sony Cameras, Projectors & Screens available for special
+          occasions
+
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
