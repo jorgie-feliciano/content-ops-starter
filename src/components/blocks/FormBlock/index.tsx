@@ -6,104 +6,13 @@ import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to
 import SubmitButtonFormControl from './SubmitButtonFormControl';
 
 export default function FormBlock(props) {
-    const formRef = React.createRef<HTMLFormElement>();
     const { fields = [], elementId, submitButton, className, styles = {}, 'data-sb-field-path': fieldPath } = props;
-    const [isSubmitted, setIsSubmitted] = React.useState(false);
-    const [isSubmitting, setIsSubmitting] = React.useState(false);
 
     if (fields.length === 0) {
         return null;
     }
 
     const isSpanish = typeof window !== 'undefined' && window.location.pathname.startsWith('/es');
-
-    // Check if form was submitted successfully
-    React.useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('success') === 'true') {
-                setIsSubmitted(true);
-            }
-        }
-    }, []);
-
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        setIsSubmitting(true);
-
-        const form = event.currentTarget;
-        const formData = new FormData(form);
-
-        // Ensure the Netlify form name is part of the encoded payload
-        const formName = form.getAttribute('name');
-        if (formName) {
-            formData.set('form-name', formName);
-        }
-
-        const params = new URLSearchParams();
-        formData.forEach((value, key) => {
-            if (typeof value === 'string') {
-                params.append(key, value);
-            }
-        });
-
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: params.toString()
-        })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`Request failed with status ${response.status}`);
-                }
-                setIsSubmitting(false);
-                setIsSubmitted(true);
-                if (typeof window !== 'undefined') {
-                    window.history.pushState({}, '', '?success=true');
-                }
-            })
-            .catch((error) => {
-                setIsSubmitting(false);
-                alert(isSpanish ? 'Error al enviar el formulario. Por favor, inténtelo de nuevo.' : 'Error submitting form. Please try again.');
-                console.error(error);
-            });
-    };
-
-    if (isSubmitted) {
-        return (
-            <div
-                className={classNames(
-                    'sb-component',
-                    'sb-component-block',
-                    'sb-component-form-block',
-                    className,
-                    'text-center',
-                    'py-12'
-                )}
-            >
-                <svg
-                    className="w-16 h-16 mx-auto mb-4 text-green-500"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                </svg>
-                <h3 className="text-2xl font-bold mb-2">
-                    {isSpanish ? '¡Gracias por contactarnos!' : 'Thanks for reaching out!'}
-                </h3>
-                <p className="text-lg">
-                    {isSpanish ? 'Le responderemos lo antes posible.' : 'We will get back to you shortly.'}
-                </p>
-            </div>
-        );
-    }
 
     return (
         <form
@@ -126,10 +35,10 @@ export default function FormBlock(props) {
             name="contact"
             id={elementId}
             method="POST"
+            action="/contact/?success=true"
             data-netlify-honeypot="bot-field"
             data-netlify="true"
             data-sb-field-path={fieldPath}
-            onSubmit={handleSubmit}
         >
             <input type="hidden" name="form-name" value="contact" />
             <div style={{ display: 'none' }}>
@@ -158,7 +67,7 @@ export default function FormBlock(props) {
             </div>
             {submitButton && (
                 <div className={classNames('mt-8', 'flex', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }))}>
-                    <SubmitButtonFormControl {...submitButton} isSubmitting={isSubmitting} {...(fieldPath && { 'data-sb-field-path': '.submitButton' })} />
+                    <SubmitButtonFormControl {...submitButton} {...(fieldPath && { 'data-sb-field-path': '.submitButton' })} />
                 </div>
             )}
         </form>
