@@ -83,7 +83,6 @@ export default function FormBlock(props) {
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true
-            ref={formRef}
             data-sb-field-path= {fieldPath}
         >
             <input type="hidden" name="form-name" value="contact" />
