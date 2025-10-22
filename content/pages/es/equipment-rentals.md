@@ -41,15 +41,13 @@ sections:
         title: Sistemas de Sonido y Equipos de PA
         subtitle: ''
         text: >
-          Sistemas de PA profesionales para eventos y locales. Sistemas
-          inalámbricos y con cable disponibles. **Marcas premium: QSC**.
-          Opciones económicas: Mackie (algunos productos como bocinas son de
-          grado profesional), Behringer.
+          Sistemas de PA profesionales para eventos y locales. QSC, Mackie &
+          Behringer (para propuestas mas económicas).
 
 
-          • Line arrays y point source
+          • Sistemas point source
 
-          • Subwoofers activos y pasivos
+          • Subwoofers activos 
 
           • Procesadores de sistema
 
