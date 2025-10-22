@@ -18,7 +18,6 @@ export default function FormBlock(props) {
     const isSpanish = typeof window !== 'undefined' && window.location.pathname.startsWith('/es');
 
     function handleSubmit(event) {
-        event.preventDefault();
         setIsSubmitting(true);
 
         const form = formRef.current;
@@ -26,20 +25,8 @@ export default function FormBlock(props) {
 
         const formData = new FormData(form);
 
-        fetch('/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(formData as any).toString()
-        })
-            .then(() => {
-                setIsSubmitted(true);
-                setIsSubmitting(false);
-                form.reset();
-            })
-            .catch((error) => {
-                console.error('Form submission error:', error);
-                setIsSubmitting(false);
-            });
+        
+            ;
     }
 
     if (isSubmitted) {
@@ -105,7 +92,8 @@ export default function FormBlock(props) {
             id={elementId}
             method="POST"
             netlify-honeypot="bot-field"
-            data-netlify="true"
+            data-netlify="true
+                        onSubmit={handleSubmit}"
             ref={formRef}
             data-sb-field-path= {fieldPath}
         >
