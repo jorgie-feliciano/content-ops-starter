@@ -12,7 +12,7 @@ sections:
       Sonido Vivo provee alquiler de equipos de audio profesional y servicios 
       para eventos y locales en Puerto Rico.
     badge:
-      label: Servicios Profesionales
+      label: LISTOS PARA SERVIRLES
       color: text-primary
       type: Badge
     elementId: ''
@@ -39,14 +39,22 @@ sections:
       - type: FeaturedItem
         title: Alquiler de Equipos
         tagline: Sistemas de Sonido Profesional
-        text: |
+        text: >
           Equipos de audio profesional disponibles para alquiler.
-          
+
+
           **Equipos Disponibles:**
-          • Sistemas de PA (Premium: QSC | Económico: Mackie [algunos productos como bocinas son de grado profesional], Behringer)
+
+          • Sistemas de PA (Premium: QSC | Económico: Mackie [algunos productos
+          como bocinas son de grado profesional], Behringer)
+
           • Consolas de mezcla (Premium: Midas | Económico: Behringer)
-          • Micrófonos (Premium: Sennheiser, Shure, Beyerdynamic, sE Electronics)
+
+          • Micrófonos (Premium: Sennheiser, Shure, Beyerdynamic, sE
+          Electronics)
+
           • Sistemas inalámbricos y con cable disponibles
+
           • Cables y accesorios
         colors: bg-neutralAlt-fg-dark
         styles:
@@ -63,7 +71,7 @@ sections:
         tagline: Experiencia Técnica
         text: |
           Ingeniería de sonido profesional para eventos.
-          
+
           **Los Servicios Incluyen:**
           • Ingeniería de sonido en vivo
           • Configuración y optimización de sistemas
@@ -87,7 +95,7 @@ sections:
         tagline: Soporte Logístico
         text: |
           Servicios de entrega e instalación de equipos.
-          
+
           **Manejamos:**
           • Entrega de equipos
           • Instalación de sistemas
@@ -108,7 +116,7 @@ sections:
         tagline: Asistencia Especializada
         text: |
           Soporte técnico para sus eventos.
-          
+
           **Servicios de Soporte:**
           • Asistencia en sitio
           • Solución de problemas
@@ -153,8 +161,12 @@ sections:
       type: TitleBlock
     subtitle: Audio profesional para Puerto Rico
     text: >
-      Proveemos equipos y servicios de audio profesional para eventos y locales en todo Puerto Rico. Servimos San Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo y áreas circundantes. El audio es nuestro servicio principal, con soluciones de video disponibles como extensión opcional para proyectos selectos. 
-      Contáctenos para discutir sus necesidades específicas.
+      Proveemos equipos y servicios de audio profesional para eventos y locales
+      en todo Puerto Rico. Servimos San Juan, Bayamón, Carolina, Ponce, Caguas,
+      Guaynabo, Mayagüez, Arecibo y áreas circundantes. El audio es nuestro
+      servicio principal, con soluciones de video disponibles como extensión
+      opcional para proyectos selectos.  Contáctenos para discutir sus
+      necesidades específicas.
     actions:
       - label: Contáctanos
         url: /es/contact
@@ -202,7 +214,9 @@ sections:
       type: TitleBlock
     subtitle: Todo Puerto Rico
     text: >
-      Servimos con orgullo eventos y locaciones en todo Puerto Rico. Desde San Juan hasta Ponce, Mayagüez hasta Fajardo—donde sea que esté tu evento, ahí estaremos.
+      Servimos con orgullo eventos y locaciones en todo Puerto Rico. Desde San
+      Juan hasta Ponce, Mayagüez hasta Fajardo—donde sea que esté tu evento, ahí
+      estaremos.
 
 
       **Cobertura en Toda la Isla**
@@ -232,7 +246,10 @@ sections:
           - pr-12
 seo:
   metaTitle: Servicios - Sonido Vivo Alquiler de Audio Profesional
-  metaDescription: Servicios de audio profesional en Puerto Rico - alquiler de equipos, ingeniería de sonido, entrega, instalación y soporte técnico para eventos y locales.
+  metaDescription: >-
+    Servicios de audio profesional en Puerto Rico - alquiler de equipos,
+    ingeniería de sonido, entrega, instalación y soporte técnico para eventos y
+    locales.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout
