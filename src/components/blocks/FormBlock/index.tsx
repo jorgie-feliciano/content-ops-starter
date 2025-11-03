@@ -1,11 +1,10 @@
 import * as React from 'react';
 import classNames from 'classnames';
+import { getComponent } from '../../components-registry';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
-import { getDataAttrs } from '../../../utils/get-data-attrs';
-import { FormBlock as FormBlockType } from '../../../types';
-import FormControl from './FormControl';
+import SubmitButtonFormControl from './SubmitButtonFormControl';
 
-export default function FormBlock(props: FormBlockType) {
+export default function FormBlock(props) {
     const { elementId, fields = [], submitLabel, className, styles = {}, 'data-sb-field-path': fieldPath } = props;
     const [showThankYou, setShowThankYou] = React.useState(false);
     const isSpanish = typeof window !== 'undefined' && window.location.pathname.startsWith('/es');
@@ -22,12 +21,16 @@ export default function FormBlock(props: FormBlockType) {
         window.history.replaceState({}, '', window.location.pathname);
     };
 
+    const FormControl = getComponent('FormControl');
+    if (!FormControl) {
+        return null;
+    }
+
     return (
         <>
             <form
                 name="contact"
                 id={elementId}
-                {...getDataAttrs(props)}
                 className={classNames(
                     'sb-component',
                     'sb-component-block',
@@ -49,13 +52,13 @@ export default function FormBlock(props: FormBlockType) {
                 data-sb-field-path={fieldPath}
             >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" aria-label="form-name" />
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="sr-only">
                     <label>
                         Don't fill this out if you're human: <input name="bot-field" />
                     </label>
                 </div>
-                {fields.map((field, index) => {
+                {fields?.map((field, index) => {
                     if (field.name === 'bot-field') {
                         return null;
                     }
@@ -77,24 +80,11 @@ export default function FormBlock(props: FormBlockType) {
                         'text-center': styles?.submitButton?.textAlign === 'center',
                         'text-right': styles?.submitButton?.textAlign === 'right'
                     })}
+                    data-sb-field-path=".submitButton"
                 >
-                    <button
-                        type="submit"
-                        className={classNames(
-                            'sb-component',
-                            'sb-component-block',
-                            'sb-component-button',
-                            'sb-component-button-primary',
-                            {
-                                'w-full': styles?.submitButton?.width === 'full',
-                                'w-auto': styles?.submitButton?.width !== 'full'
-                            },
-                            styles?.submitButton?.margin ? mapStyles({ margin: styles?.submitButton?.margin }) : undefined
-                        )}
-                        data-sb-field-path=".submitLabel"
-                    >
-                        {submitLabel}
-                    </button>
+                    {submitLabel && (
+                        <SubmitButtonFormControl {...styles?.submitButton} submitLabel={submitLabel} />
+                    )}
                 </div>
             </form>
             {showThankYou && (
@@ -125,4 +115,3 @@ export default function FormBlock(props: FormBlockType) {
             )}
         </>
     );
-}
