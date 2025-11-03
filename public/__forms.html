@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify Forms</title>
+</head>
+<body>
+    <!-- This file helps Netlify detect forms at build time -->
+    <!-- Contact Form Blueprint -->
+    <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        
+        <!-- Honeypot field -->
+        <input name="bot-field" />
+        
+        <!-- Common form fields -->
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="subject" />
+        <textarea name="message"></textarea>
+        <input type="text" name="company" />
+        <input type="text" name="address" />
+        <select name="service">
+            <option value="">Select a service</option>
+            <option value="consulting">Consulting</option>
+            <option value="development">Development</option>
+            <option value="support">Support</option>
+        </select>
+        <input type="checkbox" name="newsletter" />
+        <input type="checkbox" name="terms" />
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
