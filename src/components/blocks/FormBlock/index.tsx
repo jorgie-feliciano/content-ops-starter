@@ -1,7 +1,25 @@
 import React, { useState } from "react"
 
 const FormBlock = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    
+    const form = event.currentTarget
+    const formData = new FormData(form)
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
+    })
+      .then(() => setSubmitted(true))
+      .catch((error) => {
+        console.error('Form submission error:', error)
+        alert('There was an error submitting the form. Please try again.')
+      })
+  }
 
   return (
     <div>
@@ -11,7 +29,7 @@ const FormBlock = () => {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          onSubmit={() => setSubmitted(true)}
+          onSubmit={handleSubmit}
         >
           {/* Netlify requires this hidden input */}
           <input type="hidden" name="form-name" value="contact" />
@@ -37,4 +55,4 @@ const FormBlock = () => {
   )
 }
 
-export default FormBlock;
+export default FormBlock
