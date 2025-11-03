@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
 const FormBlock = () => {
   const [submitted, setSubmitted] = useState(false)
@@ -22,7 +22,7 @@ const FormBlock = () => {
   }
 
   return (
-    <div>
+    <div style={{ maxWidth: '600px', margin: '0 auto' }}>
       {!submitted ? (
         <form
           name="contact"
@@ -30,25 +30,136 @@ const FormBlock = () => {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
+          style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
         >
           {/* Netlify requires this hidden input */}
           <input type="hidden" name="form-name" value="contact" />
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <input type="text" name="phone" placeholder="Phone" />
-          <input type="text" name="eventType" placeholder="Event Type" required />
-          <input type="date" name="eventDate" placeholder="Event Date" required />
-          <input type="text" name="venue" placeholder="Venue" />
-          <input type="number" name="attendees" placeholder="Expected Attendees" />
-          <input type="text" name="equipment" placeholder="Equipment Needed" />
-          <textarea name="details" placeholder="Additional Details"></textarea>
+          
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label htmlFor="name" style={{ fontWeight: '600' }}>Name *</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your Name"
+              required
+              style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label htmlFor="email" style={{ fontWeight: '600' }}>Email *</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="your.email@example.com"
+              required
+              style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label htmlFor="phone" style={{ fontWeight: '600' }}>Phone</label>
+            <input
+              id="phone"
+              name="phone"
+              type="text"
+              placeholder="(123) 456-7890"
+              style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label htmlFor="eventType" style={{ fontWeight: '600' }}>Event Type *</label>
+            <input
+              id="eventType"
+              name="eventType"
+              type="text"
+              placeholder="Wedding, Concert, Party, etc."
+              required
+              style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label htmlFor="eventDate" style={{ fontWeight: '600' }}>Event Date *</label>
+            <input
+              id="eventDate"
+              name="eventDate"
+              type="date"
+              required
+              style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label htmlFor="venue" style={{ fontWeight: '600' }}>Venue</label>
+            <input
+              id="venue"
+              name="venue"
+              type="text"
+              placeholder="Event Location"
+              style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label htmlFor="attendees" style={{ fontWeight: '600' }}>Expected Attendees</label>
+            <input
+              id="attendees"
+              name="attendees"
+              type="number"
+              placeholder="Number of guests"
+              style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label htmlFor="equipment" style={{ fontWeight: '600' }}>Equipment Needed</label>
+            <input
+              id="equipment"
+              name="equipment"
+              type="text"
+              placeholder="Speakers, Microphones, DJ Equipment, etc."
+              style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
+            />
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            <label htmlFor="details" style={{ fontWeight: '600' }}>Additional Details</label>
+            <textarea
+              id="details"
+              name="details"
+              placeholder="Additional Details"
+              rows={5}
+              style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px', resize: 'vertical' }}
+            />
+          </div>
+
           {/* Simple honeypot for bots */}
-          <input type="text" name="bot-field" style={{ display: "none" }} />
-          <button type="submit">Send Request</button>
+          <input type="text" name="bot-field" style={{ display: 'none' }} />
+
+          <button
+            type="submit"
+            style={{
+              padding: '1rem',
+              backgroundColor: '#0066cc',
+              color: 'white',
+              border: 'none',
+              borderRadius: '4px',
+              fontSize: '1rem',
+              fontWeight: '600',
+              cursor: 'pointer'
+            }}
+          >
+            Send Request
+          </button>
         </form>
       ) : (
-        <div>
-          <p>Thank you for contacting Sonido Vivo. We received your message and will get back to you shortly!</p>
+        <div style={{ textAlign: 'center', padding: '2rem', backgroundColor: '#f0f9ff', borderRadius: '8px' }}>
+          <p style={{ fontSize: '1.125rem', color: '#059669', marginBottom: '0.5rem' }}>✓ Thank you for contacting Sonido Vivo!</p>
+          <p style={{ color: '#666' }}>We received your message and will get back to you shortly.</p>
         </div>
       )}
     </div>
