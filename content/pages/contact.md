@@ -46,7 +46,6 @@ sections:
         justifyContent: center
       subtitle:
         textAlign: center
-    type: GenericSection
   - type: FormBlock
     variant: card
     colors: bg-light-fg-dark
