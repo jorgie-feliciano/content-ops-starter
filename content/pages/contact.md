@@ -2,6 +2,7 @@
 title: Contact
 slug: contact
 isDraft: false
+type: PageLayout
 seo:
   title: Contacta a Sonido Vivo
   description: >-
@@ -22,7 +23,6 @@ sections:
     text: >+
       Fill out the form below and let us know about your event. We'll get back
       to you with equipment options and pricing.
-
     media:
       type: ImageBlock
       altText: Phone Icon
@@ -56,50 +56,38 @@ sections:
       backgroundPosition: center
       backgroundRepeat: no-repeat
       opacity: 100
-    title:
-      text: Request a Quote
-      color: text-dark
-      styles:
-        self:
-          textAlign: center
-      type: TitleBlock
-    subtitle: Tell us about your event
     form:
-      type: FormBlock
-      elementId: contact-form
-      action: /.netlify/functions/submission-created
-      destination: ''
       fields:
         - type: TextFormControl
           name: name
-          label: Your Name *
+          label: Name *
           hideLabel: false
           placeholder: Your Name
           isRequired: true
           width: full
         - type: EmailFormControl
           name: email
-          label: Your Email *
+          label: Email *
           hideLabel: false
           placeholder: Your Email
           isRequired: true
           width: full
         - type: TextFormControl
           name: phone
-          label: Phone Number *
+          label: Phone *
           hideLabel: false
-          placeholder: Phone Number
+          placeholder: Your Phone Number
           isRequired: true
           width: full
         - type: TextFormControl
-          name: eventType
+          name: event-type
           label: Event Type *
           hideLabel: false
-          placeholder: 'Wedding, Corporate Event, Party, etc.'
+          placeholder: Wedding, Party, Corporate, etc.
           isRequired: true
           width: full
         - type: TextFormControl
-          name: eventDate
+          name: event-date
           label: Event Date *
           hideLabel: false
           placeholder: Event Date
