@@ -28,14 +28,36 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
   const submitButton = form?.submitButton;
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     setIsSubmitting(true);
-    // Show modal after a brief delay to simulate submission feedback
-    setTimeout(() => {
-      setSubmitted(true);
-      setShowModal(true);
+
+    try {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+      
+      // Ensure form-name is included for Netlify
+      formData.append('form-name', formId);
+
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setShowModal(true);
+        form.reset();
+      } else {
+        console.error('Form submission failed');
+        alert('There was an error submitting the form. Please try again.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting the form. Please try again.');
+    } finally {
       setIsSubmitting(false);
-    }, 500);
-    // Let the native form submission continue to Netlify
+    }
   };
 
   const closeModal = () => {
@@ -48,35 +70,36 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
 
   return (
     <div
-      className={classNames('sb-component', 'sb-component-block', 'sb-component-form-block', mapStyles(styles))}
+      id={elementId}
+      className={classNames('sb-component', 'sb-component-block', 'sb-component-form-block', styles?.self?.padding)}
       data-sb-field-path={props['data-sb-field-path']}
     >
       <form
         id={formId}
-        name="contact"
-        method="POST"
-        action="/contact"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
+        name={formId}
+        className={classNames(
+          'max-w-screen-md',
+          mapStyles({ justifyContent: form?.styles?.justifyContent || 'flex-start' }),
+          form?.styles?.width ? mapStyles({ width: form?.styles?.width }) : null
+        )}
         onSubmit={handleSubmit}
-        className={classNames('sb-form', mapStyles(form?.styles))}
+        data-sb-field-path=".form"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
-        <input type="hidden" name="form-name" value="contact" />
-        <div style={{ display: 'none' }}>
-          <label>
-            Don't fill this out if you're human: <input name="bot-field" />
-          </label>
-        </div>
+        {/* Hidden fields for Netlify */}
+        <input type="hidden" name="form-name" value={formId} />
+        <input type="hidden" name="bot-field" style={{ display: 'none' }} />
+        
         {fields.map((field: any, index: number) => {
-          const Component = getComponent(field.type);
-          if (!Component) {
+          const FieldComponent = getComponent(field.type);
+          if (!FieldComponent) {
             return null;
           }
           return (
             <div
               key={index}
               className={classNames(
-                'sb-form-field',
                 {
                   'mb-4': index < fields.length - 1,
                   'mb-6': index === fields.length - 1
@@ -84,7 +107,7 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
               )}
               data-sb-field-path={`${props['data-sb-field-path']}.form.fields.${index}`}
             >
-              <Component {...field} />
+              <FieldComponent {...field} />
             </div>
           );
         })}
