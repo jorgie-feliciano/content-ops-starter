@@ -1,11 +1,5 @@
 ---
-title:
-  type: TitleBlock
-  text: Contact Us
-  color: text-dark
-  styles:
-    self:
-      textAlign: center
+title: Contact Us
 slug: contact
 type: PageLayout
 sections:
