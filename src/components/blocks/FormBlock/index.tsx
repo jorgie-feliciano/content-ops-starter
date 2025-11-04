@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import { DynamicComponent } from '../../components-registry';
+import { getComponent } from '../../components-registry';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 
 type FormBlockProps = {
@@ -67,6 +67,10 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
           </label>
         </div>
         {fields.map((field: any, index: number) => {
+          const Component = getComponent(field.type);
+          if (!Component) {
+            return null;
+          }
           return (
             <div
               key={index}
@@ -79,15 +83,21 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
               )}
               data-sb-field-path={`${props['data-sb-field-path']}.form.fields.${index}`}
             >
-              <DynamicComponent {...field} />
+              <Component {...field} />
             </div>
           );
         })}
-        {submitButton && (
-          <div data-sb-field-path={`${props['data-sb-field-path']}.form.submitButton`}>
-            <DynamicComponent {...submitButton} disabled={isSubmitting} />
-          </div>
-        )}
+        {submitButton && (() => {
+          const SubmitComponent = getComponent(submitButton.type);
+          if (!SubmitComponent) {
+            return null;
+          }
+          return (
+            <div data-sb-field-path={`${props['data-sb-field-path']}.form.submitButton`}>
+              <SubmitComponent {...submitButton} disabled={isSubmitting} />
+            </div>
+          );
+        })()}
       </form>
       {/* Success Modal */}
       {showModal && (
