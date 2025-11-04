@@ -1,60 +1,348 @@
 ---
 title: Contact
 slug: contact
-type: PageLayout
 sections:
   - type: GenericSection
     title:
-      type: TitleBlock
       text: Get in Touch
       color: text-dark
-    subtitle: >-
-      Have questions, need a quote, or want more information? Reach out and we’ll reply quickly.
-    text: ''
+      type: TitleBlock
+    subtitle: Contact Us Today
+    text: >
+      Have questions about equipment rentals or need audio services for your event?
+      Contact us and we'll respond as soon as possible.
+    badge:
+      label: Contact Us
+      color: text-primary
+      type: Badge
+    elementId: ''
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-12
+          - pl-12
+          - pb-6
+          - pr-12
+        alignItems: center
+        justifyContent: center
+  - type: GenericSection
+    title:
+      text: Request a Quote
+      color: text-dark
+      type: TitleBlock
+    subtitle: Tell us about your event
+    text: >
+      Please provide information about your event so we can assist you with
+      the right equipment and services.
     media:
-      type: ImageBlock
-      url: /images/img-placeholder-dark.svg
-      altText: Contact us
-      elementId: ''
+      fields:
+        - name: name
+          label: Name
+          hideLabel: true
+          placeholder: Your full name
+          isRequired: true
+          width: full
+          type: TextFormControl
+        - name: email
+          label: Email
+          hideLabel: true
+          placeholder: Your email address
+          isRequired: true
+          width: full
+          type: EmailFormControl
+        - name: phone
+          label: Phone
+          hideLabel: true
+          placeholder: Your phone number
+          isRequired: false
+          width: full
+          type: TextFormControl
+        - name: event-type
+          label: Event Type
+          hideLabel: true
+          placeholder: Type of event (concert, wedding, corporate, etc.)
+          isRequired: true
+          width: full
+          type: TextFormControl
+        - name: event-date
+          label: Event Date
+          hideLabel: true
+          placeholder: Event date
+          isRequired: true
+          width: full
+          type: TextFormControl
+        - name: venue
+          label: Venue
+          hideLabel: true
+          placeholder: Venue name and location
+          isRequired: false
+          width: full
+          type: TextFormControl
+        - name: attendees
+          label: Expected Attendees
+          hideLabel: true
+          placeholder: Approximate number of attendees
+          isRequired: false
+          width: full
+          type: TextFormControl
+        - name: equipment
+          label: Equipment Needed
+          hideLabel: true
+          placeholder: What equipment do you need? (PA system, microphones, etc.)
+          isRequired: false
+          width: full
+          type: TextareaFormControl
+        - name: message
+          label: Additional Details
+          hideLabel: true
+          placeholder: Any additional information about your event or special requirements
+          width: full
+          type: TextareaFormControl
+        - name: bot-field
+          label: Do not fill this out
+          hideLabel: true
+          placeholder: Leave this field empty
+          isRequired: false
+          width: full
+          type: TextFormControl
+      elementId: contact-form
+      action: /contact
+      destination: ''
       styles:
         self:
           padding:
-            - pt-0
-            - pl-0
-            - pb-0
-            - pr-0
-    colors: colors-f
-    form:
+            - pt-6
+            - pb-6
+            - pl-6
+            - pr-6
+          borderColor: border-dark
+          borderStyle: solid
+          borderWidth: 1
+          borderRadius: large
       type: FormBlock
-      fields:
-        - type: TextFormControl
-          label: Name
-          name: name
-          placeholder: Your name
-          required: true
-        - type: EmailFormControl
-          label: Email
-          name: email
-          placeholder: Your email address
-          required: true
-        - type: TextFormControl
-          label: Subject
-          name: subject
-          placeholder: Topic of your inquiry
-          required: true
-        - type: TextareaFormControl
-          label: Message
-          name: message
-          placeholder: Type your message here
-          required: true
-      button:
-        text: Send message
-        type: SubmitButton
-FAQ:
-  - question: How soon will I get a response?
-    answer: We respond to all inquiries within 24 hours on business days.
-  - question: Can I request a quote online?
-    answer: Yes, you can request a quote using the form above.
-  - question: What information should I provide?
-    answer: Please include your contact details and a brief description of your needs.
+      submitButton:
+        type: SubmitButtonFormControl
+        label: Submit Request
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: null
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-6
+          - pl-12
+          - pb-12
+          - pr-12
+  - title: Divider
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-5
+          - pl-5
+          - pb-5
+          - pr-5
+    type: DividerSection
+  - type: FeaturedItemsSection
+    title:
+      text: Other Ways to Contact Us
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: We're here to help
+    items:
+      - type: FeaturedItem
+        title: Phone
+        subtitle: Call us directly
+        text: >-
+          Contact us by phone to discuss your audio needs.
+
+
+          **321 300 5425**
+        colors: bg-neutralAlt-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
+            borderRadius: x-large
+            flexDirection: col
+            textAlign: center
+      - type: FeaturedItem
+        title: Email
+        subtitle: Send us a message
+        text: >-
+          Email us with your event details.
+
+
+          **contact@soundlive.org**
+        colors: bg-neutralAlt-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
+            borderRadius: x-large
+            flexDirection: col
+            textAlign: center
+      - type: FeaturedItem
+        title: Location
+        subtitle: Puerto Rico
+        text: >-
+          Sound Live serves events and venues throughout Puerto Rico including San Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo, Toa Baja, Trujillo Alto and surrounding areas.
+
+
+          **Puerto Rico**
+
+
+          Service available island-wide
+        colors: bg-neutralAlt-fg-dark
+        styles:
+          self:
+            padding:
+              - pt-6
+              - pl-6
+              - pb-6
+              - pr-6
+            borderRadius: x-large
+            flexDirection: col
+            textAlign: center
+    variant: three-col-grid
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-12
+          - pl-12
+          - pb-12
+          - pr-12
+        justifyContent: center
+      subtitle:
+        textAlign: center
+  - title: Divider
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-5
+          - pl-5
+          - pb-5
+          - pr-5
+    type: DividerSection
+  - type: GenericSection
+    title:
+      text: Service Areas
+      color: text-dark
+      styles:
+        self:
+          textAlign: center
+      type: TitleBlock
+    subtitle: All of Puerto Rico
+    text: >
+      We proudly serve events and locations throughout Puerto Rico. From San Juan to Ponce, Mayagüez to Fajardo—wherever your event is, we'll be there.
+      **Island-Wide Coverage**
+      • San Juan metro area
+      • North, south, east, and west regions
+      • Mountain municipalities (Utuado, Jayuya, etc.)
+      • For coastal, beach, and remote locations (charges may apply)
+    badge:
+      label: Island-Wide Service
+      color: text-primary
+      styles:
+        self:
+          textAlign: center
+      type: Badge
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        alignItems: center
+        padding:
+          - pt-12
+          - pl-12
+          - pb-12
+          - pr-12
+  - title: Divider
+    colors: bg-neutral-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-5
+          - pl-5
+          - pb-5
+          - pr-5
+    type: DividerSection
+  - type: GenericSection
+    title:
+      text: Frequently Asked Questions
+      color: text-dark
+      type: TitleBlock
+    subtitle: Everything you need to know about our audio services
+    text: |
+      **How do I request equipment for my event?**
+
+      Use the contact form above to provide details about your event, or reach out directly by phone (321 300 5425) or email (contact@soundlive.org). We'll discuss your specific audio needs and provide a personalized quote based on your event requirements.
+
+
+      **What areas of Puerto Rico do you cover?**
+
+      We serve events and venues throughout Puerto Rico including San Juan, Bayamón, Carolina, Ponce, Caguas, Guaynabo, Mayagüez, Arecibo, Toa Baja, Trujillo Alto and surrounding municipalities across the island. No matter where your event is located, we can deliver professional audio solutions to your venue.
+
+
+      **What services do you offer?**
+
+      We provide comprehensive audio solutions including professional equipment rental, sound engineering services, delivery and setup, on-site technical support, and system optimization. Audio is our core service, with video solutions available as an optional extension for select projects.
+
+
+      **What equipment brands do you have?**
+
+      We offer premium brands including QSC, Midas, Sennheiser, Shure, sE Electronics, and Beyerdynamic for clients seeking top-tier audio quality. We also provide budget-friendly options from Mackie and Behringer, ensuring quality sound solutions for events at all budget levels.
+
+
+      **What types of equipment are available?**
+
+      Our inventory includes PA systems, line array speakers, active and passive speakers, mixing consoles (digital and analog), microphones (dynamic, condenser, wireless), wireless systems, cables, and all necessary audio accessories.
+
+
+      **Do you provide sound engineers for events?**
+
+      Yes, we offer professional sound engineering services. Our experienced technicians can handle audio setup, live mixing, system optimization, and troubleshooting to ensure optimal sound quality throughout your event.
+
+
+      **How far in advance should I book equipment?**
+
+      We recommend booking as early as possible, especially for weekend events and peak seasons. Contact us with your event date and we'll confirm availability and reserve the equipment you need.
+
+
+      **Do you offer delivery, setup, and pickup services?**
+
+      Yes, we provide complete logistical support including equipment delivery to your venue, professional installation and testing, and pickup after the event. Our team ensures everything is properly set up and working before your event begins.
+
+
+      **What types of events do you serve?**
+
+      We serve all types of events including concerts, weddings, corporate events, conferences, festivals, religious services, school events, private parties, and venue installations throughout Puerto Rico.
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-12
+          - pl-12
+          - pb-12
+          - pr-12
+seo:
+  metaTitle: Contact Us - Professional Audio Rental
+  metaDescription: Contact Sound Live for professional audio equipment rental in Puerto Rico. Equipment, sound engineering, and technical support services.
+  socialImage: /images/main-hero.jpg
+  type: Seo
+type: PageLayout
 ---
