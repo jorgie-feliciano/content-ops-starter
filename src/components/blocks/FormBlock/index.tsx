@@ -32,11 +32,8 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
     setIsSubmitting(true);
 
     try {
-      const form = event.currentTarget;
-      const formData = new FormData(form);
-      
-      // Ensure form-name is included for Netlify
-      formData.append('form-name', formId);
+      const formElement = event.currentTarget;
+      const formData = new FormData(formElement);
 
       const response = await fetch('/', {
         method: 'POST',
@@ -47,7 +44,7 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
       if (response.ok) {
         setSubmitted(true);
         setShowModal(true);
-        form.reset();
+        formElement.reset();
       } else {
         console.error('Form submission failed');
         alert('There was an error submitting the form. Please try again.');
@@ -89,7 +86,11 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
       >
         {/* Hidden fields for Netlify */}
         <input type="hidden" name="form-name" value={formId} />
-        <input type="hidden" name="bot-field" style={{ display: 'none' }} />
+        <p className="hidden">
+          <label>
+            Don't fill this out if you're human: <input name="bot-field" />
+          </label>
+        </p>
         
         {fields.map((field: any, index: number) => {
           const FieldComponent = getComponent(field.type);
