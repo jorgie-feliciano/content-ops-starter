@@ -3,9 +3,7 @@ title: Contact
 slug: contact
 type: PageLayout
 sections:
-  
--
- type: GenericSection
+  - type: GenericSection
     title:
       type: TitleBlock
       text: Get in Touch
@@ -82,35 +80,20 @@ sections:
         textAlign: center
       subtitle:
         textAlign: center
-  
--
- type: GenericSection
+  - type: GenericSection
     title:
       type: TitleBlock
       text: Contact Information
       color: text-dark
     subtitle: ''
     text: |
-      
-**
-Phone:
-**
- (555) 123-4567
-      
-**
-Email:
-**
- info@soundequipment.com
-      
-**
-Address:
-**
- 123 Main Street, Your City, State 12345
-      
-**
-Business Hours:
-**
- Monday to Friday, 9:00 AM - 6:00 PM
+      **Phone:** (555) 123-4567
+
+      **Email:** info@soundequipment.com
+
+      **Address:** 123 Main Street, Your City, State 12345
+
+      **Business Hours:** Monday to Friday, 9:00 AM - 6:00 PM
     actions: []
     media:
       type: ImageBlock
