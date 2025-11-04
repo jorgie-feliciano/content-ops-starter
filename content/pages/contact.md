@@ -23,102 +23,90 @@ sections:
     text: >+
       Fill out the form below and let us know about your event. We'll get back
       to you with equipment options and pricing.
+
+    actions: []
     media:
-      type: ImageBlock
-      altText: Phone Icon
-      styles:
-        self:
-          margin:
-            - mt-0
-            - mb-12
-      url: /images/phone-icon.png
-    badge:
-      label: AVAILABLE 24/7
-      color: text-primary
-      styles:
-        self:
-          textAlign: center
-      type: Badge
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        flexDirection: col
-        justifyContent: center
-      subtitle:
-        textAlign: center
-  - type: FormBlock
-    variant: card
-    colors: bg-light-fg-dark
-    backgroundImage:
-      type: BackgroundImage
-      altText: altText of the image
-      backgroundSize: auto
-      backgroundPosition: center
-      backgroundRepeat: no-repeat
-      opacity: 100
-    form:
+      type: FormBlock
+      elementId: contact-form
+      action: /contact
+      destination: ''
       fields:
         - type: TextFormControl
           name: name
-          label: Name *
+          label: Name
           hideLabel: false
-          placeholder: Your Name
+          placeholder: Your name
           isRequired: true
           width: full
         - type: EmailFormControl
           name: email
-          label: Email *
+          label: Email
           hideLabel: false
-          placeholder: Your Email
+          placeholder: Your email
           isRequired: true
           width: full
         - type: TextFormControl
           name: phone
-          label: Phone *
+          label: Phone
           hideLabel: false
-          placeholder: Your Phone Number
-          isRequired: true
+          placeholder: Your phone number
+          isRequired: false
           width: full
-        - type: TextFormControl
+        - type: SelectFormControl
           name: event-type
-          label: Event Type *
+          label: Event Type
           hideLabel: false
-          placeholder: Wedding, Party, Corporate, etc.
+          defaultValue: Please select
+          options:
+            - Please select
+            - Wedding
+            - Corporate Event
+            - Birthday Party
+            - Concert/Festival
+            - Conference
+            - Other
           isRequired: true
           width: full
         - type: TextFormControl
           name: event-date
-          label: Event Date *
+          label: Event Date
           hideLabel: false
-          placeholder: Event Date
-          isRequired: true
-          width: full
-        - type: TextFormControl
-          name: venue
-          label: Venue/Location *
-          hideLabel: false
-          placeholder: Venue or Location
-          isRequired: true
-          width: full
-        - type: TextFormControl
-          name: attendees
-          label: Expected Number of Attendees
-          hideLabel: false
-          placeholder: Number of Attendees
+          placeholder: MM/DD/YYYY
           isRequired: false
           width: full
         - type: TextFormControl
+          name: venue
+          label: Venue
+          hideLabel: false
+          placeholder: Event location
+          isRequired: false
+          width: full
+        - type: TextFormControl
+          name: attendees
+          label: Expected Attendees
+          hideLabel: false
+          placeholder: Number of guests
+          isRequired: false
+          width: full
+        - type: TextareaFormControl
           name: equipment
           label: Equipment Needed
           hideLabel: false
-          placeholder: 'Speakers, Microphones, DJ Equipment, etc.'
+          placeholder: Tell us about your sound/equipment needs
           isRequired: false
           width: full
         - type: TextareaFormControl
           name: details
           label: Additional Details
           hideLabel: false
-          placeholder: Additional Details
+          placeholder: Any other information we should know
+          isRequired: false
+          width: full
+        - type: TextFormControl
+          name: bot-field
+          label: Don't fill this out if you're human
+          hideLabel: true
+          placeholder: ''
           isRequired: false
           width: full
       submitButton:
@@ -127,14 +115,18 @@ sections:
         icon: arrowRight
         iconPosition: right
         style: primary
+    badge:
+      label: ''
+      color: text-primary
+      styles:
+        self:
+          textAlign: center
+      type: Badge
+    colors: bg-light-fg-dark
     styles:
       self:
-        padding:
-          - pt-6
-          - pl-6
-          - pb-6
-          - pr-6
+        flexDirection: row
         justifyContent: center
-      submitButton:
+      subtitle:
         textAlign: center
 ---
