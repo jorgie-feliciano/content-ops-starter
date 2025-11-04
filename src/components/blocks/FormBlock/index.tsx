@@ -1,167 +1,182 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import classNames from 'classnames';
 
-const FormBlock = () => {
-  const [submitted, setSubmitted] = useState(false)
+import { DynamicComponent } from '../../components-registry';
+import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    
-    const form = event.currentTarget
-    const formData = new FormData(form)
-    
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as any).toString(),
-    })
-      .then(() => {
-        alert('Thank you for contacting Sonido Vivo! We received your message and will get back to you.')
-        form.reset()
-      })
-      .catch((error) => {
-        console.error('Form submission error:', error)
-        alert('There was an error submitting the form. Please try again.')
-      })
-  }
+type FormBlockProps = {
+  elementId?: string;
+  form?: {
+    fields?: any[];
+    submitButton?: any;
+    elementId?: string;
+    action?: string;
+    destination?: string;
+  };
+  styles?: any;
+  [key: string]: any;
+};
+
+const FormBlock: React.FC<FormBlockProps> = (props) => {
+  const { elementId, form, styles = {} } = props;
+  const [submitted, setSubmitted] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const formId = form?.elementId || elementId || 'contact-form';
+  const fields = form?.fields || [];
+  const submitButton = form?.submitButton;
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+
+    const formElement = event.currentTarget;
+    const formData = new FormData(formElement);
+
+    try {
+      // Submit to Netlify
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        // Show success modal
+        setShowModal(true);
+        setSubmitted(true);
+        // Reset form after a short delay to allow modal to display
+        setTimeout(() => {
+          formElement.reset();
+        }, 100);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error submitting the form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+    <>
       <form
+        id={formId}
         name="contact"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
-        style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
+        className={classNames(styles?.self?.flexDirection ? mapStyles({ flexDirection: styles.self.flexDirection }) : '')}
       >
         {/* Netlify requires this hidden input */}
         <input type="hidden" name="form-name" value="contact" />
-        
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label htmlFor="name" style={{ fontWeight: '600' }}>Your Name *</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            placeholder="Your Name"
-            style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
-          />
-        </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label htmlFor="email" style={{ fontWeight: '600' }}>Your Email *</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            placeholder="Your Email"
-            style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
-          />
-        </div>
+        {/* Honeypot field for spam prevention */}
+        <p style={{ display: 'none' }}>
+          <label>
+            Don't fill this out: <input name="bot-field" />
+          </label>
+        </p>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label htmlFor="phone" style={{ fontWeight: '600' }}>Phone Number *</label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            required
-            placeholder="Phone Number"
-            style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
-          />
-        </div>
+        {/* Dynamically render form fields */}
+        {fields.map((field, index) => (
+          <DynamicComponent key={index} {...field} />
+        ))}
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label htmlFor="eventType" style={{ fontWeight: '600' }}>Event Type *</label>
-          <input
-            id="eventType"
-            name="eventType"
-            type="text"
-            required
-            placeholder="Wedding, Corporate Event, Party, etc."
-            style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
-          />
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label htmlFor="eventDate" style={{ fontWeight: '600' }}>Event Date *</label>
-          <input
-            id="eventDate"
-            name="eventDate"
-            type="date"
-            required
-            style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
-          />
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label htmlFor="venue" style={{ fontWeight: '600' }}>Venue/Location *</label>
-          <input
-            id="venue"
-            name="venue"
-            type="text"
-            required
-            placeholder="Venue or Location"
-            style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
-          />
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label htmlFor="attendees" style={{ fontWeight: '600' }}>Expected Number of Attendees</label>
-          <input
-            id="attendees"
-            name="attendees"
-            type="number"
-            placeholder="Number of Attendees"
-            style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
-          />
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label htmlFor="equipment" style={{ fontWeight: '600' }}>Equipment Needed</label>
-          <input
-            id="equipment"
-            name="equipment"
-            type="text"
-            placeholder="Speakers, Microphones, DJ Equipment, etc."
-            style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px' }}
-          />
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <label htmlFor="details" style={{ fontWeight: '600' }}>Additional Details</label>
-          <textarea
-            id="details"
-            name="details"
-            placeholder="Additional Details"
-            rows={5}
-            style={{ padding: '0.75rem', border: '1px solid #ddd', borderRadius: '4px', resize: 'vertical' }}
-          />
-        </div>
-
-        {/* Simple honeypot for bots */}
-        <input type="text" name="bot-field" style={{ display: 'none' }} />
-
-        <button
-          type="submit"
-          style={{
-            padding: '1rem',
-            backgroundColor: '#0066cc',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            fontSize: '1rem',
-            fontWeight: '600',
-            cursor: 'pointer'
-          }}
-        >
-          Send Request
-        </button>
+        {/* Render submit button */}
+        {submitButton && <DynamicComponent {...submitButton} />}
       </form>
-    </div>
-  )
-}
 
-export default FormBlock
+      {/* Success Modal */}
+      {showModal && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999,
+          }}
+          onClick={closeModal}
+        >
+          <div
+            style={{
+              backgroundColor: 'white',
+              padding: '2rem',
+              borderRadius: '8px',
+              maxWidth: '500px',
+              width: '90%',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+              position: 'relative',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeModal}
+              style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                background: 'none',
+                border: 'none',
+                fontSize: '1.5rem',
+                cursor: 'pointer',
+                color: '#666',
+              }}
+              aria-label="Close"
+            >
+              ×
+            </button>
+            <div style={{ textAlign: 'center' }}>
+              <div
+                style={{
+                  fontSize: '3rem',
+                  color: '#4CAF50',
+                  marginBottom: '1rem',
+                }}
+              >
+                ✓
+              </div>
+              <h2 style={{ marginBottom: '1rem', color: '#333' }}>
+                Thank you for contacting Sonido Vivo!
+              </h2>
+              <p style={{ color: '#666', marginBottom: '1.5rem' }}>
+                We received your message and will get back to you.
+              </p>
+              <button
+                onClick={closeModal}
+                style={{
+                  backgroundColor: '#0066cc',
+                  color: 'white',
+                  padding: '0.75rem 2rem',
+                  border: 'none',
+                  borderRadius: '4px',
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                  fontWeight: '600',
+                }}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default FormBlock;
