@@ -27,111 +27,68 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
   const submitButton = form?.submitButton;
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
     setIsSubmitting(true);
-
-    const formElement = event.currentTarget;
-    const formData = new FormData(formElement);
-
-    try {
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString()
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-        setShowModal(true);
-        formElement.reset();
-      } else {
-        console.error('Form submission failed');
-        alert('Form submission failed. Please try again.');
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      alert('An error occurred. Please try again.');
-    } finally {
+    // Show modal after a brief delay to simulate submission feedback
+    setTimeout(() => {
+      setSubmitted(true);
+      setShowModal(true);
       setIsSubmitting(false);
-    }
+    }, 500);
+    // Let the native form submission continue to Netlify
   };
 
   const closeModal = () => {
     setShowModal(false);
   };
 
-  if (!form || !fields || fields.length === 0) {
+  if (!form) {
     return null;
   }
 
   return (
     <div
-      id={formId}
-      className={classNames(
-        'sb-component',
-        'sb-component-block',
-        'sb-component-form-block',
-        styles?.self?.margin
-      )}
+      className={classNames('sb-component', 'sb-component-block', 'sb-component-form-block', mapStyles(styles))}
       data-sb-field-path={props['data-sb-field-path']}
     >
       <form
+        id={formId}
         name="contact"
         method="POST"
+        action="/contact"
         data-netlify="true"
         netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
-        className={classNames(
-          'sb-form',
-          styles?.self?.padding,
-          styles?.self?.borderColor,
-          styles?.self?.borderStyle ? mapStyles({ borderStyle: styles?.self?.borderStyle }) : 'border-none',
-          styles?.self?.borderRadius ? mapStyles({ borderRadius: styles?.self?.borderRadius }) : null
-        )}
+        className={classNames('sb-form', mapStyles(form?.styles))}
       >
-        {/* Hidden input for Netlify form registration */}
         <input type="hidden" name="form-name" value="contact" />
-        
-        {/* Honeypot field for spam protection */}
-        <p style={{ display: 'none' }}>
+        <div style={{ display: 'none' }}>
           <label>
             Don't fill this out if you're human: <input name="bot-field" />
           </label>
-        </p>
-
-        <div className="sb-form-fields">
-          {fields.map((field, index) => {
-            const fieldType = field.type || field.__metadata?.modelName;
-            if (!fieldType) {
-              console.warn('Field missing type:', field);
-              return null;
-            }
-
-            return (
-              <div
-                key={index}
-                className={classNames(
-                  'sb-form-field',
-                  {
-                    'mb-4': index < fields.length - 1,
-                    'mb-6': index === fields.length - 1
-                  }
-                )}
-                data-sb-field-path={`${props['data-sb-field-path']}.form.fields.${index}`}
-              >
-                <DynamicComponent {...field} />
-              </div>
-            );
-          })}
         </div>
-
+        {fields.map((field: any, index: number) => {
+          return (
+            <div
+              key={index}
+              className={classNames(
+                'sb-form-field',
+                {
+                  'mb-4': index < fields.length - 1,
+                  'mb-6': index === fields.length - 1
+                }
+              )}
+              data-sb-field-path={`${props['data-sb-field-path']}.form.fields.${index}`}
+            >
+              <DynamicComponent {...field} />
+            </div>
+          );
+        })}
         {submitButton && (
           <div data-sb-field-path={`${props['data-sb-field-path']}.form.submitButton`}>
             <DynamicComponent {...submitButton} disabled={isSubmitting} />
           </div>
         )}
       </form>
-
       {/* Success Modal */}
       {showModal && (
         <div
