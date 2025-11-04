@@ -1,36 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Forms</title>
-</head>
-<body>
-    <!-- This file is used by Netlify to detect forms at build time -->
-    <!-- The actual form is rendered by React/Next.js -->
-    <form 
-        name="contact" 
-        method="POST" 
-        action="/contact" 
-        data-netlify="true" 
-        data-netlify-honeypot="bot-field"
-        style="display:none"
-    >
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-            <label>
-                Don't fill this out if you're human: <input name="bot-field" />
-            </label>
-        </p>
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <input type="text" name="phone" />
-        <input type="text" name="event-type" />
-        <input type="text" name="event-date" />
-        <input type="text" name="venue" />
-        <input type="text" name="attendees" />
-        <input type="text" name="equipment" />
-        <textarea name="details"></textarea>
-    </form>
-</body>
-</html>
+<form name="contact" method="POST" action="/contact" data-netlify="true" style="display:none">
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="text" name="phone" />
+  <input type="text" name="event-type" />
+  <input type="text" name="event-date" />
+  <input type="text" name="venue" />
+  <input type="text" name="attendees" />
+  <input type="text" name="equipment" />
+  <textarea name="details"></textarea>
+  <p style="display:none">
+    <label>
+      Don't fill this out if you're human: 
+      <input name="bot-field" />
+    </label>
+  </p>
+</form>
