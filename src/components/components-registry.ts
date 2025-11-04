@@ -8,7 +8,6 @@ import { ComponentType } from 'react';
  * "HeroSection" conditionally, then loading it with getComponent('HeroSection') will ensure that the "HeroSection"
  * is bundled only when used.
  */
-
 export function getComponent(key: string): ComponentType {
     return components[key];
 }
@@ -49,6 +48,7 @@ const components = {
     PricingSection: dynamic(() => import('./sections/PricingSection')),
     RecentPostsSection: dynamic(() => import('./sections/RecentPostsSection')),
     SelectFormControl: dynamic(() => import('./blocks/FormBlock/SelectFormControl')),
+    SubmitButtonFormControl: dynamic(() => import('./blocks/FormBlock/SubmitButtonFormControl')),
     TextareaFormControl: dynamic(() => import('./blocks/FormBlock/TextareaFormControl')),
     TextFormControl: dynamic(() => import('./blocks/FormBlock/TextFormControl')),
     VideoBlock: dynamic(() => import('./blocks/VideoBlock')),
