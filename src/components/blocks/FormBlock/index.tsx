@@ -23,7 +23,7 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const formId = form?.elementId || elementId || 'contact-form';
+  const formId = form?.elementId || elementId || 'contact';
   const fields = form?.fields || [];
   const submitButton = form?.submitButton;
 
