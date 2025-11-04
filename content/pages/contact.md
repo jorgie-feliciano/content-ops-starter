@@ -42,79 +42,32 @@ sections:
           placeholder: Your email
           isRequired: true
           width: full
-        - type: TextFormControl
-          name: phone
-          label: Phone
-          hideLabel: false
-          placeholder: Your phone number
-          isRequired: false
-          width: full
         - type: TextareaFormControl
           name: message
           label: Message
           hideLabel: false
-          placeholder: Tell us about your project or event
+          placeholder: Your message
           isRequired: true
           width: full
-      submitLabel: Send Message
+      submitButton:
+        type: SubmitButtonFormControl
+        label: Send Message
+        showIcon: false
+        icon: arrowRight
+        iconPosition: right
+        style: primary
+        elementId: ''
+      elementId: ''
+      action: /.netlify/functions/submission_created
+      destination: ''
       styles:
-        submitButton:
-          type: SubmitButtonFormControl
-          color: bg-primary
-          size: medium
-    actions: []
-    styles:
-      self:
-        height: auto
-        width: narrow
-        margin:
-          - mt-0
-          - mb-0
-          - ml-0
-          - mr-0
-        padding:
-          - pt-12
-          - pb-12
-          - pr-4
-          - pl-4
-        alignItems: center
-        justifyContent: center
-        flexDirection: row
-      title:
-        textAlign: center
-      subtitle:
-        textAlign: center
-      text:
-        textAlign: center
-  - type: FaqSection
-    title:
-      type: TitleBlock
-      text: Frequently Asked Questions
-      color: text-dark
-    subtitle: ''
-    items:
-      - type: FaqItem
-        question: What services do you offer?
-        answer: >-
-          We offer professional sound equipment for concerts, corporate events,
-          and private parties. We also provide technical installation and
-          on-site support.
-      - type: FaqItem
-        question: Do you offer custom quotes?
-        answer: >-
-          Yes, each event is unique. Contact us with the details of your event
-          and we'll provide you with a personalized quote.
-      - type: FaqItem
-        question: What is your coverage area?
-        answer: >-
-          We primarily serve the metropolitan area, but we also take on projects
-          in other regions. Contact us to discuss your specific needs.
-      - type: FaqItem
-        question: Do you offer technical support during the event?
-        answer: >-
-          Yes, we offer complete technical support during your event to ensure
-          everything runs perfectly.
-    colors: colors-f
+        self:
+          padding:
+            - pt-0
+            - pb-0
+            - pl-0
+            - pr-0
+    elementId: ''
     styles:
       self:
         height: auto
