@@ -11,6 +11,7 @@ type FormBlockProps = {
     elementId?: string;
     action?: string;
     destination?: string;
+    styles?: any;
   };
   styles?: any;
   [key: string]: any;
