@@ -9,8 +9,7 @@ sections:
       text: Get in Touch
       color: text-dark
     subtitle: >-
-      Have questions? Need a quote? Contact us and we'll respond as soon as
-      possible.
+      Have questions, need a quote, or want more information? Reach out and we’ll reply quickly.
     text: ''
     media:
       type: ImageBlock
@@ -29,98 +28,33 @@ sections:
       type: FormBlock
       fields:
         - type: TextFormControl
-          name: name
           label: Name
-          hideLabel: false
+          name: name
           placeholder: Your name
-          isRequired: true
-          width: full
+          required: true
         - type: EmailFormControl
-          name: email
           label: Email
-          hideLabel: false
-          placeholder: Your email
-          isRequired: true
-          width: full
+          name: email
+          placeholder: Your email address
+          required: true
+        - type: TextFormControl
+          label: Subject
+          name: subject
+          placeholder: Topic of your inquiry
+          required: true
         - type: TextareaFormControl
-          name: message
           label: Message
-          hideLabel: false
-          placeholder: Your message
-          isRequired: true
-          width: full
-      submitLabel: Send Message
-      elementId: contact-form
-      styles:
-        self:
-          padding:
-            - pt-6
-            - pb-6
-            - pl-6
-            - pr-6
-        submitButton:
-          type: SubmitButtonFormControl
-      action: /.netlify/functions/submission_created
-    styles:
-      self:
-        height: auto
-        width: narrow
-        margin:
-          - mt-0
-          - mb-0
-          - ml-0
-          - mr-0
-        padding:
-          - pt-12
-          - pb-12
-          - pr-4
-          - pl-4
-        justifyContent: center
-      title:
-        textAlign: center
-      subtitle:
-        textAlign: center
-  - type: GenericSection
-    title:
-      type: TitleBlock
-      text: Contact Information
-      color: text-dark
-    subtitle: ''
-    text: |
-      **Phone:** (555) 123-4567
-
-      **Email:** info@soundequipment.com
-
-      **Address:** 123 Main Street, Your City, State 12345
-
-      **Business Hours:** Monday to Friday, 9:00 AM - 6:00 PM
-    actions: []
-    media:
-      type: ImageBlock
-      url: /images/img-placeholder.svg
-      altText: Contact information
-    colors: colors-f
-    styles:
-      self:
-        height: auto
-        width: wide
-        margin:
-          - mt-0
-          - mb-0
-          - ml-0
-          - mr-0
-        padding:
-          - pt-12
-          - pb-12
-          - pr-4
-          - pl-4
-        alignItems: center
-        justifyContent: center
-        flexDirection: row
-      title:
-        textAlign: center
-      subtitle:
-        textAlign: center
-      text:
-        textAlign: center
+          name: message
+          placeholder: Type your message here
+          required: true
+      button:
+        text: Send message
+        type: SubmitButton
+FAQ:
+  - question: How soon will I get a response?
+    answer: We respond to all inquiries within 24 hours on business days.
+  - question: Can I request a quote online?
+    answer: Yes, you can request a quote using the form above.
+  - question: What information should I provide?
+    answer: Please include your contact details and a brief description of your needs.
 ---
