@@ -1,129 +1,130 @@
 ---
-title: Contact
+title:
+  type: TitleBlock
+  text: Contact Us
+  color: text-dark
+  styles:
+    self:
+      textAlign: center
 slug: contact
-isDraft: false
 type: PageLayout
-seo:
-  title: Contacta a Sonido Vivo
-  description: >-
-    Ponte en contacto con Sonido Vivo para alquiler de equipos de sonido.
-    Completa nuestro formulario para tu evento.
-  thumbnail: images/soundwave-equipment-logo-facebook.jpg
-  noindex: false
 sections:
   - type: GenericSection
     title:
-      text: Get Professional Sound for Your Event
+      type: TitleBlock
+      text: Get in Touch
       color: text-dark
       styles:
         self:
-          textAlign: center
-      type: TitleBlock
-    subtitle: Contact Sonido Vivo Today
+          textAlign: left
+    subtitle: Contact Sonido Vivo in Puerto Rico
     text: >+
-      Fill out the form below and let us know about your event. We'll get back
-      to you with equipment options and pricing.
+      Whether you need professional sound equipment for a corporate event,
+      wedding, concert, or any special occasion, we're here to help. Fill out
+      the form below or reach us directly through the contact information
+      provided.
 
     actions: []
-    media:
-      type: ImageBlock
+    badge:
+      type: Badge
+      label: Contact
+      color: text-primary
+    colors: colors-f
+    backgroundImage: null
+    styles:
+      self:
+        flexDirection: row
+        justifyContent: center
+  - type: ImageBlock
+    url: /images/main-hero.jpg
+    altText: Professional Audio Equipment Rental Puerto Rico
+    caption: ''
+    elementId: ''
     colors: colors-f
     styles:
       self:
         padding:
-          - pt-28
-          - pb-12
-          - pl-4
-          - pr-4
-        alignItems: center
-        flexDirection: row-reverse
-        justifyContent: center
-      text:
-        textAlign: center
-      subtitle:
-        textAlign: center
+          - pt-0
+          - pl-0
+          - pb-0
+          - pr-0
   - type: FormBlock
+    elementId: contact-form
+    action: /.netlify/functions/submission-created
+    destination: ''
+    method: POST
     fields:
-      - name: name
+      - type: TextFormControl
+        name: name
         label: Name
-        hideLabel: true
-        placeholder: Your name
+        hideLabel: false
+        placeholder: Your full name
         isRequired: true
         width: full
-        type: TextFormControl
-      - name: email
+      - type: EmailFormControl
+        name: email
         label: Email
-        hideLabel: true
+        hideLabel: false
         placeholder: Your email address
         isRequired: true
         width: full
-        type: EmailFormControl
-      - name: phone
+      - type: TextFormControl
+        name: phone
         label: Phone
-        hideLabel: true
+        hideLabel: false
         placeholder: Your phone number
         isRequired: false
         width: full
-        type: TextFormControl
-      - name: event-type
+      - type: TextFormControl
+        name: event-type
         label: Event Type
-        hideLabel: true
-        placeholder: Type of event (concert, wedding, corporate, etc.)
+        hideLabel: false
+        placeholder: 'e.g., Wedding, Conference, Concert'
         isRequired: true
         width: full
-        type: TextFormControl
-      - name: event-date
+      - type: TextFormControl
+        name: event-date
         label: Event Date
-        hideLabel: true
-        placeholder: Event date
+        hideLabel: false
+        placeholder: Preferred date for your event
         isRequired: true
         width: full
-        type: TextFormControl
-      - name: venue
+      - type: TextFormControl
+        name: venue
         label: Venue
-        hideLabel: true
-        placeholder: Venue name and location
+        hideLabel: false
+        placeholder: Event location
         isRequired: false
         width: full
-        type: TextFormControl
-      - name: attendees
+      - type: TextFormControl
+        name: attendees
         label: Expected Attendees
-        hideLabel: true
-        placeholder: Approximate number of attendees
+        hideLabel: false
+        placeholder: Approximate number of guests
         isRequired: false
         width: full
-        type: TextFormControl
-      - name: equipment
+      - type: TextareaFormControl
+        name: equipment
         label: Equipment Needed
-        hideLabel: true
-        placeholder: What equipment are you interested in? (PA system, microphones, etc.)
+        hideLabel: false
+        placeholder: Describe the audio equipment you're looking for
         isRequired: false
         width: full
-        type: TextareaFormControl
-      - name: message
+      - type: TextareaFormControl
+        name: message
         label: Additional Details
-        hideLabel: true
-        placeholder: Any additional information about your event or special requirements
-        width: full
-        type: TextareaFormControl
-      - name: bot-field
-        label: Don't fill this out
-        hideLabel: true
-        placeholder: Leave this field empty
+        hideLabel: false
+        placeholder: Any other information about your event
         isRequired: false
         width: full
-        type: TextFormControl
-    elementId: contact-form
-    action: /contact
-    destination: ''
-    submitButton:
-      type: SubmitButtonFormControl
-      label: Send Request
-      showIcon: false
-      icon: arrowRight
-      iconPosition: right
-      style: primary
-      elementId: contact-form-submit
+      - type: TextFormControl
+        name: bot-field
+        label: Don't fill this out if you're human
+        hideLabel: true
+        placeholder: ''
+        isRequired: false
+        width: full
+    submitLabel: Send Request
     styles:
       self:
         padding:
@@ -131,97 +132,141 @@ sections:
           - pb-6
           - pl-6
           - pr-6
-        borderColor: border-dark
-        borderStyle: solid
-        borderWidth: 1
-        borderRadius: large
-    colors: colors-a
+      submitLabel:
+        textAlign: center
+    colors: colors-f
   - type: GenericSection
     title:
-      text: Contact Information
+      type: TitleBlock
+      text: Other Ways to Reach Us
       color: text-dark
       styles:
         self:
           textAlign: left
-      type: TitleBlock
-    subtitle: ''
-    text: |-
-      **Phone:** (787) 548-9643
+    subtitle: Contact Information
+    text: >+
+      **Phone:** +1 (787) 555-0123
 
-      **Email:** sonidovivo2011@gmail.com
 
-      **Hours:** Monday-Sunday, 8:00 AM - 8:00 PM AST
+      **Email:** contacto@sonidovivo.org
+
+
+      **Hours:** Monday-Friday, 9AM-6PM AST
+
+
+      We're available for emergency rentals outside regular hours. Call us to
+      discuss your needs.
+
     actions: []
+    media: null
     colors: colors-f
     styles:
       self:
-        flexDirection: col
+        flexDirection: row
         justifyContent: center
   - type: GenericSection
     title:
-      text: Service Area
-      color: text-dark
       type: TitleBlock
-    subtitle: We proudly serve all of Puerto Rico
-    text: >-
-      Whether you're in San Juan, Ponce, Mayagüez, or anywhere else on the
-      island, Sonido Vivo is ready to deliver professional audio equipment for
-      your event.
+      text: Service Areas
+      color: text-dark
+      styles:
+        self:
+          textAlign: left
+    subtitle: Island-Wide Coverage
+    text: >+
+      We serve all of Puerto Rico, from San Juan to Ponce, Mayagüez to Fajardo.
+      Our professional audio equipment and experienced technicians are ready to
+      make your event a success, wherever you are on the island.
+
     actions: []
     colors: colors-f
     styles:
       self:
-        padding:
-          - pt-12
-          - pb-12
-          - pl-4
-          - pr-4
-        alignItems: center
-        flexDirection: col
+        flexDirection: row
+        justifyContent: center
   - type: GenericSection
     title:
+      type: TitleBlock
       text: Frequently Asked Questions
       color: text-dark
-      type: TitleBlock
-    subtitle: ''
+      styles:
+        self:
+          textAlign: left
+    subtitle: Common Questions About Our Services
     text: >+
-      **What types of events do you serve?**
-
-
-      We provide sound systems for concerts, weddings, corporate events,
-      festivals, church services, and any occasion that needs professional audio.
-
-
       **How far in advance should I book?**
 
 
-      We recommend booking at least 2-4 weeks in advance, especially for weekend
-      events. However, we'll do our best to accommodate last-minute requests.
+      We recommend booking at least 2-3 weeks in advance, especially for weekend
+      events. However, we can often accommodate last-minute requests.
 
 
       **Do you provide setup and technical support?**
 
 
-      Yes, all our rentals include delivery, professional setup, and on-site
-      technical support to ensure everything runs smoothly.
+      Yes! All our rentals include professional setup and on-site technical
+      support to ensure everything runs smoothly.
 
 
       **What's included in the rental price?**
 
 
-      Our rental packages include equipment delivery, setup, operation during the
-      event, and pickup. Specific pricing depends on your event size and
-      equipment needs.
+      Our rental prices include equipment delivery, setup, technical support
+      during your event, and pickup after the event.
+
+
+      **Can I pick up equipment myself?**
+
+
+      Yes, if you prefer to pick up and return equipment yourself, we offer a
+      discount on the rental price.
+
+
+      **What if I need to cancel or reschedule?**
+
+
+      We understand that plans change. Contact us as soon as possible if you
+      need to modify your booking. Our cancellation policy varies depending on
+      how far in advance you notify us.
+
+
+      **Do you rent equipment for multi-day events?**
+
+
+      Absolutely! We offer special rates for multi-day rentals and can customize
+      packages for festivals, conferences, and extended events.
+
+
+      **What areas of Puerto Rico do you serve?**
+
+
+      We provide service throughout Puerto Rico, including San Juan, Ponce,
+      Mayagüez, Caguas, and all other municipalities.
+
+
+      **Do you offer bilingual service?**
+
+
+      Yes, our team is fully bilingual in Spanish and English to serve all our
+      clients comfortably.
+
+
+      **What payment methods do you accept?**
+
+
+      We accept cash, all major credit cards, bank transfers, and ATH Móvil for
+      your convenience.
 
     actions: []
     colors: colors-f
     styles:
       self:
-        padding:
-          - pt-12
-          - pb-40
-          - pl-4
-          - pr-4
-        alignItems: flex-start
-        flexDirection: col
----
+        flexDirection: row
+        justifyContent: center
+seo:
+  metaTitle: Contact Us - Sonido Vivo Professional Audio Rentals
+  metaDescription: >-
+    Contact Sonido Vivo for professional audio equipment rentals in Puerto Rico.
+    Get a quote for your wedding, corporate event, concert, or special occasion.
+  socialImage: /images/main-hero.jpg
+  type: Seo
