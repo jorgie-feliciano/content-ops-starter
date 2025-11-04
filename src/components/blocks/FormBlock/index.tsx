@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-
 import { DynamicComponent } from '../../components-registry';
 import { mapStylesToClassNames as mapStyles } from '../../../utils/map-styles-to-class-names';
 
@@ -22,7 +21,7 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
   const [submitted, setSubmitted] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+  
   const formId = form?.elementId || elementId || 'contact-form';
   const fields = form?.fields || [];
   const submitButton = form?.submitButton;
@@ -35,27 +34,23 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
     const formData = new FormData(formElement);
 
     try {
-      // Submit to Netlify
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
+        body: new URLSearchParams(formData as any).toString()
       });
 
       if (response.ok) {
-        // Show success modal
-        setShowModal(true);
         setSubmitted(true);
-        // Reset form after a short delay to allow modal to display
-        setTimeout(() => {
-          formElement.reset();
-        }, 100);
+        setShowModal(true);
+        formElement.reset();
       } else {
-        throw new Error('Form submission failed');
+        console.error('Form submission failed');
+        alert('Form submission failed. Please try again.');
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('There was an error submitting the form. Please try again.');
+      alert('An error occurred. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -65,117 +60,104 @@ const FormBlock: React.FC<FormBlockProps> = (props) => {
     setShowModal(false);
   };
 
+  if (!form || !fields || fields.length === 0) {
+    return null;
+  }
+
   return (
-    <>
+    <div
+      id={formId}
+      className={classNames(
+        'sb-component',
+        'sb-component-block',
+        'sb-component-form-block',
+        styles?.self?.margin
+      )}
+      data-sb-field-path={props['data-sb-field-path']}
+    >
       <form
-        id={formId}
         name="contact"
         method="POST"
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
-        className={classNames(styles?.self?.flexDirection ? mapStyles({ flexDirection: styles.self.flexDirection }) : '')}
+        className={classNames(
+          'sb-form',
+          styles?.self?.padding,
+          styles?.self?.borderColor,
+          styles?.self?.borderStyle ? mapStyles({ borderStyle: styles?.self?.borderStyle }) : 'border-none',
+          styles?.self?.borderRadius ? mapStyles({ borderRadius: styles?.self?.borderRadius }) : null
+        )}
       >
-        {/* Netlify requires this hidden input */}
+        {/* Hidden input for Netlify form registration */}
         <input type="hidden" name="form-name" value="contact" />
-
-        {/* Honeypot field for spam prevention */}
+        
+        {/* Honeypot field for spam protection */}
         <p style={{ display: 'none' }}>
           <label>
-            Don't fill this out: <input name="bot-field" />
+            Don't fill this out if you're human: <input name="bot-field" />
           </label>
         </p>
 
-        {/* Dynamically render form fields */}
-        {fields.map((field, index) => (
-          <DynamicComponent key={index} {...field} />
-        ))}
+        <div className="sb-form-fields">
+          {fields.map((field, index) => {
+            const fieldType = field.type || field.__metadata?.modelName;
+            if (!fieldType) {
+              console.warn('Field missing type:', field);
+              return null;
+            }
 
-        {/* Render submit button */}
-        {submitButton && <DynamicComponent {...submitButton} />}
+            return (
+              <div
+                key={index}
+                className={classNames(
+                  'sb-form-field',
+                  {
+                    'mb-4': index < fields.length - 1,
+                    'mb-6': index === fields.length - 1
+                  }
+                )}
+                data-sb-field-path={`${props['data-sb-field-path']}.form.fields.${index}`}
+              >
+                <DynamicComponent {...field} />
+              </div>
+            );
+          })}
+        </div>
+
+        {submitButton && (
+          <div data-sb-field-path={`${props['data-sb-field-path']}.form.submitButton`}>
+            <DynamicComponent {...submitButton} disabled={isSubmitting} />
+          </div>
+        )}
       </form>
 
       {/* Success Modal */}
       {showModal && (
         <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 9999,
-          }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
           onClick={closeModal}
         >
           <div
-            style={{
-              backgroundColor: 'white',
-              padding: '2rem',
-              borderRadius: '8px',
-              maxWidth: '500px',
-              width: '90%',
-              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-              position: 'relative',
-            }}
+            className="bg-white rounded-lg shadow-xl p-8 max-w-md mx-4"
             onClick={(e) => e.stopPropagation()}
           >
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">
+              Thank You!
+            </h2>
+            <p className="text-gray-700 mb-6">
+              Thank you for contacting Sonido Vivo! We received your message and will get back to you.
+            </p>
             <button
               onClick={closeModal}
-              style={{
-                position: 'absolute',
-                top: '1rem',
-                right: '1rem',
-                background: 'none',
-                border: 'none',
-                fontSize: '1.5rem',
-                cursor: 'pointer',
-                color: '#666',
-              }}
-              aria-label="Close"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition-colors duration-200"
             >
-              ×
+              Close
             </button>
-            <div style={{ textAlign: 'center' }}>
-              <div
-                style={{
-                  fontSize: '3rem',
-                  color: '#4CAF50',
-                  marginBottom: '1rem',
-                }}
-              >
-                ✓
-              </div>
-              <h2 style={{ marginBottom: '1rem', color: '#333' }}>
-                Thank you for contacting Sonido Vivo!
-              </h2>
-              <p style={{ color: '#666', marginBottom: '1.5rem' }}>
-                We received your message and will get back to you.
-              </p>
-              <button
-                onClick={closeModal}
-                style={{
-                  backgroundColor: '#0066cc',
-                  color: 'white',
-                  padding: '0.75rem 2rem',
-                  border: 'none',
-                  borderRadius: '4px',
-                  fontSize: '1rem',
-                  cursor: 'pointer',
-                  fontWeight: '600',
-                }}
-              >
-                Close
-              </button>
-            </div>
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
