@@ -3,7 +3,9 @@ title: Contact
 slug: contact
 type: PageLayout
 sections:
-  - type: ContactSection
+  
+-
+ type: GenericSection
     title:
       type: TitleBlock
       text: Get in Touch
@@ -49,29 +51,22 @@ sections:
           placeholder: Your message
           isRequired: true
           width: full
-      submitButton:
-        type: SubmitButtonFormControl
-        label: Send Message
-        showIcon: false
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        elementId: ''
-      elementId: ''
-      action: /.netlify/functions/submission_created
-      destination: ''
+      submitLabel: Send Message
+      elementId: contact-form
       styles:
         self:
           padding:
-            - pt-0
-            - pb-0
-            - pl-0
-            - pr-0
-    elementId: ''
+            - pt-6
+            - pb-6
+            - pl-6
+            - pr-6
+        submitButton:
+          type: SubmitButtonFormControl
+      action: /.netlify/functions/submission_created
     styles:
       self:
         height: auto
-        width: wide
+        width: narrow
         margin:
           - mt-0
           - mb-0
@@ -87,20 +82,35 @@ sections:
         textAlign: center
       subtitle:
         textAlign: center
-  - type: GenericSection
+  
+-
+ type: GenericSection
     title:
       type: TitleBlock
       text: Contact Information
       color: text-dark
     subtitle: ''
     text: |
-      **Phone:** (555) 123-4567
-
-      **Email:** info@soundequipment.com
-
-      **Address:** 123 Main Street, Your City, State 12345
-
-      **Business Hours:** Monday to Friday, 9:00 AM - 6:00 PM
+      
+**
+Phone:
+**
+ (555) 123-4567
+      
+**
+Email:
+**
+ info@soundequipment.com
+      
+**
+Address:
+**
+ 123 Main Street, Your City, State 12345
+      
+**
+Business Hours:
+**
+ Monday to Friday, 9:00 AM - 6:00 PM
     actions: []
     media:
       type: ImageBlock
