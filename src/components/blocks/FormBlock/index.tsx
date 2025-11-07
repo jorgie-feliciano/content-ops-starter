@@ -13,12 +13,18 @@ export default function FormBlock(props) {
         
         const form = event.target;
         const formData = new FormData(form);
+
+                // Convert FormData to URLSearchParams for TypeScript compatibility
+        const params = new URLSearchParams();
+        formData.forEach((value, key) => {
+            params.append(key, String(value));
+        });
         
         try {
             const response = await fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
+                body: rams.toString()
             });
             
             if (response.ok) {
