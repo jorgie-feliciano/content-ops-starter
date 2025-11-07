@@ -34,7 +34,9 @@ export default function FormBlock(props) {
                 id={elementId}
                 name="contact"
                 method="POST"
-            action="https://formsubmit.co/contacto@sonidovivo.org"                    'sb-component',
+                action="https://formsubmit.co/contacto@sonidovivo.org"
+                className={classNames(
+                    'sb-component',
                     'sb-component-block',
                     'sb-component-form-block',
                     className,
