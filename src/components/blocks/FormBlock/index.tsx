@@ -36,7 +36,7 @@ export default function FormBlock(props) {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                action={action || '/contact'}
+                action={`${action || '/contact'}/?success=true`}
                 className={classNames(
                     'sb-component',
                     'sb-component-block',
@@ -62,14 +62,17 @@ export default function FormBlock(props) {
                         if (field.name === 'bot-field') {
                             return null;
                         }
+
                         const modelName = field.__metadata.modelName;
                         if (!modelName) {
                             throw new Error(`form field does not have the 'modelName' property`);
                         }
+
                         const FormControl = getComponent(modelName);
                         if (!FormControl) {
                             throw new Error(`no component matching the form field model name: ${modelName}`);
                         }
+
                         return <FormControl key={index} {...field} data-sb-field-path={`${fieldPath}.fields.${index}`} />;
                     })}
                 </div>
