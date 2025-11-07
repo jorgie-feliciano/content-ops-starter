@@ -34,10 +34,7 @@ export default function FormBlock(props) {
                 id={elementId}
                 name="contact"
                 method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                action={`${action || '/contact'}/?success=true`}
-                className={classNames(
+               action="https://api.web3forms.com/submit"                className={classNames(
                     'sb-component',
                     'sb-component-block',
                     'sb-component-form-block',
@@ -46,6 +43,8 @@ export default function FormBlock(props) {
                 )}
                 data-sb-field-path={fieldPath}
             >
+                                {/* Web3Forms Access Key */}
+                <input type="hidden" name="access_key" value="31196574-f606-4a87-a254-d5f4b6ae4317" />
                 {/* Hidden input for Netlify form name */}
                 <input type="hidden" name="form-name" value="contact" />
                 
