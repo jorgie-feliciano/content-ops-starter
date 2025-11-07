@@ -30,14 +30,13 @@ export default function FormBlock(props) {
 
     return (
         <>
-            <form
-                id={elementId}
-                name="contact"
-                method="POST"
-            action="https://formsubmit.co/contacto@sonidovivo.org"                    'sb-component',
-                    'sb-component-block',
-                    'sb-component-form-block',
-                    className,
+<form
+  name="contact"
+  method="POST"
+  action="https://formsubmit.co/contacto@sonidovivo.org"
+  className={`sb-component-block sb-component-form-block ${className ?? ''}`}
+>
+
                     mapStyles({ padding: styles.padding, borderRadius: styles.borderRadius, borderWidth: styles.borderWidth, borderStyle: styles.borderStyle, borderColor: styles.borderColor, margin: styles.margin })
                 )}
                 data-sb-field-path={fieldPath}
