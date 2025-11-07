@@ -9,7 +9,7 @@ export default function FormBlock(props) {
     const { fields = [], elementId, action, submitButton, className, styles = {}, 'data-sb-field-path': fieldPath } = props;
 
     React.useEffect(() => {
-        // Check if the URL has ?success=true parameter (from Netlify form submission)
+        // Check if the URL has ?success=true parameter (from Netlify form submission) 
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('success') === 'true') {
             setShowThankYou(true);
