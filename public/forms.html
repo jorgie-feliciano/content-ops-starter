@@ -1,18 +1,17 @@
-<form name="contact" method="POST" action="/contact" data-netlify="true" style="display:none">
-  <input type="hidden" name="form-name" value="contact" />
-  <input type="text" name="name" />
-  <input type="email" name="email" />
-  <input type="text" name="phone" />
-  <input type="text" name="event-type" />
-  <input type="text" name="event-date" />
-  <input type="text" name="venue" />
-  <input type="text" name="attendees" />
-  <input type="text" name="equipment" />
-  <textarea name="details"></textarea>
-  <p style="display:none">
-    <label>
-      Don't fill this out if you're human: 
-      <input name="bot-field" />
-    </label>
-  </p>
+<form name="contact" method="POST" action="/contact/?success=true" data-netlify="true" style="display:none">
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="phone" />
+    <input type="text" name="event-type" />
+    <input type="text" name="event-date" />
+    <input type="text" name="venue" />
+    <input type="text" name="attendees" />
+    <input type="text" name="equipment" />
+    <textarea name="message"></textarea>
+    <p style="display:none">
+        <label>
+            Don't fill this out if you're human: <input name="bot-field" />
+        </label>
+    </p>
 </form>
