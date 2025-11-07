@@ -24,7 +24,7 @@ export default function FormBlock(props) {
             const response = await fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: rams.toString()
+                body: params.toString()
             });
             
             if (response.ok) {
