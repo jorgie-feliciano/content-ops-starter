@@ -34,8 +34,7 @@ export default function FormBlock(props) {
                 id={elementId}
                 name="contact"
                 method="POST"
-               action="https://api.web3forms.com/submit"                className={classNames(
-                    'sb-component',
+            action="https://formsubmit.co/contacto@sonidovivo.org"                    'sb-component',
                     'sb-component-block',
                     'sb-component-form-block',
                     className,
@@ -43,9 +42,10 @@ export default function FormBlock(props) {
                 )}
                 data-sb-field-path={fieldPath}
             >
-                                {/* Web3Forms Access Key */}
-                <input type="hidden" name="access_key" value="31196574-f606-4a87-a254-d5f4b6ae4317" />
-                {/* Hidden input for Netlify form name */}
+            {/* FormSubmit Configuration */}
+            <input type="hidden" name="_next" value="https://sonidovivo.org/contact?success=true" />
+            <input type="hidden" name="_subject" value="New Quote Request - Sonido Vivo" />
+            <input type="hidden" name="_captcha" value="false" />                {/* Hidden input for Netlify form name */}
                 <input type="hidden" name="form-name" value="contact" />
                 
                 {/* Honeypot field for spam protection */}
