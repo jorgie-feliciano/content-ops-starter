@@ -13,18 +13,14 @@ export default function FormBlock(props) {
         
         const form = event.target;
         const formData = new FormData(form);
-
-                // Convert FormData to URLSearchParams for TypeScript compatibility
-        const params = new URLSearchParams();
-        formData.forEach((value, key) => {
-            params.append(key, String(value));
-        });
         
         try {
+            // Use type assertion to allow FormData in URLSearchParams constructor
+            // This works at runtime and is the recommended approach for Netlify forms
             const response = await fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: params.toString()
+                body: new URLSearchParams(formData as any).toString()
             });
             
             if (response.ok) {
