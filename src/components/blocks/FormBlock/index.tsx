@@ -36,7 +36,7 @@ export default function FormBlock(props) {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                action={`${action || '/contact'}/?success=true`}
+                action={action || '/contact'}
                 className={classNames(
                     'sb-component',
                     'sb-component-block',
@@ -73,6 +73,7 @@ export default function FormBlock(props) {
                         return <FormControl key={index} {...field} data-sb-field-path={`${fieldPath}.fields.${index}`} />;
                     })}
                 </div>
+
                 {submitButton && (
                     <div className={classNames('mt-8', mapStyles({ justifyContent: styles.justifyContent }))}>
                         <SubmitButtonFormControl {...submitButton} data-sb-field-path={`${fieldPath}.submitButton`} />
