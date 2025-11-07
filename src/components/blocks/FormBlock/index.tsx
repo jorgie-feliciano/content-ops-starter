@@ -8,20 +8,32 @@ export default function FormBlock(props) {
     const [showThankYou, setShowThankYou] = React.useState(false);
     const { fields = [], elementId, action, submitButton, className, styles = {}, 'data-sb-field-path': fieldPath } = props;
 
-    React.useEffect(() => {
-        // Check if the URL has ?success=true parameter (from Netlify form submission)
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('success') === 'true') {
-            setShowThankYou(true);
+    const handleFormSubmit = async (event) => {
+        event.preventDefault();
+        
+        const form = event.target;
+        const formData = new FormData(form);
+        
+        try {
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            });
+            
+            if (response.ok) {
+                setShowThankYou(true);
+                form.reset();
+            } else {
+                alert('There was a problem submitting your form. Please try again.');
+            }
+        } catch (error) {
+            alert('There was a problem submitting your form. Please try again.');
         }
-    }, []);
+    };
 
     const handleCloseThankYou = () => {
         setShowThankYou(false);
-        // Clean the URL by removing the ?success=true parameter
-        const url = new URL(window.location.href);
-        url.searchParams.delete('success');
-        window.history.replaceState({}, '', url.toString());
     };
 
     if (fields.length === 0) {
@@ -36,7 +48,8 @@ export default function FormBlock(props) {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                action={`${action || '/contact'}/?success=true`}
+                action={action || '/contact'}
+                onSubmit={handleFormSubmit}
                 className={classNames(
                     'sb-component',
                     'sb-component-block',
@@ -62,17 +75,14 @@ export default function FormBlock(props) {
                         if (field.name === 'bot-field') {
                             return null;
                         }
-
                         const modelName = field.__metadata.modelName;
                         if (!modelName) {
                             throw new Error(`form field does not have the 'modelName' property`);
                         }
-
                         const FormControl = getComponent(modelName);
                         if (!FormControl) {
                             throw new Error(`no component matching the form field model name: ${modelName}`);
                         }
-
                         return <FormControl key={index} {...field} data-sb-field-path={`${fieldPath}.fields.${index}`} />;
                     })}
                 </div>
