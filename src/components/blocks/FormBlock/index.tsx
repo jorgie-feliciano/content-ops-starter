@@ -29,13 +29,11 @@ export default function FormBlock(props) {
     }
 
     return (
-        <>
-<form
- <div
-  className="sb-component sb-component-block sb-component-form-block"
-  data-sb-field-path={fieldPath}
->
-  <form
+        <div
+            className="sb-component sb-component-block sb-component-form-block"
+            data-sb-field-path={fieldPath}
+        >
+            <form
     name="contact"
     method="POST"
     action="https://formsubmit.co/contacto@sonidovivo.org"
@@ -128,6 +126,6 @@ export default function FormBlock(props) {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 }
