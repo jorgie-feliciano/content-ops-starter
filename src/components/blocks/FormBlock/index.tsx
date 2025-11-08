@@ -30,17 +30,16 @@ export default function FormBlock(props) {
 
     return (
         <>
-<form
- <div
-  className="sb-component sb-component-block sb-component-form-block"
-  data-sb-field-path={fieldPath}
->
-  <form
-    name="contact"
-    method="POST"
-    action="https://formsubmit.co/contacto@sonidovivo.org"
-    className={`sb-component-form ${className ?? ''}`}
-  >
+            <div
+                className="sb-component sb-component-block sb-component-form-block"
+                data-sb-field-path={fieldPath}
+            >
+                <form
+                    name="contact"
+                    method="POST"
+                    action="https://formsubmit.co/contacto@sonidovivo.org"
+                    className={`sb-component-form ${className ?? ''}`}
+                >
             {/* FormSubmit Configuration */}
             <input type="hidden" name="_next" value="https://sonidovivo.org/contact?success=true" />
             <input type="hidden" name="_subject" value="New Quote Request - Sonido Vivo" />
@@ -77,7 +76,8 @@ export default function FormBlock(props) {
                         <SubmitButtonFormControl {...submitButton} data-sb-field-path={`${fieldPath}.submitButton`} />
                     </div>
                 )}
-            </form>
+                </form>
+            </div>
 
             {/* Thank You Modal */}
             {showThankYou && (
