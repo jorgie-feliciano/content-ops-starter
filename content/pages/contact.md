@@ -160,10 +160,10 @@ sections:
       - type: FeaturedItem
         title: Phone
         subtitle: Call us directly
-        text: |-
+        text: |
           Contact by phone to discuss audio needs.
 
-          **321 300 5425**
+          **321-300-5425**
         colors: bg-neutralAlt-fg-dark
         styles:
           self:
