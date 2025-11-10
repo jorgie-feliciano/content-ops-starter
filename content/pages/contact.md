@@ -116,6 +116,7 @@ sections:
             - pb-6
             - pl-6
             - pr-6
+            maxWidth: '850px'
           borderColor: border-dark
           borderStyle: solid
           borderWidth: 1
@@ -384,3 +385,4 @@ seo:
   type: Seo
 type: PageLayout
 ---
+          
