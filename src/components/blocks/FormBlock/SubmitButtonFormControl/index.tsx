@@ -18,6 +18,10 @@ export default function SubmitButtonFormControl(props) {
                 'sb-component',
                 'sb-component-block',
                 'sb-component-button',
+                'w-full',
+                'py-4',
+                'text-lg',
+                'font-semibold',
                 {
                     'sb-component-button-primary': style === 'primary',
                     'sb-component-button-secondary': style === 'secondary',

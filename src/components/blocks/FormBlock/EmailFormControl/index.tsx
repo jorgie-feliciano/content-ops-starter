@@ -18,7 +18,7 @@ export default function EmailFormControl(props) {
 
     return (
         <div
-            className={classNames('sb-form-control', 'w-full', {
+            className={classNames('sb-form-control', 'w-full', 'mb-6', {
                 'sm:w-formField': width === '1/2'
             })}
             data-sb-field-path={fieldPath}
@@ -35,7 +35,7 @@ export default function EmailFormControl(props) {
             )}
             <input
                 id={name}
-                className="sb-input text-inherit bg-transparent border-b border-current w-full py-2 focus:outline-none"
+                className="sb-input text-inherit bg-transparent border-b border-current w-full py-3 focus:outline-none"
                 type="email"
                 name={name}
                 {...attr}

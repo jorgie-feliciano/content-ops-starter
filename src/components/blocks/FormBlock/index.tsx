@@ -38,7 +38,7 @@ export default function FormBlock(props) {
                     name="contact"
                     method="POST"
                     action="https://formsubmit.co/contacto@sonidovivo.org"
-                    className={`sb-component-form ${className ?? ''}`}
+                    className={classNames('sb-component-form', 'shadow-lg', className)}
                 >
             {/* FormSubmit Configuration */}
             <input type="hidden" name="_next" value="https://sonidovivo.org/contact?success=true" />
@@ -72,7 +72,7 @@ export default function FormBlock(props) {
                 </div>
 
                 {submitButton && (
-                    <div className={classNames('mt-8', mapStyles({ justifyContent: styles.justifyContent }))}>
+                    <div className={classNames('mt-4', mapStyles({ justifyContent: styles.justifyContent }))}>
                         <SubmitButtonFormControl {...submitButton} data-sb-field-path={`${fieldPath}.submitButton`} />
                     </div>
                 )}
