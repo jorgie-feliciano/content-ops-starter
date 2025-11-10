@@ -33,7 +33,7 @@ sections:
       type: TitleBlock
     subtitle: Tell us about your event
     text: >
-      Please provide information about your event so we can assist you with  the
+      Please provide information about your event so we can assist you with the
       right equipment and services.
     media:
       fields:
@@ -112,10 +112,10 @@ sections:
       styles:
         self:
           padding:
-            - pt-6
-            - pb-6
-            - pl-6
-            - pr-6
+            - pt-8
+            - pb-8
+            - pl-8
+            - pr-8
           borderColor: border-dark
           borderStyle: solid
           borderWidth: 1
@@ -132,8 +132,10 @@ sections:
     colors: bg-light-fg-dark
     styles:
       self:
+        flexDirection: row
+        alignItems: flex-start
         padding:
-          - pt-6
+          - pt-12
           - pl-12
           - pb-12
           - pr-12
