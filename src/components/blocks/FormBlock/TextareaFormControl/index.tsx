@@ -18,7 +18,7 @@ export default function TextareaFormControl(props) {
 
     return (
         <div
-            className={classNames('sb-form-control', 'w-full', {
+            className={classNames('sb-form-control', 'w-full', 'mb-6', {
                 'sm:w-formField': width === '1/2'
             })}
             data-sb-field-path={fieldPath}
@@ -35,7 +35,7 @@ export default function TextareaFormControl(props) {
             )}
             <textarea
                 id={props.name}
-                className="sb-textarea text-inherit bg-transparent border border-current w-full p-2 focus:outline-none"
+                className="sb-textarea text-inherit bg-transparent border border-current w-full p-3 focus:outline-none"
                 name={name}
                 rows={5}
                 {...attr}
